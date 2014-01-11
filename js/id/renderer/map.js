@@ -405,7 +405,7 @@ iD.Map = function(context) {
     };
 
     map.editable = function() {
-        return map.zoom() >= 16;
+        return map.zoom() >= 13;
     };
 
     map.minzoom = function(_) {
