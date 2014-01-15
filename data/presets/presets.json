@@ -5744,6 +5744,25 @@
         ],
         "name": "Tram"
     },
+    "redd_project/leisure/nature_reserve": {
+        "icon": "park2",
+        "geometry": [
+            "point",
+            "area"
+        ],
+        "terms": [
+            "estate",
+            "forest",
+            "grass",
+            "green",
+            "woodland",
+            "redd"
+        ],
+        "tags": {
+            "leisure": "nature_reserve"
+        },
+        "name": "REDD Nature Reserve"
+    },
     "relation": {
         "name": "Relation",
         "icon": "relation",
