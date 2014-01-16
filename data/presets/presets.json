@@ -5744,7 +5744,7 @@
         ],
         "name": "Tram"
     },
-    "redd_project/leisure/nature_reserve": {
+    "redd_project/protected_area/redd": {
         "icon": "park2",
         "geometry": [
             "point",
@@ -5759,9 +5759,9 @@
             "redd"
         ],
         "tags": {
-            "leisure": "nature_reserve"
+            "protected_area": "redd"
         },
-        "name": "REDD Nature Reserve"
+        "name": "REDD Protected Area"
     },
     "relation": {
         "name": "Relation",

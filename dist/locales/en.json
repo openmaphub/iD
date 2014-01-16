@@ -2258,8 +2258,8 @@
                 "name": "Tram",
                 "terms": "streetcar"
             },
-            "redd_project/leisure/nature_reserve": {
-                "name": "REDD Nature Reserve",
+            "redd_project/protected_area/redd": {
+                "name": "REDD Protected Area",
                 "terms": "estate,forest,grass,green,woodland,redd"
             },
             "relation": {

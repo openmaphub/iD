@@ -1371,9 +1371,9 @@ en:
       railway/tram: 
         name: Tram
         terms: "<translate with synonyms or related terms for 'Tram', separated by commas>"
-      redd_project/leisure/nature_reserve: 
-        name: REDD Nature Reserve
-        terms: "<translate with synonyms or related terms for 'REDD Nature Reserve', separated by commas>"
+      redd_project/protected_area/redd: 
+        name: REDD Protected Area
+        terms: "<translate with synonyms or related terms for 'REDD Protected Area', separated by commas>"
       relation: 
         name: Relation
         terms: "<translate with synonyms or related terms for 'Relation', separated by commas>"

@@ -71,6 +71,7 @@ iD.areaKeys = {
     "public_transport": {
         "stop_position": true
     },
+    "protected_area": {},
     "shop": {},
     "tourism": {
         "viewpoint": true
