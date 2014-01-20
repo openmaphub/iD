@@ -1,0 +1,20 @@
+{
+    "icon": "park2",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [
+        "estate",
+        "forest",
+        "grass",
+        "green",
+        "woodland",
+        "redd"
+    ],
+    "tags": {
+        "protected_area": "redd",
+        "area": "yes"
+    },
+    "name": "REDD Protected Area"
+}

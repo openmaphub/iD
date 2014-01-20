@@ -5759,7 +5759,8 @@
             "redd"
         ],
         "tags": {
-            "protected_area": "redd"
+            "protected_area": "redd",
+            "area": "yes"
         },
         "name": "REDD Protected Area"
     },
