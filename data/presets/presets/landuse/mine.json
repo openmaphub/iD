@@ -1,0 +1,18 @@
+{
+    "geometry": [
+        "area"
+    ],
+    "terms": [
+        "mine",
+        "mining",
+        "concession"
+    ],
+    "tags": {
+        "landuse": "concession",
+        "industrial": "mining"
+    },
+    "fields": [
+        "operator"
+    ],
+    "name": "Mining Concession"
+}

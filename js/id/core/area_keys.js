@@ -41,6 +41,7 @@ iD.areaKeys = {
     "historic": {
         "boundary_stone": true
     },
+    "boundary": {},
     "landuse": {},
     "leisure": {
         "slipway": true

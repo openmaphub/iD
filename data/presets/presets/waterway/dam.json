@@ -6,6 +6,13 @@
         "line",
         "area"
     ],
+    "fields": [
+        "proposed"
+    ],
+    "terms": [
+        "dam",
+        "hydropower"
+    ],
     "tags": {
         "waterway": "dam"
     },

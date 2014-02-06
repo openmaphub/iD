@@ -1,0 +1,18 @@
+{
+    "geometry": [
+        "area"
+    ],
+    "terms": [
+        "logging",
+        "artisanal"
+    ],
+    "tags": {
+        "landuse": "concession",
+        "industrial": "logging",
+        "artisanal": "yes"
+    },
+    "fields": [
+        "operator"
+    ],
+    "name": "Artisanal Logging"
+}

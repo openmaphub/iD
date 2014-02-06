@@ -3088,249 +3088,10 @@
         },
         "name": "Highway"
     },
-    "highway/bridleway": {
-        "fields": [
-            "access",
-            "surface",
-            "structure"
-        ],
-        "icon": "highway-bridleway",
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "bridleway"
-        },
-        "terms": [
-            "bridleway",
-            "equestrian trail",
-            "horse riding path",
-            "bridle road",
-            "horse trail"
-        ],
-        "name": "Bridle Path"
-    },
-    "highway/bus_stop": {
-        "icon": "bus",
-        "fields": [
-            "operator",
-            "shelter"
-        ],
-        "geometry": [
-            "point",
-            "vertex"
-        ],
-        "tags": {
-            "highway": "bus_stop"
-        },
-        "terms": [],
-        "name": "Bus Stop"
-    },
-    "highway/crossing": {
-        "fields": [
-            "crossing"
-        ],
-        "geometry": [
-            "vertex"
-        ],
-        "tags": {
-            "highway": "crossing"
-        },
-        "terms": [
-            "crosswalk",
-            "zebra crossing"
-        ],
-        "name": "Crossing"
-    },
-    "highway/cycleway": {
-        "icon": "highway-cycleway",
-        "fields": [
-            "surface",
-            "lit",
-            "structure",
-            "access",
-            "oneway"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "cycleway"
-        },
-        "terms": [],
-        "name": "Cycle Path"
-    },
-    "highway/footway": {
-        "icon": "highway-footway",
-        "fields": [
-            "structure",
-            "access",
-            "surface"
-        ],
-        "geometry": [
-            "line",
-            "area"
-        ],
-        "terms": [
-            "beaten path",
-            "boulevard",
-            "clearing",
-            "course",
-            "cut*",
-            "drag*",
-            "footpath",
-            "highway",
-            "lane",
-            "line",
-            "orbit",
-            "passage",
-            "pathway",
-            "rail",
-            "rails",
-            "road",
-            "roadway",
-            "route",
-            "street",
-            "thoroughfare",
-            "trackway",
-            "trail",
-            "trajectory",
-            "walk"
-        ],
-        "tags": {
-            "highway": "footway"
-        },
-        "name": "Foot Path"
-    },
-    "highway/living_street": {
-        "icon": "highway-living-street",
-        "fields": [
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "surface"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "living_street"
-        },
-        "name": "Living Street"
-    },
-    "highway/mini_roundabout": {
-        "geometry": [
-            "vertex"
-        ],
-        "tags": {
-            "highway": "mini_roundabout"
-        },
-        "fields": [
-            "clock_direction"
-        ],
-        "name": "Mini-Roundabout"
-    },
-    "highway/motorway": {
-        "icon": "highway-motorway",
-        "fields": [
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "lanes",
-            "surface",
-            "ref"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "motorway"
-        },
-        "terms": [],
-        "name": "Motorway"
-    },
-    "highway/motorway_junction": {
-        "geometry": [
-            "vertex"
-        ],
-        "tags": {
-            "highway": "motorway_junction"
-        },
-        "fields": [
-            "ref"
-        ],
-        "name": "Motorway Junction"
-    },
-    "highway/motorway_link": {
-        "icon": "highway-motorway-link",
-        "fields": [
-            "oneway_yes",
-            "maxspeed",
-            "structure",
-            "access",
-            "surface",
-            "ref"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "motorway_link"
-        },
-        "terms": [
-            "ramp",
-            "on ramp",
-            "off ramp"
-        ],
-        "name": "Motorway Link"
-    },
-    "highway/path": {
-        "icon": "highway-path",
-        "fields": [
-            "structure",
-            "access",
-            "sac_scale",
-            "surface",
-            "incline",
-            "trail_visibility",
-            "ref"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "path"
-        },
-        "terms": [],
-        "name": "Path"
-    },
-    "highway/pedestrian": {
-        "fields": [
-            "access",
-            "oneway",
-            "surface"
-        ],
-        "geometry": [
-            "line",
-            "area"
-        ],
-        "tags": {
-            "highway": "pedestrian"
-        },
-        "terms": [],
-        "name": "Pedestrian"
-    },
     "highway/primary": {
         "icon": "highway-primary",
         "fields": [
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "lanes",
-            "surface",
+            "proposed",
             "ref"
         ],
         "geometry": [
@@ -3342,90 +3103,10 @@
         "terms": [],
         "name": "Primary Road"
     },
-    "highway/primary_link": {
-        "icon": "highway-primary-link",
-        "fields": [
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "surface",
-            "ref"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "primary_link"
-        },
-        "terms": [
-            "ramp",
-            "on ramp",
-            "off ramp"
-        ],
-        "name": "Primary Link"
-    },
-    "highway/residential": {
-        "icon": "highway-residential",
-        "fields": [
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "surface"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "residential"
-        },
-        "terms": [],
-        "name": "Residential Road"
-    },
-    "highway/rest_area": {
-        "geometry": [
-            "point",
-            "vertex",
-            "area"
-        ],
-        "tags": {
-            "highway": "rest_area"
-        },
-        "terms": [
-            "rest stop",
-            "turnout",
-            "lay-by"
-        ],
-        "name": "Rest Area"
-    },
-    "highway/road": {
-        "icon": "highway-road",
-        "fields": [
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "surface"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "road"
-        },
-        "terms": [],
-        "name": "Unknown Road"
-    },
     "highway/secondary": {
         "icon": "highway-secondary",
         "fields": [
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "lanes",
-            "surface",
+            "proposed",
             "ref"
         ],
         "geometry": [
@@ -3437,259 +3118,10 @@
         "terms": [],
         "name": "Secondary Road"
     },
-    "highway/secondary_link": {
-        "icon": "highway-secondary-link",
-        "fields": [
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "surface",
-            "ref"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "secondary_link"
-        },
-        "terms": [
-            "ramp",
-            "on ramp",
-            "off ramp"
-        ],
-        "name": "Secondary Link"
-    },
-    "highway/service": {
-        "icon": "highway-service",
-        "fields": [
-            "service",
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "surface"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "service"
-        },
-        "terms": [],
-        "name": "Service Road"
-    },
-    "highway/service/alley": {
-        "icon": "highway-service",
-        "fields": [
-            "oneway",
-            "access",
-            "surface"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "service",
-            "service": "alley"
-        },
-        "name": "Alley"
-    },
-    "highway/service/drive-through": {
-        "icon": "highway-service",
-        "fields": [
-            "oneway",
-            "access",
-            "surface"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "service",
-            "service": "drive-through"
-        },
-        "name": "Drive-Through"
-    },
-    "highway/service/driveway": {
-        "icon": "highway-service",
-        "fields": [
-            "oneway",
-            "access",
-            "surface"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "service",
-            "service": "driveway"
-        },
-        "name": "Driveway"
-    },
-    "highway/service/emergency_access": {
-        "icon": "highway-service",
-        "fields": [
-            "oneway",
-            "access",
-            "surface"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "service",
-            "service": "emergency_access"
-        },
-        "name": "Emergency Access"
-    },
-    "highway/service/parking_aisle": {
-        "icon": "highway-service",
-        "fields": [
-            "oneway",
-            "access",
-            "surface"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "service",
-            "service": "parking_aisle"
-        },
-        "name": "Parking Aisle"
-    },
-    "highway/services": {
-        "geometry": [
-            "point",
-            "vertex",
-            "area"
-        ],
-        "tags": {
-            "highway": "services"
-        },
-        "terms": [
-            "services",
-            "travel plaza",
-            "service station"
-        ],
-        "name": "Service Area"
-    },
-    "highway/steps": {
-        "fields": [
-            "access",
-            "surface"
-        ],
-        "icon": "highway-steps",
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "steps"
-        },
-        "terms": [
-            "stairs",
-            "staircase"
-        ],
-        "name": "Steps"
-    },
-    "highway/stop": {
-        "geometry": [
-            "vertex"
-        ],
-        "tags": {
-            "highway": "stop"
-        },
-        "terms": [
-            "stop sign"
-        ],
-        "name": "Stop Sign"
-    },
-    "highway/tertiary": {
-        "icon": "highway-tertiary",
-        "fields": [
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "lanes",
-            "surface",
-            "ref"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "tertiary"
-        },
-        "terms": [],
-        "name": "Tertiary Road"
-    },
-    "highway/tertiary_link": {
-        "icon": "highway-tertiary-link",
-        "fields": [
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "surface",
-            "ref"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "tertiary_link"
-        },
-        "terms": [
-            "ramp",
-            "on ramp",
-            "off ramp"
-        ],
-        "name": "Tertiary Link"
-    },
-    "highway/track": {
-        "icon": "highway-track",
-        "fields": [
-            "tracktype",
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "surface"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "track"
-        },
-        "terms": [],
-        "name": "Track"
-    },
-    "highway/traffic_signals": {
-        "geometry": [
-            "vertex"
-        ],
-        "tags": {
-            "highway": "traffic_signals"
-        },
-        "terms": [
-            "light",
-            "stoplight",
-            "traffic light"
-        ],
-        "name": "Traffic Signals"
-    },
     "highway/trunk": {
         "icon": "highway-trunk",
         "fields": [
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "lanes",
-            "surface",
+            "proposed",
             "ref"
         ],
         "geometry": [
@@ -3701,48 +3133,11 @@
         "terms": [],
         "name": "Trunk Road"
     },
-    "highway/trunk_link": {
-        "icon": "highway-trunk-link",
-        "fields": [
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "surface",
-            "ref"
-        ],
-        "geometry": [
-            "line"
-        ],
-        "tags": {
-            "highway": "trunk_link"
-        },
-        "terms": [
-            "ramp",
-            "on ramp",
-            "off ramp"
-        ],
-        "name": "Trunk Link"
-    },
-    "highway/turning_circle": {
-        "icon": "circle",
-        "geometry": [
-            "vertex"
-        ],
-        "tags": {
-            "highway": "turning_circle"
-        },
-        "terms": [],
-        "name": "Turning Circle"
-    },
     "highway/unclassified": {
         "icon": "highway-unclassified",
         "fields": [
-            "oneway",
-            "maxspeed",
-            "structure",
-            "access",
-            "surface"
+            "ref",
+            "proposed"
         ],
         "geometry": [
             "line"
@@ -3856,6 +3251,20 @@
         },
         "name": "Wayside Shrine"
     },
+    "indigenous/boundary": {
+        "geometry": [
+            "area"
+        ],
+        "terms": [
+            "indigenous",
+            "boundary",
+            "redd"
+        ],
+        "tags": {
+            "boundary": "indigenous"
+        },
+        "name": "Indigenous Boundary"
+    },
     "landuse": {
         "fields": [
             "landuse"
@@ -3880,6 +3289,24 @@
         },
         "terms": [],
         "name": "Allotments"
+    },
+    "landuse/artisanal": {
+        "geometry": [
+            "area"
+        ],
+        "terms": [
+            "logging",
+            "artisanal"
+        ],
+        "tags": {
+            "landuse": "concession",
+            "industrial": "logging",
+            "artisanal": "yes"
+        },
+        "fields": [
+            "operator"
+        ],
+        "name": "Artisanal Logging"
     },
     "landuse/basin": {
         "geometry": [
@@ -3994,16 +3421,21 @@
         "name": "Grass"
     },
     "landuse/industrial": {
-        "icon": "industrial",
         "geometry": [
-            "point",
             "area"
         ],
+        "terms": [
+            "logging",
+            "industrial"
+        ],
         "tags": {
-            "landuse": "industrial"
+            "landuse": "concession",
+            "industrial": "logging"
         },
-        "terms": [],
-        "name": "Industrial"
+        "fields": [
+            "operator"
+        ],
+        "name": "Industrial Logging"
     },
     "landuse/meadow": {
         "geometry": [
@@ -4016,6 +3448,38 @@
         "terms": [],
         "name": "Meadow"
     },
+    "landuse/mine": {
+        "geometry": [
+            "area"
+        ],
+        "terms": [
+            "mine",
+            "mining",
+            "concession"
+        ],
+        "tags": {
+            "landuse": "concession",
+            "industrial": "mining"
+        },
+        "fields": [
+            "operator"
+        ],
+        "name": "Mining Concession"
+    },
+    "landuse/oil": {
+        "geometry": [
+            "area"
+        ],
+        "terms": [
+            "oil",
+            "fuel"
+        ],
+        "tags": {
+            "landuse": "concession",
+            "industrial": "oil"
+        },
+        "name": "Oil Blocks"
+    },
     "landuse/orchard": {
         "icon": "park2",
         "geometry": [
@@ -4027,6 +3491,22 @@
         },
         "terms": [],
         "name": "Orchard"
+    },
+    "landuse/palm": {
+        "geometry": [
+            "area"
+        ],
+        "terms": [
+            "palm",
+            "oil",
+            "orchard",
+            "trees"
+        ],
+        "tags": {
+            "landuse": "orchard",
+            "trees": "oil_palms"
+        },
+        "name": "Palm Oil Plantations"
     },
     "landuse/quarry": {
         "geometry": [
@@ -5429,6 +4909,9 @@
     "power/line": {
         "geometry": [
             "line"
+        ],
+        "fields": [
+            "proposed"
         ],
         "tags": {
             "power": "line"
@@ -7353,6 +6836,13 @@
             "vertex",
             "line",
             "area"
+        ],
+        "fields": [
+            "proposed"
+        ],
+        "terms": [
+            "dam",
+            "hydropower"
         ],
         "tags": {
             "waterway": "dam"

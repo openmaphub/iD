@@ -752,6 +752,9 @@
             "power": {
                 "label": "Type"
             },
+            "proposed": {
+                "label": "Proposed"
+            },
             "railway": {
                 "label": "Type"
             },
@@ -1542,144 +1545,16 @@
                 "name": "Highway",
                 "terms": ""
             },
-            "highway/bridleway": {
-                "name": "Bridle Path",
-                "terms": "bridleway,equestrian trail,horse riding path,bridle road,horse trail"
-            },
-            "highway/bus_stop": {
-                "name": "Bus Stop",
-                "terms": ""
-            },
-            "highway/crossing": {
-                "name": "Crossing",
-                "terms": "crosswalk,zebra crossing"
-            },
-            "highway/cycleway": {
-                "name": "Cycle Path",
-                "terms": ""
-            },
-            "highway/footway": {
-                "name": "Foot Path",
-                "terms": "beaten path,boulevard,clearing,course,cut*,drag*,footpath,highway,lane,line,orbit,passage,pathway,rail,rails,road,roadway,route,street,thoroughfare,trackway,trail,trajectory,walk"
-            },
-            "highway/living_street": {
-                "name": "Living Street",
-                "terms": ""
-            },
-            "highway/mini_roundabout": {
-                "name": "Mini-Roundabout",
-                "terms": ""
-            },
-            "highway/motorway": {
-                "name": "Motorway",
-                "terms": ""
-            },
-            "highway/motorway_junction": {
-                "name": "Motorway Junction",
-                "terms": ""
-            },
-            "highway/motorway_link": {
-                "name": "Motorway Link",
-                "terms": "ramp,on ramp,off ramp"
-            },
-            "highway/path": {
-                "name": "Path",
-                "terms": ""
-            },
-            "highway/pedestrian": {
-                "name": "Pedestrian",
-                "terms": ""
-            },
             "highway/primary": {
                 "name": "Primary Road",
-                "terms": ""
-            },
-            "highway/primary_link": {
-                "name": "Primary Link",
-                "terms": "ramp,on ramp,off ramp"
-            },
-            "highway/residential": {
-                "name": "Residential Road",
-                "terms": ""
-            },
-            "highway/rest_area": {
-                "name": "Rest Area",
-                "terms": "rest stop,turnout,lay-by"
-            },
-            "highway/road": {
-                "name": "Unknown Road",
                 "terms": ""
             },
             "highway/secondary": {
                 "name": "Secondary Road",
                 "terms": ""
             },
-            "highway/secondary_link": {
-                "name": "Secondary Link",
-                "terms": "ramp,on ramp,off ramp"
-            },
-            "highway/service": {
-                "name": "Service Road",
-                "terms": ""
-            },
-            "highway/service/alley": {
-                "name": "Alley",
-                "terms": ""
-            },
-            "highway/service/drive-through": {
-                "name": "Drive-Through",
-                "terms": ""
-            },
-            "highway/service/driveway": {
-                "name": "Driveway",
-                "terms": ""
-            },
-            "highway/service/emergency_access": {
-                "name": "Emergency Access",
-                "terms": ""
-            },
-            "highway/service/parking_aisle": {
-                "name": "Parking Aisle",
-                "terms": ""
-            },
-            "highway/services": {
-                "name": "Service Area",
-                "terms": "services,travel plaza,service station"
-            },
-            "highway/steps": {
-                "name": "Steps",
-                "terms": "stairs,staircase"
-            },
-            "highway/stop": {
-                "name": "Stop Sign",
-                "terms": "stop sign"
-            },
-            "highway/tertiary": {
-                "name": "Tertiary Road",
-                "terms": ""
-            },
-            "highway/tertiary_link": {
-                "name": "Tertiary Link",
-                "terms": "ramp,on ramp,off ramp"
-            },
-            "highway/track": {
-                "name": "Track",
-                "terms": ""
-            },
-            "highway/traffic_signals": {
-                "name": "Traffic Signals",
-                "terms": "light,stoplight,traffic light"
-            },
             "highway/trunk": {
                 "name": "Trunk Road",
-                "terms": ""
-            },
-            "highway/trunk_link": {
-                "name": "Trunk Link",
-                "terms": "ramp,on ramp,off ramp"
-            },
-            "highway/turning_circle": {
-                "name": "Turning Circle",
                 "terms": ""
             },
             "highway/unclassified": {
@@ -1722,6 +1597,10 @@
                 "name": "Wayside Shrine",
                 "terms": ""
             },
+            "indigenous/boundary": {
+                "name": "Indigenous Boundary",
+                "terms": "indigenous,boundary,redd"
+            },
             "landuse": {
                 "name": "Landuse",
                 "terms": ""
@@ -1729,6 +1608,10 @@
             "landuse/allotments": {
                 "name": "Allotments",
                 "terms": ""
+            },
+            "landuse/artisanal": {
+                "name": "Artisanal Logging",
+                "terms": "logging,artisanal"
             },
             "landuse/basin": {
                 "name": "Basin",
@@ -1767,16 +1650,28 @@
                 "terms": ""
             },
             "landuse/industrial": {
-                "name": "Industrial",
-                "terms": ""
+                "name": "Industrial Logging",
+                "terms": "logging,industrial"
             },
             "landuse/meadow": {
                 "name": "Meadow",
                 "terms": ""
             },
+            "landuse/mine": {
+                "name": "Mining Concession",
+                "terms": "mine,mining,concession"
+            },
+            "landuse/oil": {
+                "name": "Oil Blocks",
+                "terms": "oil,fuel"
+            },
             "landuse/orchard": {
                 "name": "Orchard",
                 "terms": ""
+            },
+            "landuse/palm": {
+                "name": "Palm Oil Plantations",
+                "terms": "palm,oil,orchard,trees"
             },
             "landuse/quarry": {
                 "name": "Quarry",
@@ -2640,7 +2535,7 @@
             },
             "waterway/dam": {
                 "name": "Dam",
-                "terms": ""
+                "terms": "dam,hydropower"
             },
             "waterway/ditch": {
                 "name": "Ditch",

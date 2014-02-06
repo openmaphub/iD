@@ -1,11 +1,8 @@
 {
     "icon": "highway-unclassified",
     "fields": [
-        "oneway",
-        "maxspeed",
-        "structure",
-        "access",
-        "surface"
+        "ref",
+        "proposed"
     ],
     "geometry": [
         "line"

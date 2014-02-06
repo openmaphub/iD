@@ -1,12 +1,17 @@
 {
-    "icon": "industrial",
     "geometry": [
-        "point",
         "area"
     ],
+    "terms": [
+        "logging",
+        "industrial"
+    ],
     "tags": {
-        "landuse": "industrial"
+        "landuse": "concession",
+        "industrial": "logging"
     },
-    "terms": [],
-    "name": "Industrial"
+    "fields": [
+        "operator"
+    ],
+    "name": "Industrial Logging"
 }

@@ -1,0 +1,16 @@
+{
+    "geometry": [
+        "area"
+    ],
+    "terms": [
+        "palm",
+        "oil",
+        "orchard",
+        "trees"
+    ],
+    "tags": {
+        "landuse": "orchard",
+        "trees": "oil_palms"
+    },
+    "name": "Palm Oil Plantations"
+}

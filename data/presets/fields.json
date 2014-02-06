@@ -596,6 +596,11 @@
         "type": "typeCombo",
         "label": "Type"
     },
+    "proposed": {
+        "key": "proposed",
+        "type": "check",
+        "label": "Proposed"
+    },
     "railway": {
         "key": "railway",
         "type": "typeCombo",

@@ -1,0 +1,14 @@
+{
+    "geometry": [
+        "area"
+    ],
+    "terms": [
+        "oil",
+        "fuel"
+    ],
+    "tags": {
+        "landuse": "concession",
+        "industrial": "oil"
+    },
+    "name": "Oil Blocks"
+}
