@@ -47,6 +47,15 @@ iD.validate = function(changes, graph) {
                 entity: change
             });
         }
+
+        if ('protected_area' in change.tags && change.tags['name'] == null) {
+            warnings.push({
+                message: 'Name missing for REDD Protected Area.',
+                tooltip: 'REDD Protected Areas should have a name.',
+                entity: change
+            });
+        }
+
     }
 
     return warnings;
