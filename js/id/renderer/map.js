@@ -216,7 +216,10 @@ iD.Map = function(context) {
         }
 
         if (map.editable()) {
-            context.connection().loadTiles(projection, dimensions);
+            var q = iD.util.stringQs(location.hash.substring(1));
+            if (!q.id) {
+                context.connection().loadTiles(projection, dimensions);
+            }
             drawVector(difference, extent);
         } else {
             editOff();
@@ -405,7 +408,11 @@ iD.Map = function(context) {
     };
 
     map.editable = function() {
-        return map.zoom() >= 13;
+        var q = iD.util.stringQs(location.hash.substring(1));
+        if (q.id) {
+            return map.zoom() >= 5;
+        }
+        return map.zoom() >=14;
     };
 
     map.minzoom = function(_) {

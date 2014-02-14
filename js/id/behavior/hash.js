@@ -48,7 +48,7 @@ iD.behavior.Hash = function(context) {
 
         if (location.hash) {
             var q = iD.util.stringQs(location.hash.substring(1));
-            if (q.id) context.loadEntity(q.id, !q.map);
+            if (q.id) context.loadEntity(q.id, q.map);
             hashchange();
             if (q.map) hash.hadHash = true;
         }
