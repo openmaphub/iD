@@ -4,28 +4,12 @@
         "name": "Land Use",
         "icon": "land-use",
         "members": [
-            "landuse/residential",
             "landuse/industrial",
-            "landuse/commercial",
-            "landuse/retail",
-            "landuse/farm",
-            "landuse/farmyard",
-            "landuse/forest",
-            "landuse/meadow",
-            "landuse/cemetery"
-        ]
-    },
-    "category-rail": {
-        "geometry": "line",
-        "name": "Rail",
-        "icon": "category-rail",
-        "members": [
-            "railway/rail",
-            "railway/subway",
-            "railway/tram",
-            "railway/monorail",
-            "railway/disused",
-            "railway/abandoned"
+            "landuse/artisanal",
+            "landuse/oil",
+            "landuse/mine",
+            "landuse/orchard",
+            "landuse/palm"
         ]
     },
     "category-road": {
@@ -44,22 +28,15 @@
         "name": "Water",
         "icon": "water",
         "members": [
-            "natural/water/lake",
-            "natural/water/pond",
-            "natural/water/reservoir",
-            "natural/water"
+            "waterway/dam"
         ]
     },
-    "category-water-line": {
-        "geometry": "line",
+    "category-water-point": {
+        "geometry": "point",
         "name": "Water",
         "icon": "category-water",
         "members": [
-            "waterway/river",
-            "waterway/stream",
-            "waterway/canal",
-            "waterway/ditch",
-            "waterway/drain"
+            "waterway/dam"
         ]
     }
 }

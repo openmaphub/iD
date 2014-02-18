@@ -3,13 +3,11 @@ en:
     categories: 
       "category-landuse": 
         name: Land Use
-      "category-rail": 
-        name: Rail
       "category-road": 
         name: Road
       "category-water-area": 
         name: Water
-      "category-water-line": 
+      "category-water-point": 
         name: Water
     fields: 
       access: 
@@ -388,54 +386,6 @@ en:
       power/minor_line: 
         name: Minor Power Line
         terms: "<translate with synonyms or related terms for 'Minor Power Line', separated by commas>"
-      public_transport/platform: 
-        name: Platform
-        terms: "<translate with synonyms or related terms for 'Platform', separated by commas>"
-      public_transport/stop_position: 
-        name: Stop Position
-        terms: "<translate with synonyms or related terms for 'Stop Position', separated by commas>"
-      railway: 
-        name: Railway
-        terms: "<translate with synonyms or related terms for 'Railway', separated by commas>"
-      railway/abandoned: 
-        name: Abandoned Railway
-        terms: "<translate with synonyms or related terms for 'Abandoned Railway', separated by commas>"
-      railway/disused: 
-        name: Disused Railway
-        terms: "<translate with synonyms or related terms for 'Disused Railway', separated by commas>"
-      railway/funicular: 
-        name: Funicular
-        terms: "<translate with synonyms or related terms for 'Funicular', separated by commas>"
-      railway/halt: 
-        name: Railway Halt
-        terms: "<translate with synonyms or related terms for 'Railway Halt', separated by commas>"
-      railway/level_crossing: 
-        name: Level Crossing
-        terms: "<translate with synonyms or related terms for 'Level Crossing', separated by commas>"
-      railway/monorail: 
-        name: Monorail
-        terms: "<translate with synonyms or related terms for 'Monorail', separated by commas>"
-      railway/narrow_gauge: 
-        name: Narrow Gauge Rail
-        terms: "<translate with synonyms or related terms for 'Narrow Gauge Rail', separated by commas>"
-      railway/platform: 
-        name: Railway Platform
-        terms: "<translate with synonyms or related terms for 'Railway Platform', separated by commas>"
-      railway/rail: 
-        name: Rail
-        terms: "<translate with synonyms or related terms for 'Rail', separated by commas>"
-      railway/station: 
-        name: Railway Station
-        terms: "<translate with synonyms or related terms for 'Railway Station', separated by commas>"
-      railway/subway: 
-        name: Subway
-        terms: "<translate with synonyms or related terms for 'Subway', separated by commas>"
-      railway/subway_entrance: 
-        name: Subway Entrance
-        terms: "<translate with synonyms or related terms for 'Subway Entrance', separated by commas>"
-      railway/tram: 
-        name: Tram
-        terms: "<translate with synonyms or related terms for 'Tram', separated by commas>"
       redd_project: 
         name: REDD Protected Area
         terms: "<translate with synonyms or related terms for 'REDD Protected Area', separated by commas>"
@@ -445,57 +395,6 @@ en:
       relation: 
         name: Relation
         terms: "<translate with synonyms or related terms for 'Relation', separated by commas>"
-      type/boundary: 
-        name: Boundary
-        terms: "<translate with synonyms or related terms for 'Boundary', separated by commas>"
-      type/boundary/administrative: 
-        name: Administrative Boundary
-        terms: "<translate with synonyms or related terms for 'Administrative Boundary', separated by commas>"
-      type/multipolygon: 
-        name: Multipolygon
-        terms: "<translate with synonyms or related terms for 'Multipolygon', separated by commas>"
-      type/restriction: 
-        name: Restriction
-        terms: "<translate with synonyms or related terms for 'Restriction', separated by commas>"
-      type/route: 
-        name: Route
-        terms: "<translate with synonyms or related terms for 'Route', separated by commas>"
-      type/route/bicycle: 
-        name: Cycle Route
-        terms: "<translate with synonyms or related terms for 'Cycle Route', separated by commas>"
-      type/route/bus: 
-        name: Bus Route
-        terms: "<translate with synonyms or related terms for 'Bus Route', separated by commas>"
-      type/route/detour: 
-        name: Detour Route
-        terms: "<translate with synonyms or related terms for 'Detour Route', separated by commas>"
-      type/route/ferry: 
-        name: Ferry Route
-        terms: "<translate with synonyms or related terms for 'Ferry Route', separated by commas>"
-      type/route/foot: 
-        name: Foot Route
-        terms: "<translate with synonyms or related terms for 'Foot Route', separated by commas>"
-      type/route/hiking: 
-        name: Hiking Route
-        terms: "<translate with synonyms or related terms for 'Hiking Route', separated by commas>"
-      type/route/pipeline: 
-        name: Pipeline Route
-        terms: "<translate with synonyms or related terms for 'Pipeline Route', separated by commas>"
-      type/route/power: 
-        name: Power Route
-        terms: "<translate with synonyms or related terms for 'Power Route', separated by commas>"
-      type/route/road: 
-        name: Road Route
-        terms: "<translate with synonyms or related terms for 'Road Route', separated by commas>"
-      type/route/train: 
-        name: Train Route
-        terms: "<translate with synonyms or related terms for 'Train Route', separated by commas>"
-      type/route/tram: 
-        name: Tram Route
-        terms: "<translate with synonyms or related terms for 'Tram Route', separated by commas>"
-      type/route_master: 
-        name: Route Master
-        terms: "<translate with synonyms or related terms for 'Route Master', separated by commas>"
       vertex: 
         name: Other
         terms: "<translate with synonyms or related terms for 'Other', separated by commas>"

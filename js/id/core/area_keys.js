@@ -7,9 +7,6 @@ iD.areaKeys = {
         "line": true,
         "minor_line": true
     },
-    "public_transport": {
-        "stop_position": true
-    },
     "protected_area": {},
     "waterway": {
         "ditch": true,

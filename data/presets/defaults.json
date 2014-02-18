@@ -1,20 +1,19 @@
 {
     "area": [
         "category-landuse",
-        "category-water-area",
+        "indigenous/boundary",
+        "redd_project/protected_area/redd",
+        "waterway/dam",
         "area"
     ],
     "line": [
         "category-road",
-        "category-rail",
-        "category-water-line",
         "power/line"
     ],
     "point": [
         "point"
     ],
     "vertex": [
-        "railway/level_crossing",
         "vertex"
     ],
     "relation": [

@@ -3,14 +3,11 @@
     "name": "Land Use",
     "icon": "land-use",
     "members": [
-        "landuse/residential",
         "landuse/industrial",
-        "landuse/commercial",
-        "landuse/retail",
-        "landuse/farm",
-        "landuse/farmyard",
-        "landuse/forest",
-        "landuse/meadow",
-        "landuse/cemetery"
+        "landuse/artisanal",
+        "landuse/oil",
+        "landuse/mine",
+        "landuse/orchard",
+        "landuse/palm"
     ]
 }

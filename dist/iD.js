@@ -20794,9 +20794,6 @@ iD.areaKeys = {
         "line": true,
         "minor_line": true
     },
-    "public_transport": {
-        "stop_position": true
-    },
     "protected_area": {},
     "waterway": {
         "ditch": true,
@@ -62231,261 +62228,6 @@ iD.introGraph = '{"n185954700":{"id":"n185954700","loc":[-85.642244,41.939081],"
                 "name": "Minor Power Line",
                 "icon": "power-line"
             },
-            "public_transport/platform": {
-                "fields": [
-                    "ref",
-                    "operator",
-                    "network",
-                    "shelter"
-                ],
-                "geometry": [
-                    "point",
-                    "vertex",
-                    "line",
-                    "area"
-                ],
-                "tags": {
-                    "public_transport": "platform"
-                },
-                "name": "Platform"
-            },
-            "public_transport/stop_position": {
-                "fields": [
-                    "ref",
-                    "operator",
-                    "network"
-                ],
-                "geometry": [
-                    "vertex"
-                ],
-                "tags": {
-                    "public_transport": "stop_position"
-                },
-                "name": "Stop Position"
-            },
-            "railway": {
-                "fields": [
-                    "railway"
-                ],
-                "geometry": [
-                    "point",
-                    "vertex",
-                    "line",
-                    "area"
-                ],
-                "tags": {
-                    "railway": "*"
-                },
-                "name": "Railway"
-            },
-            "railway/abandoned": {
-                "icon": "railway-abandoned",
-                "geometry": [
-                    "line"
-                ],
-                "tags": {
-                    "railway": "abandoned"
-                },
-                "fields": [
-                    "structure"
-                ],
-                "terms": [],
-                "name": "Abandoned Railway"
-            },
-            "railway/disused": {
-                "icon": "railway-disused",
-                "geometry": [
-                    "line"
-                ],
-                "tags": {
-                    "railway": "disused"
-                },
-                "fields": [
-                    "structure"
-                ],
-                "terms": [],
-                "name": "Disused Railway"
-            },
-            "railway/funicular": {
-                "geometry": [
-                    "line"
-                ],
-                "terms": [
-                    "venicular",
-                    "cliff railway",
-                    "cable car",
-                    "cable railway",
-                    "funicular railway"
-                ],
-                "fields": [
-                    "structure",
-                    "gauge"
-                ],
-                "tags": {
-                    "railway": "funicular"
-                },
-                "icon": "railway-rail",
-                "name": "Funicular"
-            },
-            "railway/halt": {
-                "icon": "rail",
-                "geometry": [
-                    "point",
-                    "vertex"
-                ],
-                "tags": {
-                    "railway": "halt"
-                },
-                "name": "Railway Halt",
-                "terms": [
-                    "break",
-                    "interrupt",
-                    "rest",
-                    "wait",
-                    "interruption"
-                ]
-            },
-            "railway/level_crossing": {
-                "icon": "cross",
-                "geometry": [
-                    "vertex"
-                ],
-                "tags": {
-                    "railway": "level_crossing"
-                },
-                "terms": [
-                    "crossing",
-                    "railroad crossing",
-                    "railway crossing",
-                    "grade crossing",
-                    "road through railroad",
-                    "train crossing"
-                ],
-                "name": "Level Crossing"
-            },
-            "railway/monorail": {
-                "icon": "railway-monorail",
-                "geometry": [
-                    "line"
-                ],
-                "tags": {
-                    "railway": "monorail"
-                },
-                "fields": [
-                    "structure",
-                    "electrified"
-                ],
-                "terms": [],
-                "name": "Monorail"
-            },
-            "railway/narrow_gauge": {
-                "icon": "railway-rail",
-                "geometry": [
-                    "line"
-                ],
-                "tags": {
-                    "railway": "narrow_gauge"
-                },
-                "fields": [
-                    "structure",
-                    "gauge",
-                    "electrified"
-                ],
-                "terms": [
-                    "narrow gauge railway",
-                    "narrow gauge railroad"
-                ],
-                "name": "Narrow Gauge Rail"
-            },
-            "railway/platform": {
-                "geometry": [
-                    "point",
-                    "vertex",
-                    "line",
-                    "area"
-                ],
-                "tags": {
-                    "railway": "platform"
-                },
-                "name": "Railway Platform"
-            },
-            "railway/rail": {
-                "icon": "railway-rail",
-                "geometry": [
-                    "line"
-                ],
-                "tags": {
-                    "railway": "rail"
-                },
-                "fields": [
-                    "structure",
-                    "gauge",
-                    "electrified"
-                ],
-                "terms": [],
-                "name": "Rail"
-            },
-            "railway/station": {
-                "icon": "rail",
-                "geometry": [
-                    "point",
-                    "vertex",
-                    "area"
-                ],
-                "tags": {
-                    "railway": "station"
-                },
-                "terms": [
-                    "train station",
-                    "station"
-                ],
-                "name": "Railway Station"
-            },
-            "railway/subway": {
-                "icon": "railway-subway",
-                "fields": [
-                    "structure",
-                    "gauge",
-                    "electrified"
-                ],
-                "geometry": [
-                    "line"
-                ],
-                "tags": {
-                    "railway": "subway"
-                },
-                "terms": [],
-                "name": "Subway"
-            },
-            "railway/subway_entrance": {
-                "icon": "rail-metro",
-                "geometry": [
-                    "point"
-                ],
-                "tags": {
-                    "railway": "subway_entrance"
-                },
-                "terms": [],
-                "name": "Subway Entrance"
-            },
-            "railway/tram": {
-                "icon": "railway-light-rail",
-                "geometry": [
-                    "line"
-                ],
-                "tags": {
-                    "railway": "tram"
-                },
-                "fields": [
-                    "structure",
-                    "gauge",
-                    "electrified"
-                ],
-                "terms": [
-                    "streetcar"
-                ],
-                "name": "Tram"
-            },
             "redd_project": {
                 "icon": "park2",
                 "geometry": [
@@ -62528,257 +62270,6 @@ iD.introGraph = '{"n185954700":{"id":"n185954700","loc":[-85.642244,41.939081],"
                 ],
                 "fields": [
                     "relation"
-                ]
-            },
-            "type/boundary": {
-                "geometry": [
-                    "relation"
-                ],
-                "tags": {
-                    "type": "boundary"
-                },
-                "name": "Boundary",
-                "icon": "boundary",
-                "fields": [
-                    "boundary"
-                ]
-            },
-            "type/boundary/administrative": {
-                "name": "Administrative Boundary",
-                "geometry": [
-                    "relation"
-                ],
-                "tags": {
-                    "type": "boundary",
-                    "boundary": "administrative"
-                },
-                "fields": [
-                    "admin_level"
-                ],
-                "icon": "boundary"
-            },
-            "type/multipolygon": {
-                "geometry": [
-                    "area",
-                    "relation"
-                ],
-                "tags": {
-                    "type": "multipolygon"
-                },
-                "removeTags": {},
-                "name": "Multipolygon",
-                "icon": "multipolygon",
-                "searchable": false,
-                "matchScore": 0.1
-            },
-            "type/restriction": {
-                "geometry": [
-                    "relation"
-                ],
-                "tags": {
-                    "type": "restriction"
-                },
-                "name": "Restriction",
-                "icon": "restriction",
-                "fields": [
-                    "restriction"
-                ]
-            },
-            "type/route": {
-                "geometry": [
-                    "relation"
-                ],
-                "tags": {
-                    "type": "route"
-                },
-                "name": "Route",
-                "icon": "route",
-                "fields": [
-                    "route",
-                    "ref"
-                ]
-            },
-            "type/route/bicycle": {
-                "geometry": [
-                    "relation"
-                ],
-                "tags": {
-                    "type": "route",
-                    "route": "bicycle"
-                },
-                "name": "Cycle Route",
-                "icon": "route-bicycle",
-                "fields": [
-                    "ref",
-                    "network"
-                ]
-            },
-            "type/route/bus": {
-                "geometry": [
-                    "relation"
-                ],
-                "tags": {
-                    "type": "route",
-                    "route": "bus"
-                },
-                "name": "Bus Route",
-                "icon": "route-bus",
-                "fields": [
-                    "ref",
-                    "operator",
-                    "network"
-                ]
-            },
-            "type/route/detour": {
-                "geometry": [
-                    "relation"
-                ],
-                "tags": {
-                    "type": "route",
-                    "route": "detour"
-                },
-                "name": "Detour Route",
-                "icon": "route-detour",
-                "fields": [
-                    "ref"
-                ]
-            },
-            "type/route/ferry": {
-                "geometry": [
-                    "relation"
-                ],
-                "tags": {
-                    "type": "route",
-                    "route": "ferry"
-                },
-                "name": "Ferry Route",
-                "icon": "route-ferry",
-                "fields": [
-                    "ref",
-                    "operator",
-                    "network"
-                ]
-            },
-            "type/route/foot": {
-                "geometry": [
-                    "relation"
-                ],
-                "tags": {
-                    "type": "route",
-                    "route": "foot"
-                },
-                "name": "Foot Route",
-                "icon": "route-foot",
-                "fields": [
-                    "ref",
-                    "operator",
-                    "network"
-                ]
-            },
-            "type/route/hiking": {
-                "geometry": [
-                    "relation"
-                ],
-                "tags": {
-                    "type": "route",
-                    "route": "hiking"
-                },
-                "name": "Hiking Route",
-                "icon": "route-foot",
-                "fields": [
-                    "ref",
-                    "operator",
-                    "network"
-                ]
-            },
-            "type/route/pipeline": {
-                "geometry": [
-                    "relation"
-                ],
-                "tags": {
-                    "type": "route",
-                    "route": "pipeline"
-                },
-                "name": "Pipeline Route",
-                "icon": "route-pipeline",
-                "fields": [
-                    "ref",
-                    "operator"
-                ]
-            },
-            "type/route/power": {
-                "geometry": [
-                    "relation"
-                ],
-                "tags": {
-                    "type": "route",
-                    "route": "power"
-                },
-                "name": "Power Route",
-                "icon": "route-power",
-                "fields": [
-                    "ref",
-                    "operator"
-                ]
-            },
-            "type/route/road": {
-                "geometry": [
-                    "relation"
-                ],
-                "tags": {
-                    "type": "route",
-                    "route": "road"
-                },
-                "name": "Road Route",
-                "icon": "route-road",
-                "fields": [
-                    "ref"
-                ]
-            },
-            "type/route/train": {
-                "geometry": [
-                    "relation"
-                ],
-                "tags": {
-                    "type": "route",
-                    "route": "train"
-                },
-                "name": "Train Route",
-                "icon": "route-train",
-                "fields": [
-                    "ref",
-                    "operator"
-                ]
-            },
-            "type/route/tram": {
-                "geometry": [
-                    "relation"
-                ],
-                "tags": {
-                    "type": "route",
-                    "route": "tram"
-                },
-                "name": "Tram Route",
-                "icon": "route-tram",
-                "fields": [
-                    "ref",
-                    "operator"
-                ]
-            },
-            "type/route_master": {
-                "geometry": [
-                    "relation"
-                ],
-                "tags": {
-                    "type": "route_master"
-                },
-                "name": "Route Master",
-                "icon": "route-master",
-                "fields": [
-                    "route_master",
-                    "ref",
-                    "operator",
-                    "network"
                 ]
             },
             "vertex": {
@@ -62944,20 +62435,19 @@ iD.introGraph = '{"n185954700":{"id":"n185954700","loc":[-85.642244,41.939081],"
         "defaults": {
             "area": [
                 "category-landuse",
-                "category-water-area",
+                "indigenous/boundary",
+                "redd_project/protected_area/redd",
+                "waterway/dam",
                 "area"
             ],
             "line": [
                 "category-road",
-                "category-rail",
-                "category-water-line",
                 "power/line"
             ],
             "point": [
                 "point"
             ],
             "vertex": [
-                "railway/level_crossing",
                 "vertex"
             ],
             "relation": [
@@ -62973,28 +62463,12 @@ iD.introGraph = '{"n185954700":{"id":"n185954700","loc":[-85.642244,41.939081],"
                 "name": "Land Use",
                 "icon": "land-use",
                 "members": [
-                    "landuse/residential",
                     "landuse/industrial",
-                    "landuse/commercial",
-                    "landuse/retail",
-                    "landuse/farm",
-                    "landuse/farmyard",
-                    "landuse/forest",
-                    "landuse/meadow",
-                    "landuse/cemetery"
-                ]
-            },
-            "category-rail": {
-                "geometry": "line",
-                "name": "Rail",
-                "icon": "category-rail",
-                "members": [
-                    "railway/rail",
-                    "railway/subway",
-                    "railway/tram",
-                    "railway/monorail",
-                    "railway/disused",
-                    "railway/abandoned"
+                    "landuse/artisanal",
+                    "landuse/oil",
+                    "landuse/mine",
+                    "landuse/orchard",
+                    "landuse/palm"
                 ]
             },
             "category-road": {
@@ -63013,22 +62487,15 @@ iD.introGraph = '{"n185954700":{"id":"n185954700","loc":[-85.642244,41.939081],"
                 "name": "Water",
                 "icon": "water",
                 "members": [
-                    "natural/water/lake",
-                    "natural/water/pond",
-                    "natural/water/reservoir",
-                    "natural/water"
+                    "waterway/dam"
                 ]
             },
-            "category-water-line": {
-                "geometry": "line",
+            "category-water-point": {
+                "geometry": "point",
                 "name": "Water",
                 "icon": "category-water",
                 "members": [
-                    "waterway/river",
-                    "waterway/stream",
-                    "waterway/canal",
-                    "waterway/ditch",
-                    "waterway/drain"
+                    "waterway/dam"
                 ]
             }
         },
@@ -76165,16 +75632,13 @@ iD.introGraph = '{"n185954700":{"id":"n185954700","loc":[-85.642244,41.939081],"
                 "category-landuse": {
                     "name": "Land Use"
                 },
-                "category-rail": {
-                    "name": "Rail"
-                },
                 "category-road": {
                     "name": "Road"
                 },
                 "category-water-area": {
                     "name": "Water"
                 },
-                "category-water-line": {
+                "category-water-point": {
                     "name": "Water"
                 }
             },
@@ -76711,70 +76175,6 @@ iD.introGraph = '{"n185954700":{"id":"n185954700","loc":[-85.642244,41.939081],"
                     "name": "Minor Power Line",
                     "terms": ""
                 },
-                "public_transport/platform": {
-                    "name": "Platform",
-                    "terms": ""
-                },
-                "public_transport/stop_position": {
-                    "name": "Stop Position",
-                    "terms": ""
-                },
-                "railway": {
-                    "name": "Railway",
-                    "terms": ""
-                },
-                "railway/abandoned": {
-                    "name": "Abandoned Railway",
-                    "terms": ""
-                },
-                "railway/disused": {
-                    "name": "Disused Railway",
-                    "terms": ""
-                },
-                "railway/funicular": {
-                    "name": "Funicular",
-                    "terms": "venicular,cliff railway,cable car,cable railway,funicular railway"
-                },
-                "railway/halt": {
-                    "name": "Railway Halt",
-                    "terms": "break,interrupt,rest,wait,interruption"
-                },
-                "railway/level_crossing": {
-                    "name": "Level Crossing",
-                    "terms": "crossing,railroad crossing,railway crossing,grade crossing,road through railroad,train crossing"
-                },
-                "railway/monorail": {
-                    "name": "Monorail",
-                    "terms": ""
-                },
-                "railway/narrow_gauge": {
-                    "name": "Narrow Gauge Rail",
-                    "terms": "narrow gauge railway,narrow gauge railroad"
-                },
-                "railway/platform": {
-                    "name": "Railway Platform",
-                    "terms": ""
-                },
-                "railway/rail": {
-                    "name": "Rail",
-                    "terms": ""
-                },
-                "railway/station": {
-                    "name": "Railway Station",
-                    "terms": "train station,station"
-                },
-                "railway/subway": {
-                    "name": "Subway",
-                    "terms": ""
-                },
-                "railway/subway_entrance": {
-                    "name": "Subway Entrance",
-                    "terms": ""
-                },
-                "railway/tram": {
-                    "name": "Tram",
-                    "terms": "streetcar"
-                },
                 "redd_project": {
                     "name": "REDD Protected Area",
                     "terms": ""
@@ -76785,74 +76185,6 @@ iD.introGraph = '{"n185954700":{"id":"n185954700","loc":[-85.642244,41.939081],"
                 },
                 "relation": {
                     "name": "Relation",
-                    "terms": ""
-                },
-                "type/boundary": {
-                    "name": "Boundary",
-                    "terms": ""
-                },
-                "type/boundary/administrative": {
-                    "name": "Administrative Boundary",
-                    "terms": ""
-                },
-                "type/multipolygon": {
-                    "name": "Multipolygon",
-                    "terms": ""
-                },
-                "type/restriction": {
-                    "name": "Restriction",
-                    "terms": ""
-                },
-                "type/route": {
-                    "name": "Route",
-                    "terms": ""
-                },
-                "type/route/bicycle": {
-                    "name": "Cycle Route",
-                    "terms": ""
-                },
-                "type/route/bus": {
-                    "name": "Bus Route",
-                    "terms": ""
-                },
-                "type/route/detour": {
-                    "name": "Detour Route",
-                    "terms": ""
-                },
-                "type/route/ferry": {
-                    "name": "Ferry Route",
-                    "terms": ""
-                },
-                "type/route/foot": {
-                    "name": "Foot Route",
-                    "terms": ""
-                },
-                "type/route/hiking": {
-                    "name": "Hiking Route",
-                    "terms": ""
-                },
-                "type/route/pipeline": {
-                    "name": "Pipeline Route",
-                    "terms": ""
-                },
-                "type/route/power": {
-                    "name": "Power Route",
-                    "terms": ""
-                },
-                "type/route/road": {
-                    "name": "Road Route",
-                    "terms": ""
-                },
-                "type/route/train": {
-                    "name": "Train Route",
-                    "terms": ""
-                },
-                "type/route/tram": {
-                    "name": "Tram Route",
-                    "terms": ""
-                },
-                "type/route_master": {
-                    "name": "Route Master",
                     "terms": ""
                 },
                 "vertex": {

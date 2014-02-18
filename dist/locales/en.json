@@ -400,16 +400,13 @@
             "category-landuse": {
                 "name": "Land Use"
             },
-            "category-rail": {
-                "name": "Rail"
-            },
             "category-road": {
                 "name": "Road"
             },
             "category-water-area": {
                 "name": "Water"
             },
-            "category-water-line": {
+            "category-water-point": {
                 "name": "Water"
             }
         },
@@ -946,70 +943,6 @@
                 "name": "Minor Power Line",
                 "terms": ""
             },
-            "public_transport/platform": {
-                "name": "Platform",
-                "terms": ""
-            },
-            "public_transport/stop_position": {
-                "name": "Stop Position",
-                "terms": ""
-            },
-            "railway": {
-                "name": "Railway",
-                "terms": ""
-            },
-            "railway/abandoned": {
-                "name": "Abandoned Railway",
-                "terms": ""
-            },
-            "railway/disused": {
-                "name": "Disused Railway",
-                "terms": ""
-            },
-            "railway/funicular": {
-                "name": "Funicular",
-                "terms": "venicular,cliff railway,cable car,cable railway,funicular railway"
-            },
-            "railway/halt": {
-                "name": "Railway Halt",
-                "terms": "break,interrupt,rest,wait,interruption"
-            },
-            "railway/level_crossing": {
-                "name": "Level Crossing",
-                "terms": "crossing,railroad crossing,railway crossing,grade crossing,road through railroad,train crossing"
-            },
-            "railway/monorail": {
-                "name": "Monorail",
-                "terms": ""
-            },
-            "railway/narrow_gauge": {
-                "name": "Narrow Gauge Rail",
-                "terms": "narrow gauge railway,narrow gauge railroad"
-            },
-            "railway/platform": {
-                "name": "Railway Platform",
-                "terms": ""
-            },
-            "railway/rail": {
-                "name": "Rail",
-                "terms": ""
-            },
-            "railway/station": {
-                "name": "Railway Station",
-                "terms": "train station,station"
-            },
-            "railway/subway": {
-                "name": "Subway",
-                "terms": ""
-            },
-            "railway/subway_entrance": {
-                "name": "Subway Entrance",
-                "terms": ""
-            },
-            "railway/tram": {
-                "name": "Tram",
-                "terms": "streetcar"
-            },
             "redd_project": {
                 "name": "REDD Protected Area",
                 "terms": ""
@@ -1020,74 +953,6 @@
             },
             "relation": {
                 "name": "Relation",
-                "terms": ""
-            },
-            "type/boundary": {
-                "name": "Boundary",
-                "terms": ""
-            },
-            "type/boundary/administrative": {
-                "name": "Administrative Boundary",
-                "terms": ""
-            },
-            "type/multipolygon": {
-                "name": "Multipolygon",
-                "terms": ""
-            },
-            "type/restriction": {
-                "name": "Restriction",
-                "terms": ""
-            },
-            "type/route": {
-                "name": "Route",
-                "terms": ""
-            },
-            "type/route/bicycle": {
-                "name": "Cycle Route",
-                "terms": ""
-            },
-            "type/route/bus": {
-                "name": "Bus Route",
-                "terms": ""
-            },
-            "type/route/detour": {
-                "name": "Detour Route",
-                "terms": ""
-            },
-            "type/route/ferry": {
-                "name": "Ferry Route",
-                "terms": ""
-            },
-            "type/route/foot": {
-                "name": "Foot Route",
-                "terms": ""
-            },
-            "type/route/hiking": {
-                "name": "Hiking Route",
-                "terms": ""
-            },
-            "type/route/pipeline": {
-                "name": "Pipeline Route",
-                "terms": ""
-            },
-            "type/route/power": {
-                "name": "Power Route",
-                "terms": ""
-            },
-            "type/route/road": {
-                "name": "Road Route",
-                "terms": ""
-            },
-            "type/route/train": {
-                "name": "Train Route",
-                "terms": ""
-            },
-            "type/route/tram": {
-                "name": "Tram Route",
-                "terms": ""
-            },
-            "type/route_master": {
-                "name": "Route Master",
                 "terms": ""
             },
             "vertex": {
