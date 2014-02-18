@@ -62236,7 +62236,7 @@ iD.introGraph = '{"n185954700":{"id":"n185954700","loc":[-85.642244,41.939081],"
                 ],
                 "terms": [],
                 "tags": {
-                    "protected_area": "*",
+                    "protected_area": "redd",
                     "area": "yes"
                 },
                 "name": "REDD Protected Area"
