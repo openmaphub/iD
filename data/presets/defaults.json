@@ -1,31 +1,16 @@
 {
     "area": [
         "category-landuse",
-        "category-building",
         "category-water-area",
-        "leisure/park",
-        "amenity/hospital",
-        "amenity/place_of_worship",
-        "amenity/cafe",
-        "amenity/restaurant",
         "area"
     ],
     "line": [
         "category-road",
         "category-rail",
-        "category-path",
         "category-water-line",
         "power/line"
     ],
     "point": [
-        "leisure/park",
-        "amenity/hospital",
-        "amenity/place_of_worship",
-        "amenity/cafe",
-        "amenity/restaurant",
-        "amenity/bar",
-        "amenity/bank",
-        "shop/supermarket",
         "point"
     ],
     "vertex": [
@@ -33,7 +18,6 @@
         "vertex"
     ],
     "relation": [
-        "category-route",
         "type/boundary",
         "type/restriction",
         "type/multipolygon",

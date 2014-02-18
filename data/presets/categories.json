@@ -1,31 +1,4 @@
 {
-    "category-building": {
-        "geometry": "area",
-        "name": "Building",
-        "icon": "building",
-        "members": [
-            "building/house",
-            "building/apartments",
-            "building/commercial",
-            "building/industrial",
-            "building/residential",
-            "building"
-        ]
-    },
-    "category-golf": {
-        "geometry": "area",
-        "name": "Golf",
-        "icon": "golf",
-        "members": [
-            "golf/fairway",
-            "golf/green",
-            "golf/lateral_water_hazard",
-            "golf/rough",
-            "golf/bunker",
-            "golf/tee",
-            "golf/water_hazard"
-        ]
-    },
     "category-landuse": {
         "geometry": "area",
         "name": "Land Use",
@@ -40,18 +13,6 @@
             "landuse/forest",
             "landuse/meadow",
             "landuse/cemetery"
-        ]
-    },
-    "category-path": {
-        "geometry": "line",
-        "name": "Path",
-        "icon": "category-path",
-        "members": [
-            "highway/footway",
-            "highway/cycleway",
-            "highway/bridleway",
-            "highway/path",
-            "highway/steps"
         ]
     },
     "category-rail": {
@@ -76,26 +37,6 @@
             "highway/secondary",
             "highway/trunk",
             "highway/unclassified"
-        ]
-    },
-    "category-route": {
-        "geometry": "relation",
-        "name": "Route",
-        "icon": "route",
-        "members": [
-            "type/route/road",
-            "type/route/bicycle",
-            "type/route/foot",
-            "type/route/hiking",
-            "type/route/bus",
-            "type/route/train",
-            "type/route/tram",
-            "type/route/ferry",
-            "type/route/power",
-            "type/route/pipeline",
-            "type/route/detour",
-            "type/route_master",
-            "type/route"
         ]
     },
     "category-water-area": {

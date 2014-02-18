@@ -1,0 +1,13 @@
+{
+    "icon": "park2",
+    "geometry": [
+        "point",
+        "area"
+    ],
+    "terms": [],
+    "tags": {
+        "protected_area": "*",
+        "area": "yes"
+    },
+    "name": "REDD Protected Area"
+}

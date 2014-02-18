@@ -692,11 +692,6 @@
         ],
         "label": "Type"
     },
-    "shop": {
-        "key": "shop",
-        "type": "typeCombo",
-        "label": "Type"
-    },
     "source": {
         "key": "source",
         "type": "text",
