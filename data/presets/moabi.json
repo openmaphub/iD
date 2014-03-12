@@ -1,0 +1,31 @@
+{    
+    "moabi": {
+        "fields": [
+            "landuse"
+        ],
+        "geometry": [
+            "point",
+            "vertex",
+            "line",
+            "area"
+        ],
+        "tags": {
+            "moabi": "*"
+        },
+        "name": "Moabi Land Preset"
+    },
+
+        "moabi1": {
+        "geometry": [
+            "point",
+            "vertex",
+            "line",
+            "area"
+        ],
+        "tags": {
+            "moabi": "*"
+        },
+        "name": "Another Moabi Preset"
+    }
+
+}
