@@ -6,7 +6,8 @@ var fs = require('fs'),
     jsonschema = require('jsonschema'),
     fieldSchema = require('./data/presets/schema/field.json'),
     presetSchema = require('./data/presets/schema/preset.json'),
-    suggestions = require('./data/name-suggestions.json');
+    suggestions = require('./data/name-suggestions.json'),
+    moabi = 'data/presets/moabi.json';
 
 function readtxt(f) {
     return fs.readFileSync(f, 'utf8');
@@ -169,6 +170,12 @@ function generatePresets() {
         presets[id] = preset;
     });
 
+    // Parse the moabi presets file and add them.
+    var moabiPresets = read(moabi);
+    for (p in moabiPresets) {
+        presets[p] = moabiPresets[p];
+    }
+ 
     presets = _.merge(presets, suggestionsToPresets(presets));
 
     fs.writeFileSync('data/presets/presets.json', stringify(presets));

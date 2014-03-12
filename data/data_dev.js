@@ -18,7 +18,8 @@ iD.data = {
             path + 'data/operations-sprite.json',
             path + 'data/locales.json',
             path + 'dist/locales/en.json',
-            path + 'data/name-suggestions.json'
+            path + 'data/name-suggestions.json',
+            path + 'data/presets/moabi.json'
             ], d3.json, function (err, data) {
 
             iD.data = {
@@ -37,9 +38,14 @@ iD.data = {
                 operations: data[10],
                 locales: data[11],
                 en: data[12],
-                suggestions: data[13]
+                suggestions: data[13],
             };
 
+            // Parse the moabi presets file and add them.
+            moabi = data[14];
+            for (p in moabi) {
+                iD.data.presets.presets[p] = moabi[p];
+            }
             callback();
         });
     }

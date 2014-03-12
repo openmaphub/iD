@@ -27192,6 +27192,12 @@ iD.ui.Notice = function(context) {
             .attr('class', 'label')
             .text(t('zoom_in_edit'));
 
+        var anotherButton = div.append('button')
+            .on('click', function() { console.log('Hello!'); });
+
+        anotherButton.append('span')
+            .text('Hello!')
+
         function disableTooHigh() {
             div.style('display', context.map().editable() ? 'none' : 'block');
         }
@@ -30850,7 +30856,6 @@ iD.presets = function() {
     };
 
     all.load = function(d) {
-
         if (d.fields) {
             _.forEach(d.fields, function(d, id) {
                 fields[id] = iD.presets.Field(id, d);
@@ -62430,6 +62435,33 @@ iD.introGraph = '{"n185954700":{"id":"n185954700","loc":[-85.642244,41.939081],"
                     "waterway": "weir"
                 },
                 "name": "Weir"
+            },
+            "moabi": {
+                "fields": [
+                    "landuse"
+                ],
+                "geometry": [
+                    "point",
+                    "vertex",
+                    "line",
+                    "area"
+                ],
+                "tags": {
+                    "moabi": "*"
+                },
+                "name": "Moabi Land Preset"
+            },
+            "moabi1": {
+                "geometry": [
+                    "point",
+                    "vertex",
+                    "line",
+                    "area"
+                ],
+                "tags": {
+                    "moabi": "*"
+                },
+                "name": "Another Moabi Preset"
             }
         },
         "defaults": {
