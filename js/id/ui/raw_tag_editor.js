@@ -8,6 +8,7 @@ iD.ui.RawTagEditor = function(context) {
         id;
 
     function rawTagEditor(selection) {
+        console.log(selection);
         var count = Object.keys(tags).filter(function(d) { return d; }).length;
 
         selection.call(iD.ui.Disclosure()

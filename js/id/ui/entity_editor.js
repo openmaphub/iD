@@ -97,6 +97,8 @@ iD.ui.EntityEditor = function(context) {
                 .tags(tags)
                 .state(state)
                 .on('change', changeTags));
+        
+        console.log(preset);
 
         $body.select('.raw-tag-editor')
             .call(rawTagEditor

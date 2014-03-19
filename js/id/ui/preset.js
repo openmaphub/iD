@@ -60,6 +60,7 @@ iD.ui.preset = function(context) {
     }
 
     function presets(selection) {
+        console.log(selection);
         if (!fields) {
             var entity = context.entity(id),
                 geometry = context.geometry(id);

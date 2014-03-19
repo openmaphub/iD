@@ -2501,6 +2501,13 @@ img.wiki-image {
     opacity: 0.9;
 }
 
+.notice .preset-editor {
+    bottom: 50%;
+    margin: auto;
+    width: 80%;
+    height: 100px;
+}
+
 .notice .zoom-to:hover {
     background: #d8e1ff;
 }

@@ -122,7 +122,6 @@ iD.Map = function(context) {
                     return d.id in complete;
                 }
             };
-
         } else if (extent) {
             all = context.intersects(map.extent().intersection(extent));
             var set = d3.set(_.pluck(all, 'id'));
@@ -193,7 +192,6 @@ iD.Map = function(context) {
     }
 
     function redraw(difference, extent) {
-
         if (!surface) return;
 
         clearTimeout(timeoutId);
@@ -208,7 +206,7 @@ iD.Map = function(context) {
         var zoom = String(~~map.zoom());
         if (surface.attr('data-zoom') !== zoom) {
             surface.attr('data-zoom', zoom)
-                .classed('low-zoom', zoom <= 16);
+                .classed('low-zoom', zoom <= 5);
         }
 
         if (!difference) {
@@ -218,6 +216,7 @@ iD.Map = function(context) {
         if (map.editable()) {
             var q = iD.util.stringQs(location.hash.substring(1));
             if (!q.id) {
+                // console.log('here');
                 context.connection().loadTiles(projection, dimensions);
             }
             drawVector(difference, extent);
@@ -411,8 +410,9 @@ iD.Map = function(context) {
         var q = iD.util.stringQs(location.hash.substring(1));
         if (q.id) {
             return map.zoom() >= 5;
+        } else {
+            return map.zoom() >=14;
         }
-        return map.zoom() >=14;
     };
 
     map.minzoom = function(_) {

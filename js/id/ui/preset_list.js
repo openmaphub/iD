@@ -5,6 +5,7 @@ iD.ui.PresetList = function(context) {
         autofocus = false;
 
     function presetList(selection) {
+        console.log(selection);
         var geometry = context.geometry(id),
             presets = context.presets().matchGeometry(geometry);
 
