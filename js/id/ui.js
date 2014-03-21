@@ -76,6 +76,9 @@ iD.ui = function(context) {
             .attr('class', 'map-control help-control')
             .call(iD.ui.Help(context));
 
+        controls.append('div')
+            .attr('class', 'map-control preset-editor-control');
+
         var about = content.append('div')
             .attr('class','col12 about-block fillD');
 

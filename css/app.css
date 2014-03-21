@@ -1745,6 +1745,12 @@ button.minor.tag-reference-loading {
     width: 100%;
 }
 
+.preset-editor .tag-reference-body {
+    border-bottom: 1px solid #ccc;
+    float: left;
+    width: 89%;
+}
+
 .raw-tag-editor .tag-reference-body p:last-child {
     padding-bottom: 20px;
 }
@@ -2138,6 +2144,12 @@ img.wiki-image {
 .help-wrap .nav a:only-child {
     width: 100%;
     border-radius: 4px;
+}
+
+/* Preset Editor */
+
+.preset-editor-control button {
+    border-radius: 0 0 0 4px;
 }
 
 /* Map
