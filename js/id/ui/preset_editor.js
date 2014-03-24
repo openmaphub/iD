@@ -1,16 +1,40 @@
 iD.ui.PresetEditor = function(context) {
 
-    // Disable notice.
-    var $notice = d3.select('.notice');
-    $notice.attr('style', 'display:none');
+    var key = 'p';
 
-    // Hide feature list pane
-    var $featureList = d3.select('.feature-list-pane');
-    $featureList.classed('inspector-hidden', true);
+    function presetEditor (selection) {
 
-    return function (selection) {
         selection.html('');
-        
+
+        var tooltip = bootstrap.tooltip()
+        .placement('left')
+        .html(true)
+        .title('Preset Editor', key);
+
+        var button = selection.append('button')
+        .attr('tabindex', -1)
+        .on('click', loadEditor)
+        .call(tooltip);
+
+        button.append('span')
+        .attr('class', 'preset-editor-icon');
+
+    }
+
+    function loadEditor() {
+
+        // Hide feature list pane
+        d3.select('.feature-list-pane')
+        .classed('inspector-hidden', true);
+
+        // Disable notice.
+        var $notice = d3.select('.notice');
+        $notice.attr('style', 'display:none');
+
+
+        selection = d3.select('.inspector-wrap');
+        selection.html('');
+
         selection.classed('inspector-hidden', false);
 
         var $pane = selection.append('div')
@@ -43,11 +67,11 @@ iD.ui.PresetEditor = function(context) {
         $enter.select('.preset-close')    
         .on('click', function () { 
             context.enter(iD.modes.Browse(context));
-            // selection.classed('inspector-hidden', true);
-            // d3.select('.notice')
-            // .attr('style', 'display: block');
-            // d3.selectAll('.panewrap').remove(); 
-        });
+        // selection.classed('inspector-hidden', true);
+        // d3.select('.notice')
+        // .attr('style', 'display: block');
+        // d3.selectAll('.panewrap').remove(); 
+    });
 
         var $inspectorBody = $entityEditor.append('div')
         .attr('class', 'inspector-body');
@@ -59,7 +83,7 @@ iD.ui.PresetEditor = function(context) {
         .attr('class', 'preset-form inspector-inner fillL3')
         .append('div')
         .attr('class', 'form-field form-field-name');
-        
+
         $presetForm.append('label')
         .attr('class', 'form-label')
         .text('Preset Name');
@@ -113,24 +137,8 @@ iD.ui.PresetEditor = function(context) {
         .attr('class', 'add-tag')
         .append('span')
         .attr('class', 'icon plus light');
+    }                 
 
+    return presetEditor;
 
-
-        //  .text('Something');
-        // var $form = selection.selectAll('.preset-form')
-        //     .data([0]);
-
-        // $form.enter().append('div')
-        //     .attr('class', 'preset-form inspector-inner fillL3');
-
-        // var $fields = $form.selectAll('.form-field')
-        //     .attr('class', 'form-field-name');
-
-        // var $label = $form.append('label')
-        //     .attr('class', 'form-label')
-        //     .attr('for', 'preset-input-name');            
-    }
-
-    // return presetEditor;
-    
 }

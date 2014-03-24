@@ -2152,6 +2152,16 @@ img.wiki-image {
     border-radius: 0 0 0 4px;
 }
 
+.preset-editor-icon {
+  display:inline-block;
+  vertical-align:top;
+  width:20px;
+  height:20px;
+  background:transparent url(img/preset-editor.png) no-repeat 0 0;
+  text-indent:-9999px;
+  overflow:hidden;
+  }
+
 /* Map
 ------------------------------------------------------- */
 

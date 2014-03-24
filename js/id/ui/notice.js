@@ -14,12 +14,6 @@ iD.ui.Notice = function(context) {
             .attr('class', 'label')
             .text(t('zoom_in_edit'));
 
-        var presetEditorButton = div.append('button')
-            .attr('class', 'preset-editor notice')
-            .text('Preset Editor')
-            .on('click', function() { 
-                d3.select('.inspector-wrap').call(iD.ui.PresetEditor(context)); });
-            
         function disableTooHigh() {
             div.style('display', context.map().editable() ? 'none' : 'block');
         }
