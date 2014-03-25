@@ -120,6 +120,7 @@ iD.ui.PresetEditor = function(context) {
             $enter.append('button')
             .attr('tabindex', -1)
             .attr('class', 'remove minor')
+            .on('click', removeTag)
             .append('span')
             .attr('class', 'icon delete');
 
@@ -137,6 +138,10 @@ iD.ui.PresetEditor = function(context) {
         .attr('class', 'add-tag')
         .append('span')
         .attr('class', 'icon plus light');
+
+        function removeTag () {
+            d3.select(this.parentNode).remove();
+        }
     }                 
 
     return presetEditor;
