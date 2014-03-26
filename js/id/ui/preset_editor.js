@@ -119,12 +119,10 @@ iD.ui.PresetEditor = function(context) {
         }
         
         function applyPresets () {
-            var preset = {},
-                tags = {},
-                geometry = {},
+            var tags = {},
+                geometry = ["point", "area"],
                 fields = {},
                 name = {};
-
 
             var presetName = d3.select('#preset-input-name').value();
             
@@ -135,8 +133,8 @@ iD.ui.PresetEditor = function(context) {
                 value = row.selectAll('input.value').value();
                 tags[key] = value;
                 });
-            console.log(tags);
-
+            iD.data.presets.presets[presetName] = {'tags': tags, 'geometry': geometry, 'name': presetName};
+            context.presets().load(iD.data.presets);
         }                
 
     }

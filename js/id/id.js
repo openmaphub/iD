@@ -274,6 +274,8 @@ window.iD = function () {
         return presets;
     };
 
+    console.log(context.presets());
+
     context.container = function(_) {
         if (!arguments.length) return container;
         container = _;
