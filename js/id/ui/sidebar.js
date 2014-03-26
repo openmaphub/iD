@@ -56,6 +56,7 @@ iD.ui.Sidebar = function(context) {
         };
 
         sidebar.show = function(component) {
+            console.log('side bar component', component);
             featureListWrap.classed('inspector-hidden', true);
             inspectorWrap.classed('inspector-hidden', true);
             if (current) current.remove();

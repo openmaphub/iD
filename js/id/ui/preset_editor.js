@@ -1,41 +1,10 @@
 iD.ui.PresetEditor = function(context) {
 
-    var key = 'p';
+    var event = d3.dispatch('cancel', 'save');
 
-    function presetEditor (selection) {
+    function presetEditor(selection) {
 
         selection.html('');
-
-        var tooltip = bootstrap.tooltip()
-        .placement('left')
-        .html(true)
-        .title('Preset Editor', key);
-
-        var button = selection.append('button')
-        .attr('tabindex', -1)
-        .on('click', loadEditor)
-        .call(tooltip);
-
-        button.append('span')
-        .attr('class', 'preset-editor-icon');
-
-    }
-
-    function loadEditor() {
-
-        // Hide feature list pane
-        d3.select('.feature-list-pane')
-        .classed('inspector-hidden', true);
-
-        // Disable notice.
-        var $notice = d3.select('.notice');
-        $notice.attr('style', 'display:none');
-
-
-        selection = d3.select('.inspector-wrap');
-        selection.html('');
-
-        selection.classed('inspector-hidden', false);
 
         var $pane = selection.append('div')
         .attr('class', 'panewrap')
@@ -63,15 +32,10 @@ iD.ui.PresetEditor = function(context) {
         $enter.select('h3')
         .text('Preset Editor');
 
-        // FIXME - Button is misbehaving.
         $enter.select('.preset-close')    
-        .on('click', function () { 
+        .on('click', function () {
             context.enter(iD.modes.Browse(context));
-        // selection.classed('inspector-hidden', true);
-        // d3.select('.notice')
-        // .attr('style', 'display: block');
-        // d3.selectAll('.panewrap').remove(); 
-    });
+        });
 
         var $inspectorBody = $entityEditor.append('div')
         .attr('class', 'inspector-body');
@@ -133,17 +97,49 @@ iD.ui.PresetEditor = function(context) {
         .attr('class', 'tag-list')
         .call(rawTagRow)
 
+
         $rawTagEditor.append('button')
         .on('click', rawTagRow)
         .attr('class', 'add-tag')
         .append('span')
         .attr('class', 'icon plus light');
 
+        $button = $inspectorBody.append('button')
+        .attr('class', 'action col4 button preset-editor')
+        // FIXME: Ideally, it should fire save and this should be handled in modes.preset_editor.js
+        // .on('click', event.save);
+        .on('click', applyPresets);
+
+        $button.append('span')
+        .attr('class', 'label')
+        .text('Save');
+
         function removeTag () {
             d3.select(this.parentNode).remove();
         }
-    }                 
+        
+        function applyPresets () {
+            var preset = {},
+                tags = {},
+                geometry = {},
+                fields = {},
+                name = {};
 
-    return presetEditor;
 
+            var presetName = d3.select('#preset-input-name').value();
+            
+            var newTags = d3.selectAll('.tag-row');
+            newTags.each(function() {
+                row = d3.select(this);
+                key = row.selectAll('input.key').value(),
+                value = row.selectAll('input.value').value();
+                tags[key] = value;
+                });
+            console.log(tags);
+
+        }                
+
+    }
+
+    return d3.rebind(presetEditor, event, 'on');
 }

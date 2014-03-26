@@ -78,7 +78,7 @@ iD.ui = function(context) {
 
         controls.append('div')
             .attr('class', 'map-control preset-editor-control')
-            .call(iD.ui.PresetEditor(context));
+            .call(iD.ui.EditPresets(context));
 
         var about = content.append('div')
             .attr('class','col12 about-block fillD');
