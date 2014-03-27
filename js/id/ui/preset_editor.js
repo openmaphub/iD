@@ -6,66 +6,67 @@ iD.ui.PresetEditor = function(context) {
 
         selection.html('');
 
-        var $pane = selection.append('div')
-        .attr('class', 'panewrap')
-        .attr('style', 'right: 0%');
+        var header = selection.append('div')
+            .attr('class', 'header fillL');
 
-        $pane.append('div')
-        .attr('class', 'preset-list-pane pane');
+        header.append('button')
+            .attr('class', 'fr')
+            .on('click', function() {context.enter(iD.modes.Browse(context));})
+            .append('span')
+            .attr('class', 'icon close');
 
-        var $entityEditor = $pane.append('div')
-        .attr('class', 'entity-editor-pane pane');
+        header.append('h3')
+            .text('Preset Editor');
 
+        var body = selection.append('div')
+            .attr('class', 'body');
 
-        var $header = $entityEditor.append('div');
+        var presetSection = body.append('div')
+            .attr('class', 'modal-section')
 
-        var $enter = $entityEditor.append('div')
-        .attr('class', 'header fillL cf');
+        var presetForm = presetSection.append('div')
+            .attr('class', 'preset-form fillL3');
 
-        $enter.append('button')
-        .attr('class', 'fr preset-close')
-        .append('span')
-        .attr('class', 'icon close');
+        var presetFormField = presetForm.append('div')
+            .attr('class', 'form-field form-field-name');
 
+        var presetNameLabel = presetFormField.append('label')
+            .attr('class', 'form-label')
+            .text('Preset Name');
 
-        $enter.append('h3');
-        $enter.select('h3')
-        .text('Preset Editor');
+        var presetNameForm = presetFormField.append('input')
+            .attr('id', 'preset-input-name')
+            .attr('style', 'width: 100%;');
 
-        $enter.select('.preset-close')    
-        .on('click', function () {
-            context.enter(iD.modes.Browse(context));
-        });
+        var tagSection = body.append('div')
+            .attr('class', 'modal-section');
 
-        var $inspectorBody = $entityEditor.append('div')
-        .attr('class', 'inspector-body');
+        var presetEditor = tagSection.append('div')
+            .attr('class', 'preset-editor')
 
-        var $inspectorBorder = $inspectorBody.append('div')
-        .attr('class', 'inspector-border inspector-preset');
+        var tagList = presetEditor.append('div')
+            .append('ul')
+            .attr('class', 'tag-list')
+            .call(rawTagRow);
 
-        var $presetForm = $inspectorBorder.append('div')
-        .attr('class', 'preset-form inspector-inner fillL3')
-        .append('div')
-        .attr('class', 'form-field form-field-name');
+        var addTagButton = presetEditor.append('button')
+            .on('click', rawTagRow)
+            .attr('class', 'add-tag')
+            .append('span')
+            .attr('class', 'icon plus light');
 
-        $presetForm.append('label')
-        .attr('class', 'form-label')
-        .text('Preset Name');
-
-        $presetForm.append('input')
-        .attr('id', 'preset-input-name')
-        .attr('type', 'text');
-
-        var $rawTagEditor = $inspectorBody.append('div')
-        .attr('class', 'inspector-border preset-editor inspector-inner');
+        var saveButton = body.append('modal-section')
+            .append('button')
+            .attr('class', 'action col4 button preset-editor')
+            .on('click', applyPresets)
+            .text('Save');
 
         function rawTagRow () {
 
-            $selection = d3.select('.tag-list');
+            $selection = d3.select('.sidebar-component .tag-list');
 
             $enter = $selection.append('li')
             .attr('class', 'tag-row cf');
-
 
             $enter.append('div')
             .attr('class', 'key-wrap')
@@ -92,27 +93,15 @@ iD.ui.PresetEditor = function(context) {
             .attr('class', 'tag-reference-body cf');
         }
 
-        $rawTagEditor.append('div')
-        .append('ul')
-        .attr('class', 'tag-list')
-        .call(rawTagRow)
-
-
-        $rawTagEditor.append('button')
-        .on('click', rawTagRow)
-        .attr('class', 'add-tag')
-        .append('span')
-        .attr('class', 'icon plus light');
-
-        $button = $inspectorBody.append('button')
-        .attr('class', 'action col4 button preset-editor')
+        // $button = $inspectorBody.append('button')
+        // .attr('class', 'action col4 button preset-editor')
         // FIXME: Ideally, it should fire save and this should be handled in modes.preset_editor.js
         // .on('click', event.save);
-        .on('click', applyPresets);
+        // .on('click', applyPresets);
 
-        $button.append('span')
-        .attr('class', 'label')
-        .text('Save');
+        // $button.append('span')
+        // .attr('class', 'label')
+        // .text('Save');
 
         function removeTag () {
             d3.select(this.parentNode).remove();

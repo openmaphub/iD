@@ -965,7 +965,7 @@ a:hover .icon.out-link   { background-position: -500px -14px;}
     overflow: hidden;
 }
 
-.inspector-preset .preset-form {
+.inspector-preset, .modal-section .preset-form {
     padding: 10px;
     margin: 0 10px 20px 10px;
     border-radius: 8px;
@@ -1679,7 +1679,7 @@ div.combobox {
 }
 
 /* Adding form fields to tag editor */
-
+.modal-section .add-tag,
 .inspector-inner .add-tag {
     width: 40%;
     height: 30px;
