@@ -22,7 +22,7 @@ iD.ui.PresetEditor = function(context) {
             .attr('class', 'body');
 
         var presetSection = body.append('div')
-            .attr('class', 'modal-section')
+            .attr('class', 'modal-section');
 
         var presetForm = presetSection.append('div')
             .attr('class', 'preset-form fillL3');
