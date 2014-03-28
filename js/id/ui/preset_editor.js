@@ -67,6 +67,37 @@ iD.ui.PresetEditor = function(context) {
             .on('click', applyPresets)
             .text('Save');
 
+        var editExistingPointPresetButton = body.append('modal-section')
+            .append('button')
+            .attr('class', 'action col4 button preset-editor')
+            .on('click', function() {
+                editExistingPresets('point');
+            })
+            .text('Edit Point Preset');
+
+        var editExistingPointPresetButton = body.append('modal-section')
+            .append('button')
+            .attr('class', 'action col4 button preset-editor')
+            .on('click', function() {
+                editExistingPresets('line');
+            })
+            .text('Edit Line Preset');
+
+        var editExistingPointPresetButton = body.append('modal-section')
+            .append('button')
+            .attr('class', 'action col4 button preset-editor')
+            .on('click', function() {
+                editExistingPresets('area');
+            })
+            .text('Edit Area Preset');
+
+        function editExistingPresets(geometryType) {
+            console.log("edit existing presets");
+            var editPresetList = iD.ui.EditPresetList(context, geometryType);
+            console.log("presetList", editPresetList);
+            body.call(editPresetList);
+        }
+
 
 
         function rawTagRow () {
@@ -146,25 +177,27 @@ iD.ui.PresetEditor = function(context) {
                 tags[key] = value;
                 });
             iD.data.presets.presets[presetName] = {'tags': tags, 'geometry': geometry, 'name': presetName};
-            context.presets().load(iD.data.presets);
-            validateTags(tags);
-            noticeSection.text('Success!');
+            console.log(validateTags(tags));
+            // if (validateTags(tags)) {
+            //     noticeSection.text('Success!');
+            //     context.presets().load(iD.data.presets);
+            // };
         }
 
         function validateTags (tags) {
-            // console.log(tags);
             tags = d3.entries(tags);
-            // tags.each(function () {
-            //     tag = this;
-            //     if (tag.key && !tag.value) {
-            //         console.log('key yes, no value');
-            //     }
-            //     else if
-            // })
+            emptyTags = tags.some(function (tag) {
+                console.log(tag);
+                if (tag.value.length == 0) {
+                    return false;
+                }
+                else {
+                    return false;
+                }
+            });
 
-            // tags.each(function (tag) {
-            //     console(tag);
-            // });
+            if (emptyTags)
+            return true;
         }                
 
     }
