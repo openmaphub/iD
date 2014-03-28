@@ -6,6 +6,8 @@ iD.ui.PresetEditor = function(context) {
 
         selection.html('');
 
+
+
         var header = selection.append('div')
             .attr('class', 'header fillL');
 
@@ -20,6 +22,10 @@ iD.ui.PresetEditor = function(context) {
 
         var body = selection.append('div')
             .attr('class', 'body');
+
+        var noticeSection = body.append('div')
+            .attr('class', 'modal-section warning-section fillL2')
+            .append('h3');
 
         var presetSection = body.append('div')
             .attr('class', 'modal-section');
@@ -61,36 +67,53 @@ iD.ui.PresetEditor = function(context) {
             .on('click', applyPresets)
             .text('Save');
 
+
+
         function rawTagRow () {
 
             $selection = d3.select('.sidebar-component .tag-list');
 
-            $enter = $selection.append('li')
+            $row = $selection.append('li')
             .attr('class', 'tag-row cf');
 
-            $enter.append('div')
+            $key = $row.append('div')
             .attr('class', 'key-wrap')
             .append('input')
             .property('type', 'text')
             .attr('class', 'key')
-            .attr('maxlength', 255);
+            .attr('maxlength', 255)
+            .on('input', inputevent)
+            .on('keydown', keydown);
 
-            $enter.append('div')
+            $row.append('div')
             .attr('class', 'input-wrap-position')
             .append('input')
             .property('type', 'text')
+            .property('disabled', true)
             .attr('class', 'value')
             .attr('maxlength', 255);
 
-            $enter.append('button')
+            $row.append('button')
             .attr('tabindex', -1)
             .attr('class', 'remove minor')
             .on('click', removeTag)
             .append('span')
             .attr('class', 'icon delete');
 
-            $enter.append('div')
+            $row.append('div')
             .attr('class', 'tag-reference-body cf');
+        }
+
+        function inputevent () {
+            row = d3.select(this.parentNode.parentNode);
+            row.select('input.value').property('disabled', false);
+        }
+
+        function keydown () {
+            row = d3.select(this.parentNode.parentNode);
+            if (d3.select(this).property('value').length == 0) {
+                row.select('input.value').property('disabled', true);
+            }
         }
 
         // $button = $inspectorBody.append('button')
@@ -124,6 +147,24 @@ iD.ui.PresetEditor = function(context) {
                 });
             iD.data.presets.presets[presetName] = {'tags': tags, 'geometry': geometry, 'name': presetName};
             context.presets().load(iD.data.presets);
+            validateTags(tags);
+            noticeSection.text('Success!');
+        }
+
+        function validateTags (tags) {
+            // console.log(tags);
+            tags = d3.entries(tags);
+            // tags.each(function () {
+            //     tag = this;
+            //     if (tag.key && !tag.value) {
+            //         console.log('key yes, no value');
+            //     }
+            //     else if
+            // })
+
+            // tags.each(function (tag) {
+            //     console(tag);
+            // });
         }                
 
     }
