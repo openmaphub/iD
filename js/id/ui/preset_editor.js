@@ -95,6 +95,7 @@ iD.ui.PresetEditor = function(context) {
             console.log("edit existing presets");
             var editPresetList = iD.ui.EditPresetList(context, geometryType);
             console.log("presetList", editPresetList);
+            body.attr('class', 'preset-editor');
             body.call(editPresetList);
         }
 

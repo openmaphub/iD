@@ -12,12 +12,15 @@ iD.ui.EditPresetList = function(context, geometryType) {
         //     presets = context.presets().matchGeometry(geometry);
 
         selection.html('');
+        // var messagewrap = selection.append('div')
+        //     .attr('class', 'header fillL cf');
 
-        var messagewrap = selection.append('div')
-            .attr('class', 'header fillL cf');
+        // var message = messagewrap.append('h3')
+        //     .text(t('inspector.choose'));
 
-        var message = messagewrap.append('h3')
-            .text(t('inspector.choose'));
+        presetListSection = selection.append('div')
+            .attr('class', 'preset-list-pane');
+
 
         // if (context.entity(id).isUsed(context.graph())) {
         //     messagewrap.append('button')
@@ -67,24 +70,24 @@ iD.ui.EditPresetList = function(context, geometryType) {
             list.classed('filtered', value.length);
             if (value.length) {
                 var results = presets.search(value, geometry);
-                message.text(t('inspector.results', {
-                    n: results.collection.length,
-                    search: value
-                }));
+                // message.text(t('inspector.results', {
+                //     n: results.collection.length,
+                //     search: value
+                // }));
                 list.call(drawList, results);
             } else {
                 console.log("no value, do nothing.")
                 list.call(drawList, context.presets().defaults(geometry, 36));
-                message.text(t('inspector.choose'));
+                // message.text(t('inspector.choose'));
             }
         }
 
-        var searchWrap = selection.append('div')
+        var searchWrap = presetListSection.append('div')
             .attr('class', 'search-header');
 
         var search = searchWrap.append('input')
             .attr('class', 'preset-search-input')
-            .attr('placeholder', t('inspector.search'))
+            .attr('placeholder', 'Search Presets')
             .attr('type', 'search')
             .on('keydown', keydown)
             .on('keypress', keypress)
@@ -97,7 +100,7 @@ iD.ui.EditPresetList = function(context, geometryType) {
             search.node().focus();
         }
 
-        var listWrap = selection.append('div')
+        var listWrap = presetListSection.append('div')
             .attr('class', 'inspector-body');
 
         var list = listWrap.append('div')

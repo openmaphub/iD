@@ -1,4 +1,5 @@
 iD.ui.PresetList = function(context) {
+    GLOB = context;
     var event = d3.dispatch('choose'),
         id,
         currentPreset,

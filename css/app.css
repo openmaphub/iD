@@ -2170,6 +2170,10 @@ img.wiki-image {
     margin-top: 10px;
 }
 
+.sidebar-component .body.preset-editor {
+    top: 0px;
+}
+
 /* Map
 ------------------------------------------------------- */
 
