@@ -96,9 +96,6 @@ iD.presets = function() {
     };
 
     all.defaults = function(geometry, n) {
-        if (geometry === "all") {
-            return iD.presets.Collection([]);
-        }
         var rec = recent.matchGeometry(geometry).collection.slice(0, 4),
             def = _.uniq(rec.concat(defaults[geometry].collection)).slice(0, n - 1);
         return iD.presets.Collection(_.unique(rec.concat(def).concat(all.item(geometry))));

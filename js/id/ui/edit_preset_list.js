@@ -77,7 +77,7 @@ iD.ui.EditPresetList = function(context, geometryType) {
                 list.call(drawList, results);
             } else {
                 console.log("no value, do nothing.")
-                list.call(drawList, context.presets().defaults(geometry, 36));
+                list.call(drawList, context.presets());
                 // message.text(t('inspector.choose'));
             }
         }
@@ -105,7 +105,10 @@ iD.ui.EditPresetList = function(context, geometryType) {
 
         var list = listWrap.append('div')
             .attr('class', 'preset-list fillL cf')
-            .call(drawList, context.presets().defaults(geometryType, 36));
+
+            // Avoid displaying defaults specific to geometry.
+            // Display everything.
+            .call(drawList, context.presets());
     }
 
     function drawList(list, presets) {
