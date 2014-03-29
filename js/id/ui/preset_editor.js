@@ -6,8 +6,6 @@ iD.ui.PresetEditor = function(context) {
 
         selection.html('');
 
-
-
         var header = selection.append('div')
             .attr('class', 'header fillL');
 
@@ -25,78 +23,77 @@ iD.ui.PresetEditor = function(context) {
 
         var noticeSection = body.append('div')
             .attr('class', 'modal-section warning-section fillL2')
+            .style('display', 'none')
             .append('h3');
 
-        var presetSection = body.append('div')
-            .attr('class', 'modal-section');
 
-        var presetForm = presetSection.append('div')
-            .attr('class', 'preset-form fillL3');
 
-        var presetFormField = presetForm.append('div')
-            .attr('class', 'form-field form-field-name');
-
-        var presetNameLabel = presetFormField.append('label')
-            .attr('class', 'form-label')
-            .text('Preset Name');
-
-        var presetNameForm = presetFormField.append('input')
-            .attr('id', 'preset-input-name')
-            .attr('style', 'width: 100%;');
-
-        var tagSection = body.append('div')
-            .attr('class', 'modal-section');
-
-        var presetEditor = tagSection.append('div')
-            .attr('class', 'preset-editor')
-
-        var tagList = presetEditor.append('div')
-            .append('ul')
-            .attr('class', 'tag-list')
-            .call(rawTagRow);
-
-        var addTagButton = presetEditor.append('button')
-            .on('click', rawTagRow)
-            .attr('class', 'add-tag')
-            .append('span')
-            .attr('class', 'icon plus light');
-
-        var saveButton = body.append('modal-section')
+        var addNewButton = body.append('modal-section')
             .append('button')
             .attr('class', 'action col4 button preset-editor')
-            .on('click', applyPresets)
-            .text('Save');
+            .on('click', renderPresetForm)
+            .text('Add New Preset');
 
         var editExistingPointPresetButton = body.append('modal-section')
             .append('button')
             .attr('class', 'action col4 button preset-editor')
             .on('click', function() {
-                editExistingPresets('point');
+                editExistingPresets();
             })
-            .text('Edit Point Preset');
+            .text('Edit Existing Preset');
 
-        var editExistingPointPresetButton = body.append('modal-section')
-            .append('button')
-            .attr('class', 'action col4 button preset-editor')
-            .on('click', function() {
-                editExistingPresets('line');
-            })
-            .text('Edit Line Preset');
-
-        var editExistingPointPresetButton = body.append('modal-section')
-            .append('button')
-            .attr('class', 'action col4 button preset-editor')
-            .on('click', function() {
-                editExistingPresets('area');
-            })
-            .text('Edit Area Preset');
-
-        function editExistingPresets(geometryType) {
+        function editExistingPresets() {
+            geometryType = 'point';
             console.log("edit existing presets");
             var editPresetList = iD.ui.EditPresetList(context, geometryType);
             console.log("presetList", editPresetList);
             body.attr('class', 'preset-editor');
             body.call(editPresetList);
+        }
+
+        function renderPresetForm () {
+
+            body.html('');
+
+            var presetSection = body.append('div')
+                .attr('class', 'modal-section');
+
+            var presetForm = presetSection.append('div')
+                .attr('class', 'preset-form fillL3');
+
+            var presetFormField = presetForm.append('div')
+                .attr('class', 'form-field form-field-name');
+
+            var presetNameLabel = presetFormField.append('label')
+                .attr('class', 'form-label')
+                .text('Preset Name');
+
+            var presetNameForm = presetFormField.append('input')
+                .attr('id', 'preset-input-name')
+                .attr('style', 'width: 100%;');
+
+            var tagSection = body.append('div')
+                .attr('class', 'modal-section');
+
+            var presetEditor = tagSection.append('div')
+                .attr('class', 'preset-editor')
+
+            var tagList = presetEditor.append('div')
+                .append('ul')
+                .attr('class', 'tag-list')
+                .call(rawTagRow);
+
+            var addTagButton = presetEditor.append('button')
+                .on('click', rawTagRow)
+                .attr('class', 'add-tag')
+                .append('span')
+                .attr('class', 'icon plus light');
+
+            var saveButton = body.append('modal-section')
+                .append('button')
+                .attr('class', 'action col4 button preset-editor')
+                .on('click', applyPresets)
+                .text('Save');
         }
 
 
