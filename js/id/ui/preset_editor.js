@@ -21,11 +21,6 @@ iD.ui.PresetEditor = function(context) {
         var body = selection.append('div')
             .attr('class', 'body');
 
-        var noticeSection = body.append('div')
-            .attr('class', 'modal-section warning-section fillL2')
-            .style('display', 'none')
-            .append('h3');
-
 
 
         var addNewButton = body.append('modal-section')
@@ -54,6 +49,11 @@ iD.ui.PresetEditor = function(context) {
         function renderPresetForm () {
 
             body.html('');
+
+            var noticeSection = body.append('div')
+                .attr('class', 'modal-section warning-section fillL2')
+                .style('display', 'none')
+                .append('h3');
 
             var presetSection = body.append('div')
                 .attr('class', 'modal-section');
@@ -175,27 +175,28 @@ iD.ui.PresetEditor = function(context) {
                 tags[key] = value;
                 });
             iD.data.presets.presets[presetName] = {'tags': tags, 'geometry': geometry, 'name': presetName};
-            console.log(validateTags(tags));
-            // if (validateTags(tags)) {
-            //     noticeSection.text('Success!');
-            //     context.presets().load(iD.data.presets);
-            // };
+
+            if (validateTags(tags)) {
+                d3.select('.warning-section').style('display', 'block')
+                    .text('New Preset Saved');
+                context.presets().load(iD.data.presets);
+            }
+            else {
+                d3.select('.warning-section').style('display', 'block')
+                    .text('Tags must have a value.');
+            }
         }
 
         function validateTags (tags) {
             tags = d3.entries(tags);
-            emptyTags = tags.some(function (tag) {
-                console.log(tag);
-                if (tag.value.length == 0) {
+            for (var i = 0; i < tags.length; i++) {
+                if (tags[i].value.length == 0) {
                     return false;
                 }
                 else {
-                    return false;
+                    return true;
                 }
-            });
-
-            if (emptyTags)
-            return true;
+            }
         }                
 
     }
