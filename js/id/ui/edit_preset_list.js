@@ -210,13 +210,7 @@ iD.ui.EditPresetList = function(context, geometryType) {
         }
 
         item.choose = function() {
-            console.log("preset chosen", preset);
-            // context.presets().choose(preset);
-
-            // context.perform(
-            //     iD.actions.ChangePreset(id, currentPreset, preset),
-            //     t('operations.change_tags.annotation'));
-
+            iD.ui.PresetEditor(context).render(preset);
             event.choose(preset);
         };
 

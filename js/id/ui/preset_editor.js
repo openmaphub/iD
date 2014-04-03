@@ -21,12 +21,10 @@ iD.ui.PresetEditor = function(context) {
         var body = selection.append('div')
         .attr('class', 'body');
 
-
-
         var addNewButton = body.append('modal-section')
         .append('button')
         .attr('class', 'action col4 button preset-editor')
-        .on('click', function () { renderPresetForm(body); } )
+        .on('click', presetEditor.render)
         .text('Add New Preset');
 
         var editExistingPointPresetButton = body.append('modal-section')
@@ -44,12 +42,23 @@ iD.ui.PresetEditor = function(context) {
             console.log("presetList", editPresetList);
             body.attr('class', 'preset-editor');
             body.call(editPresetList);
-        }                
+        }
+
+
 
     }
 
-    function renderPresetForm (body) {
+    presetEditor.render = function (preset) {
 
+        if (preset === undefined) preset = null;
+        if (preset) {
+            d3.select('.sidebar-component .preset-editor').remove();
+            d3.select('.sidebar-component')
+            .append('div')
+            .attr('class', 'body');
+        }
+
+        var body = d3.select('.sidebar-component .body');
         body.html('');
 
         var noticeSection = body.append('div')
@@ -72,7 +81,8 @@ iD.ui.PresetEditor = function(context) {
 
         var presetNameForm = presetFormField.append('input')
         .attr('id', 'preset-input-name')
-        .attr('style', 'width: 100%;');
+        .attr('style', 'width: 100%;')
+        .value(function() { if (preset) return preset.name(); });
 
         var tagSection = body.append('div')
         .attr('class', 'modal-section');
@@ -82,8 +92,16 @@ iD.ui.PresetEditor = function(context) {
 
         var tagList = presetEditor.append('div')
         .append('ul')
-        .attr('class', 'tag-list')
-        .call(rawTagRow);
+        .attr('class', 'tag-list');
+
+        if (preset) {
+            d3.entries(preset.tags).forEach( function (tag) {
+                rawTagRow(tag);
+            });
+        }
+        else {
+            rawTagRow();
+        }
 
         var addTagButton = presetEditor.append('button')
         .on('click', rawTagRow)
@@ -94,13 +112,18 @@ iD.ui.PresetEditor = function(context) {
         var saveButton = body.append('modal-section')
         .append('button')
         .attr('class', 'action col4 button preset-editor')
-        .on('click', applyPresets)
+
+        // FIXME: save is fired on the mode object and not the
+        // actual event.
+        .on('click', function() { context.mode().save(); })
         .text('Save');
+
+        return presetEditor;
     }
 
+    function rawTagRow (tag) {
 
-
-    function rawTagRow () {
+        if (tag === undefined) tag = null;
 
         $selection = d3.select('.sidebar-component .tag-list');
 
@@ -114,17 +137,19 @@ iD.ui.PresetEditor = function(context) {
         .attr('class', 'key')
         .attr('maxlength', 255)
         .on('input', inputevent)
-        .on('keydown', keydown);
+        .on('keydown', keydown)
+        .value(function () { if (tag) return tag.key; })
 
-        $row.append('div')
+        $value = $row.append('div')
         .attr('class', 'input-wrap-position')
         .append('input')
         .property('type', 'text')
-        .property('disabled', true)
+        .property('disabled', function() {return typeof(tag) !== 'undefined' ?  false : true;})
         .attr('class', 'value')
-        .attr('maxlength', 255);
+        .attr('maxlength', 255)
+        .value(function () {if (tag) return tag.value; });
 
-        $row.append('button')
+        $remove = $row.append('button')
         .attr('tabindex', -1)
         .attr('class', 'remove minor')
         .on('click', removeTag)
@@ -147,60 +172,9 @@ iD.ui.PresetEditor = function(context) {
         }
     }
 
-        // $button = $inspectorBody.append('button')
-        // .attr('class', 'action col4 button preset-editor')
-        // FIXME: Ideally, it should fire save and this should be handled in modes.preset_editor.js
-        // .on('click', event.save);
-        // .on('click', applyPresets);
-
-        // $button.append('span')
-        // .attr('class', 'label')
-        // .text('Save');
-
-        function removeTag () {
-            d3.select(this.parentNode).remove();
-        }
-        
-        function applyPresets () {
-            var tags = {},
-            geometry = ["point", "area"],
-            fields = {},
-            name = {};
-
-            var presetName = d3.select('#preset-input-name').value();
-            
-            var newTags = d3.selectAll('.tag-row');
-            newTags.each(function() {
-                row = d3.select(this);
-                key = row.selectAll('input.key').value(),
-                value = row.selectAll('input.value').value();
-                tags[key] = value;
-            });
-            iD.data.presets.presets[presetName] = {'tags': tags, 'geometry': geometry, 'name': presetName};
-
-            if (validateTags(tags)) {
-                d3.select('.warning-section').style('display', 'block')
-                .text('New Preset Saved');
-                context.presets().load(iD.data.presets);
-            }
-            else {
-                d3.select('.warning-section').style('display', 'block')
-                .text('Tags must have a value.');
-            }
-        }
-
-        function validateTags (tags) {
-            tags = d3.entries(tags);
-            for (var i = 0; i < tags.length; i++) {
-                if (tags[i].value.length == 0) {
-                    return false;
-                }
-                else {
-                    return true;
-                }
-            }
-        }
-
-
-        return d3.rebind(presetEditor, event, 'on');
+    function removeTag () {
+        d3.select(this.parentNode).remove();
     }
+
+    return d3.rebind(presetEditor, event, 'on');
+}
