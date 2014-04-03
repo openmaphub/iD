@@ -8,7 +8,6 @@ iD.modes.PresetEditor = function(context) {
     }
 
     function save(e) {
-        console.log("some saving happens")
         var tags = {},
         geometry = ["point", "area"],
         fields = {},
@@ -38,7 +37,6 @@ iD.modes.PresetEditor = function(context) {
 
     function validateTags (tags) {
         tags = d3.entries(tags);
-        console.log(tags);
         for (var i = 0; i < tags.length; i++) {
             if (tags[i].value.length == 0) {
                 return false;
