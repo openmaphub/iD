@@ -115,7 +115,7 @@ iD.ui.PresetEditor = function(context) {
 
         // FIXME: save is fired on the mode object and not the
         // actual event.
-        .on('click', function() { context.mode().save(); })
+        .on('click', function() { context.mode().save(preset); })
         .text('Save');
 
         return presetEditor;

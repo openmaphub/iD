@@ -7,14 +7,34 @@ iD.modes.PresetEditor = function(context) {
         context.enter(iD.modes.Browse(context));
     }
 
-    function save(e) {
+    function save(preset) {
+
         var tags = {},
+        fields = [],
         geometry = ["point", "area"],
-        fields = {},
-        name = {};
+        terms = [],
+        id,
+        icon,
+        name;
 
-        var presetName = d3.select('#preset-input-name').value();
+        if (preset) {
+            id = preset.id;
+            geometry = preset.geometry;
+            icon = preset.icon;
+            name = preset.name();
+            terms = preset.terms()
+            preset.fields.forEach(function (element) {
+                fields.push(element.id);
+            });
+        }
+        else {
 
+            // Get the ID for the preset from the API here.
+            id = 'moabi/1';
+            name = d3.select('#preset-input-name').value();
+        }
+
+        console.log(name);
         var newTags = d3.selectAll('.tag-row');
         newTags.each(function() {
             row = d3.select(this);
@@ -24,10 +44,14 @@ iD.modes.PresetEditor = function(context) {
         });
 
         if (validateTags(tags)) {
-            iD.data.presets.presets[presetName] = {'tags': tags, 'geometry': geometry, 'name': presetName};
+            iD.data.presets.presets[id] = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
             d3.select('.warning-section').style('display', 'block')
-            .text('New Preset Saved');
-            context.presets().load(iD.data.presets);
+            .text('Preset Saved');
+            var presets = iD.presets().load(iD.data.presets);
+            context.presets = function() {
+                return presets;
+            };
+            // context.presets().load(iD.data.presets);
         }
         else {
             d3.select('.warning-section').style('display', 'block')
@@ -56,8 +80,8 @@ iD.modes.PresetEditor = function(context) {
         context.ui().sidebar.show(ui);
     };
 
-    mode.save = function() {
-        save();
+    mode.save = function(preset) {
+        save(preset);
     };
 
     mode.exit = function() {
