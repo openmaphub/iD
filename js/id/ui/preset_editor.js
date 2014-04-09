@@ -11,7 +11,7 @@ iD.ui.PresetEditor = function(context) {
 
         header.append('button')
         .attr('class', 'fr')
-        .on('click', function() {context.enter(iD.modes.Browse(context));})
+        .on('click', function() {context.enter(iD.modes.Browse(context)); })
         .append('span')
         .attr('class', 'icon close');
 
@@ -43,14 +43,11 @@ iD.ui.PresetEditor = function(context) {
             body.attr('class', 'preset-editor');
             body.call(editPresetList);
         }
-
-
-
     }
 
     presetEditor.render = function (preset) {
 
-        if (preset === undefined) preset = null;
+        if (preset === undefined) { preset = null; }
         if (preset) {
             d3.select('.sidebar-component .preset-editor').remove();
             d3.select('.sidebar-component')
@@ -177,4 +174,6 @@ iD.ui.PresetEditor = function(context) {
     }
 
     return d3.rebind(presetEditor, event, 'on');
+
 }
+

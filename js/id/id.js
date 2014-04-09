@@ -267,9 +267,17 @@ window.iD = function () {
     };
 
     /* Presets */
+
+    if (moabi_presets) {
+        for (p in moabi_presets) {
+            // console.log(moabi_presets[p]);
+            iD.data.presets.presets[p] = moabi_presets[p];
+        }
+    };
+
     var presets = iD.presets()
         .load(iD.data.presets);
-
+        
     context.presets = function() {
         return presets;
     };

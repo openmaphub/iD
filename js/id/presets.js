@@ -76,6 +76,8 @@ iD.presets = function() {
             var preset = all.collection[i],
                 geometry = preset.geometry;
 
+                // console.log(preset);
+
             for (var j = 0; j < geometry.length; j++) {
                 var g = index[geometry[j]];
                 for (var k in preset.tags) {

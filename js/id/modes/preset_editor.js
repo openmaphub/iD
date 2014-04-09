@@ -15,26 +15,9 @@ iD.modes.PresetEditor = function(context) {
         terms = [],
         id,
         icon,
-        name;
+        name,
+        preset;
 
-        if (preset) {
-            id = preset.id;
-            geometry = preset.geometry;
-            icon = preset.icon;
-            name = preset.name();
-            terms = preset.terms()
-            preset.fields.forEach(function (element) {
-                fields.push(element.id);
-            });
-        }
-        else {
-
-            // Get the ID for the preset from the API here.
-            id = 'moabi/1';
-            name = d3.select('#preset-input-name').value();
-        }
-
-        console.log(name);
         var newTags = d3.selectAll('.tag-row');
         newTags.each(function() {
             row = d3.select(this);
@@ -44,14 +27,48 @@ iD.modes.PresetEditor = function(context) {
         });
 
         if (validateTags(tags)) {
-            iD.data.presets.presets[id] = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
-            d3.select('.warning-section').style('display', 'block')
-            .text('Preset Saved');
-            var presets = iD.presets().load(iD.data.presets);
-            context.presets = function() {
-                return presets;
-            };
-            // context.presets().load(iD.data.presets);
+            if (preset) {
+                id = preset.id;
+                geometry = preset.geometry;
+                icon = preset.icon;
+                name = preset.name();
+                terms = preset.terms()
+                preset.fields.forEach(function (element) {
+                    fields.push(element.id);
+                });
+
+                preset = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
+                // This edit preset.
+                request = d3.xhr('http://127.0.0.1:3000/api'+id.split('/')[1]);
+                request.header("Content-Type", "application/x-www-form-urlencoded")
+                .put('json='+JSON.stringify(preset), function(error, response) {
+                    console.log(response);
+                })
+
+            }
+            else {
+
+            // New preset.
+            // Get the ID for the preset from the API here.
+            name = d3.select('#preset-input-name').value();
+            preset = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
+
+            request = d3.xhr('http://127.0.0.1:3000/api/0.6/presets.json');
+            request
+            .header("Content-Type", "application/x-www-form-urlencoded")
+            .post('json='+JSON.stringify(preset), function(error, response) {
+                id = d3.entries(JSON.parse(response.responseText))[0].key;
+                iD.data.presets.presets[id] = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
+                d3.select('.warning-section').style('display', 'block')
+                .text('Preset Saved');
+                var presets = iD.presets().load(iD.data.presets);
+                context.presets = function() {
+                    return presets;
+                    };
+                });
+            }
+
+                // context.presets().load(iD.data.presets);
         }
         else {
             d3.select('.warning-section').style('display', 'block')
