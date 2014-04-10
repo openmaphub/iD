@@ -3,7 +3,7 @@ window.iD = function () {
     window.locale.current('en');
 
     var context = {},
-        storage;
+    storage;
 
     // https://github.com/openstreetmap/iD/issues/772
     // http://mathiasbynens.be/notes/localstorage-pattern#comment-9
@@ -31,13 +31,13 @@ window.iD = function () {
     };
 
     var history = iD.History(context),
-        dispatch = d3.dispatch('enter', 'exit'),
-        mode,
-        container,
-        ui = iD.ui(context),
-        connection = iD.Connection(),
-        locale = iD.detect().locale,
-        localePath;
+    dispatch = d3.dispatch('enter', 'exit'),
+    mode,
+    container,
+    ui = iD.ui(context),
+    connection = iD.Connection(),
+    locale = iD.detect().locale,
+    localePath;
 
     if (locale && iD.data.locales.indexOf(locale) === -1) {
         locale = locale.split('-')[0];
@@ -203,63 +203,63 @@ window.iD = function () {
             x = 0, y = 0, // translate
             clipExtent = [[0, 0], [0, 0]];
 
-        function projection(point) {
-            point = project(point[0] * Math.PI / 180, point[1] * Math.PI / 180);
-            return [point[0] * k + x, y - point[1] * k];
+            function projection(point) {
+                point = project(point[0] * Math.PI / 180, point[1] * Math.PI / 180);
+                return [point[0] * k + x, y - point[1] * k];
+            }
+
+            projection.invert = function(point) {
+                point = project.invert((point[0] - x) / k, (y - point[1]) / k);
+                return point && [point[0] * 180 / Math.PI, point[1] * 180 / Math.PI];
+            };
+
+            projection.scale = function(_) {
+                if (!arguments.length) return k;
+                k = +_;
+                return projection;
+            };
+
+            projection.translate = function(_) {
+                if (!arguments.length) return [x, y];
+                x = +_[0];
+                y = +_[1];
+                return projection;
+            };
+
+            projection.clipExtent = function(_) {
+                if (!arguments.length) return clipExtent;
+                clipExtent = _;
+                return projection;
+            };
+
+            projection.stream = d3.geo.transform({
+                point: function(x, y) {
+                    x = projection([x, y]);
+                    this.stream.point(x[0], x[1]);
+                }
+            }).stream;
+
+            return projection;
         }
 
-        projection.invert = function(point) {
-            point = project.invert((point[0] - x) / k, (y - point[1]) / k);
-            return point && [point[0] * 180 / Math.PI, point[1] * 180 / Math.PI];
-        };
+        context.projection = rawMercator();
 
-        projection.scale = function(_) {
-            if (!arguments.length) return k;
-            k = +_;
-            return projection;
-        };
+        /* Background */
+        var background = iD.Background(context);
+        context.background = function() { return background; };
 
-        projection.translate = function(_) {
-            if (!arguments.length) return [x, y];
-            x = +_[0];
-            y = +_[1];
-            return projection;
-        };
+        /* Map */
+        var map = iD.Map(context);
+        context.map = function() { return map; };
+        context.layers = function() { return map.layers; };
+        context.surface = function() { return map.surface; };
+        context.mouse = map.mouse;
+        context.extent = map.extent;
+        context.pan = map.pan;
+        context.zoomIn = map.zoomIn;
+        context.zoomOut = map.zoomOut;
 
-        projection.clipExtent = function(_) {
-            if (!arguments.length) return clipExtent;
-            clipExtent = _;
-            return projection;
-        };
-
-        projection.stream = d3.geo.transform({
-            point: function(x, y) {
-                x = projection([x, y]);
-                this.stream.point(x[0], x[1]);
-            }
-        }).stream;
-
-        return projection;
-    }
-
-    context.projection = rawMercator();
-
-    /* Background */
-    var background = iD.Background(context);
-    context.background = function() { return background; };
-
-    /* Map */
-    var map = iD.Map(context);
-    context.map = function() { return map; };
-    context.layers = function() { return map.layers; };
-    context.surface = function() { return map.surface; };
-    context.mouse = map.mouse;
-    context.extent = map.extent;
-    context.pan = map.pan;
-    context.zoomIn = map.zoomIn;
-    context.zoomOut = map.zoomOut;
-
-    context.surfaceRect = function() {
+        context.surfaceRect = function() {
         // Work around a bug in Firefox.
         //   http://stackoverflow.com/questions/18153989/
         //   https://bugzilla.mozilla.org/show_bug.cgi?id=530985
@@ -269,15 +269,15 @@ window.iD = function () {
     /* Presets */
 
     if (moabi_presets) {
-        for (p in moabi_presets) {
+        for (var p in moabi_presets) {
             // console.log(moabi_presets[p]);
             iD.data.presets.presets[p] = moabi_presets[p];
         }
     };
 
     var presets = iD.presets()
-        .load(iD.data.presets);
-        
+    .load(iD.data.presets);
+
     context.presets = function() {
         return presets;
     };
@@ -324,7 +324,7 @@ iD.version = '1.3.5';
     var detected = {};
 
     var ua = navigator.userAgent,
-        msie = new RegExp('MSIE ([0-9]{1,}[\\.0-9]{0,})');
+    msie = new RegExp('MSIE ([0-9]{1,}[\\.0-9]{0,})');
 
     if (msie.exec(ua) !== null) {
         var rv = parseFloat(RegExp.$1);
