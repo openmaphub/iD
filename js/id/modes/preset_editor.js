@@ -38,10 +38,11 @@ iD.modes.PresetEditor = function(context) {
                 });
 
                 preset = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
-                // This edit preset.
-                request = d3.xhr('http://127.0.0.1:3000/api'+id.split('/')[1]);
+
+                // FIXME: use connection.url
+                request = d3.xhr('http://127.0.0.1:3000/api/0.6/presets/'+id.split('/')[1]+'/update.json');
                 request.header("Content-Type", "application/x-www-form-urlencoded")
-                .put('json='+JSON.stringify(preset), function(error, response) {
+                .post('json='+JSON.stringify(preset), function(error, response) {
                     console.log(response);
                 })
 
@@ -53,6 +54,7 @@ iD.modes.PresetEditor = function(context) {
             name = d3.select('#preset-input-name').value();
             preset = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
 
+            // FIXME: use connection.url
             request = d3.xhr('http://127.0.0.1:3000/api/0.6/presets.json');
             request
             .header("Content-Type", "application/x-www-form-urlencoded")
