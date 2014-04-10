@@ -39,38 +39,44 @@ iD.modes.PresetEditor = function(context) {
 
                 preset = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
 
-                // FIXME: use connection.url
-                request = d3.xhr('http://127.0.0.1:3000/api/0.6/presets/'+id.split('/')[1]+'/update.json');
-                request.header("Content-Type", "application/x-www-form-urlencoded")
-                .post('json='+JSON.stringify(preset), function(error, response) {
-                    console.log(response);
-                })
-
-            }
-            else {
-
-            // New preset.
-            // Get the ID for the preset from the API here.
-            name = d3.select('#preset-input-name').value();
-            preset = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
-
             // FIXME: use connection.url
-            request = d3.xhr('http://127.0.0.1:3000/api/0.6/presets.json');
-            request
-            .header("Content-Type", "application/x-www-form-urlencoded")
+            request = d3.xhr('http://127.0.0.1:3000/api/0.6/presets/'+id.split('/')[1]+'/update.json');
+            request.header("Content-Type", "application/x-www-form-urlencoded")
             .post('json='+JSON.stringify(preset), function(error, response) {
-                id = d3.entries(JSON.parse(response.responseText))[0].key;
-                iD.data.presets.presets[id] = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
-                d3.select('.warning-section').style('display', 'block')
-                .text('Preset Saved');
-                var presets = iD.presets().load(iD.data.presets);
-                context.presets = function() {
-                    return presets;
-                    };
-                });
-            }
+              iD.data.presets.presets[id] = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
+              d3.select('.warning-section').style('display', 'block')
+              .text('Changes Saved');
+              var presets = iD.presets().load(iD.data.presets);
+              context.presets = function() {
+                return presets;
+            };
+        })
 
-                // context.presets().load(iD.data.presets);
+        }
+        else {
+
+        // New preset.
+        // Get the ID for the preset from the API here.
+        name = d3.select('#preset-input-name').value();
+        preset = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
+
+        // FIXME: use connection.url
+        request = d3.xhr('http://127.0.0.1:3000/api/0.6/presets.json');
+        request
+        .header("Content-Type", "application/x-www-form-urlencoded")
+        .post('json='+JSON.stringify(preset), function(error, response) {
+            id = d3.entries(JSON.parse(response.responseText))[0].key;
+            iD.data.presets.presets[id] = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
+            d3.select('.warning-section').style('display', 'block')
+            .text('Preset Saved');
+            var presets = iD.presets().load(iD.data.presets);
+            context.presets = function() {
+                return presets;
+            };
+        });
+    }
+
+            // context.presets().load(iD.data.presets);
         }
         else {
             d3.select('.warning-section').style('display', 'block')
@@ -96,16 +102,20 @@ iD.modes.PresetEditor = function(context) {
 
     mode.enter = function() {
 
-        context.ui().sidebar.show(ui);
-    };
+        context.connection().authenticate(function() {
+            context.ui().sidebar.show(ui);
+        });
 
-    mode.save = function(preset) {
-        save(preset);
-    };
+    // context.ui().sidebar.show(ui);
+};
 
-    mode.exit = function() {
-        context.ui().sidebar.hide(ui);
-    };
+mode.save = function(preset) {
+    save(preset);
+};
 
-    return mode;
+mode.exit = function() {
+    context.ui().sidebar.hide(ui);
+};
+
+return mode;
 };
