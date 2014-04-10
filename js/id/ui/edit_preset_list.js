@@ -5,7 +5,6 @@ iD.ui.EditPresetList = function(context, geometryType) {
         autofocus = false;
 
     function presetList(selection) {
-        console.log(selection);
         var geometry = geometryType,
             presets = context.presets();
         //var geometry = context.geometry(id),
@@ -112,6 +111,14 @@ iD.ui.EditPresetList = function(context, geometryType) {
     }
 
     function drawList(list, presets) {
+
+        // Filter presets that are editable based on the id.
+        presets.collection = presets.collection.filter(function(preset) {
+            if (preset.id.startsWith('moabi')) {
+                return preset
+            };
+        });
+
         var collection = presets.collection.map(function(preset) {
             return preset.members ? CategoryItem(preset) : PresetItem(preset);
         });
