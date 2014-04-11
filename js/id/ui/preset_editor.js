@@ -77,7 +77,7 @@ iD.ui.PresetEditor = function(context) {
         .text('Preset Name');
 
         var presetNameForm = presetFormField.append('input')
-        .attr('id', 'preset-input-name')
+        .attr('id', 'preset-editor-input-name')
         .attr('style', 'width: 100%;')
         .value(function() { if (preset) {
             return preset.name();
