@@ -19993,8 +19993,8 @@ iD.modes.PresetEditor = function(context) {
 
         var newTags = d3.selectAll('.tag-row');
         newTags.each(function() {
-            row = d3.select(this);
-            key = row.selectAll('input.key').value(),
+            var row = d3.select(this);
+            var key = row.selectAll('input.key').value(),
             value = row.selectAll('input.value').value();
             tags[key] = value;
         });
@@ -20011,37 +20011,46 @@ iD.modes.PresetEditor = function(context) {
                 });
 
                 preset = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
-                // This edit preset.
-                request = d3.xhr('http://127.0.0.1:3000/api'+id.split('/')[1]);
-                request.header("Content-Type", "application/x-www-form-urlencoded")
-                .put('json='+JSON.stringify(preset), function(error, response) {
-                    console.log(response);
-                })
 
-            }
-            else {
-
-            // New preset.
-            // Get the ID for the preset from the API here.
-            name = d3.select('#preset-input-name').value();
-            preset = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
-
-            request = d3.xhr('http://127.0.0.1:3000/api/0.6/presets.json');
-            request
-            .header("Content-Type", "application/x-www-form-urlencoded")
+            // FIXME: use connection.url
+            var request = d3.xhr(context.connection().presetsURL+'/'+id.split('/')[1]+'/update.json');
+            request.header("Content-Type", "application/x-www-form-urlencoded")
             .post('json='+JSON.stringify(preset), function(error, response) {
-                id = d3.entries(JSON.parse(response.responseText))[0].key;
-                iD.data.presets.presets[id] = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
-                d3.select('.warning-section').style('display', 'block')
-                .text('Preset Saved');
-                var presets = iD.presets().load(iD.data.presets);
-                context.presets = function() {
-                    return presets;
-                    };
-                });
-            }
+              iD.data.presets.presets[id] = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
+              d3.select('.warning-section').style('display', 'block')
+              .text('Changes Saved');
+              var presets = iD.presets().load(iD.data.presets);
+              context.presets = function() {
+                return presets;
+            };
+        })
 
-                // context.presets().load(iD.data.presets);
+        }
+        else {
+
+        // New preset.
+        // Get the ID for the preset from the API here.
+        name = d3.select('#preset-input-name').value();
+        console.log(name);
+        preset = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
+
+        // FIXME: use connection.url
+        request = d3.xhr(context.connection().presetsURL+'.json');
+        request
+        .header("Content-Type", "application/x-www-form-urlencoded")
+        .post('json='+JSON.stringify(preset), function(error, response) {
+            id = d3.entries(JSON.parse(response.responseText))[0].key;
+            iD.data.presets.presets[id] = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
+            d3.select('.warning-section').style('display', 'block')
+            .text('Preset Saved');
+            var presets = iD.presets().load(iD.data.presets);
+            context.presets = function() {
+                return presets;
+            };
+        });
+    }
+
+            // context.presets().load(iD.data.presets);
         }
         else {
             d3.select('.warning-section').style('display', 'block')
@@ -20066,19 +20075,22 @@ iD.modes.PresetEditor = function(context) {
     };
 
     mode.enter = function() {
+        context.connection().authenticate(function() {
+            context.ui().sidebar.show(ui);
+        });
 
-        context.ui().sidebar.show(ui);
-    };
+    // context.ui().sidebar.show(ui);
+};
 
-    mode.save = function(preset) {
-        save(preset);
-    };
+mode.save = function(preset) {
+    save(preset);
+};
 
-    mode.exit = function() {
-        context.ui().sidebar.hide(ui);
-    };
+mode.exit = function() {
+    context.ui().sidebar.hide(ui);
+};
 
-    return mode;
+return mode;
 };
 iD.modes.RotateWay = function(context, wayId) {
     var mode = {
@@ -20944,6 +20956,7 @@ iD.areaKeys = {
         relationStr = 'relation',
         off;
 
+    connection.presetsURL = url + '/api/0.6/presets';
     connection.changesetURL = function(changesetId) {
         return url + '/changeset/' + changesetId;
     };
@@ -26219,7 +26232,6 @@ iD.ui.EditPresetList = function(context, geometryType) {
         autofocus = false;
 
     function presetList(selection) {
-        console.log(selection);
         var geometry = geometryType,
             presets = context.presets();
         //var geometry = context.geometry(id),
@@ -26232,7 +26244,7 @@ iD.ui.EditPresetList = function(context, geometryType) {
         // var message = messagewrap.append('h3')
         //     .text(t('inspector.choose'));
 
-        presetListSection = selection.append('div')
+        var presetListSection = selection.append('div')
             .attr('class', 'preset-list-pane');
 
 
@@ -26326,6 +26338,14 @@ iD.ui.EditPresetList = function(context, geometryType) {
     }
 
     function drawList(list, presets) {
+
+        // Filter presets that are editable based on the id.
+        presets.collection = presets.collection.filter(function(preset) {
+            if (preset.id.split('/')[0] == 'moabi') {
+                return preset
+            };
+        });
+
         var collection = presets.collection.map(function(preset) {
             return preset.members ? CategoryItem(preset) : PresetItem(preset);
         });
@@ -27865,7 +27885,7 @@ iD.ui.PresetEditor = function(context) {
         .text('Edit Existing Preset');
 
         function editExistingPresets() {
-            geometryType = 'point';
+            var geometryType = 'point';
             console.log("edit existing presets");
             var editPresetList = iD.ui.EditPresetList(context, geometryType);
             console.log("presetList", editPresetList);
@@ -27908,7 +27928,12 @@ iD.ui.PresetEditor = function(context) {
         var presetNameForm = presetFormField.append('input')
         .attr('id', 'preset-input-name')
         .attr('style', 'width: 100%;')
-        .value(function() { if (preset) return preset.name(); });
+        .value(function() { if (preset) {
+            return preset.name();
+        }
+        else {
+            return "";
+        } });
 
         var tagSection = body.append('div')
         .attr('class', 'modal-section');
@@ -27949,14 +27974,16 @@ iD.ui.PresetEditor = function(context) {
 
     function rawTagRow (tag) {
 
-        if (tag === undefined) tag = null;
+        if (tag === undefined) {
+            tag = null;
+        }
 
-        $selection = d3.select('.sidebar-component .tag-list');
+        var $selection = d3.select('.sidebar-component .tag-list');
 
-        $row = $selection.append('li')
+        var $row = $selection.append('li')
         .attr('class', 'tag-row cf');
 
-        $key = $row.append('div')
+        var $key = $row.append('div')
         .attr('class', 'key-wrap')
         .append('input')
         .property('type', 'text')
@@ -27964,18 +27991,30 @@ iD.ui.PresetEditor = function(context) {
         .attr('maxlength', 255)
         .on('input', inputevent)
         .on('keydown', keydown)
-        .value(function () { if (tag) return tag.key; })
+        .value(function () { if (tag) { 
+            return tag.key; 
+        }
+        else {
+            return "";
+        } 
+    });
 
-        $value = $row.append('div')
+        var $value = $row.append('div')
         .attr('class', 'input-wrap-position')
         .append('input')
         .property('type', 'text')
         .property('disabled', function() {return typeof(tag) !== 'undefined' ?  false : true;})
         .attr('class', 'value')
         .attr('maxlength', 255)
-        .value(function () {if (tag) return tag.value; });
+        .value(function () {if (tag) {
+            return tag.value;
+            }
+            else {
+                return "";
+            }
+        });
 
-        $remove = $row.append('button')
+        var $remove = $row.append('button')
         .attr('tabindex', -1)
         .attr('class', 'remove minor')
         .on('click', removeTag)
@@ -27987,13 +28026,14 @@ iD.ui.PresetEditor = function(context) {
     }
 
     function inputevent () {
-        row = d3.select(this.parentNode.parentNode);
+        var row = d3.select(this.parentNode.parentNode);
         row.select('input.value').property('disabled', false);
     }
 
     function keydown () {
-        row = d3.select(this.parentNode.parentNode);
-        if (d3.select(this).property('value').length == 0) {
+        var textArea = d3.select(this);
+        var row = d3.select(d3.select(this).node().parentNode.parentNode);
+        if (textArea.property('value').length == 0) {
             row.select('input.value').property('disabled', true);
         }
     }

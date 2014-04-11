@@ -36,7 +36,7 @@ iD.ui.PresetEditor = function(context) {
         .text('Edit Existing Preset');
 
         function editExistingPresets() {
-            geometryType = 'point';
+            var geometryType = 'point';
             console.log("edit existing presets");
             var editPresetList = iD.ui.EditPresetList(context, geometryType);
             console.log("presetList", editPresetList);
@@ -79,7 +79,12 @@ iD.ui.PresetEditor = function(context) {
         var presetNameForm = presetFormField.append('input')
         .attr('id', 'preset-input-name')
         .attr('style', 'width: 100%;')
-        .value(function() { if (preset) return preset.name(); });
+        .value(function() { if (preset) {
+            return preset.name();
+        }
+        else {
+            return "";
+        } });
 
         var tagSection = body.append('div')
         .attr('class', 'modal-section');
@@ -120,14 +125,16 @@ iD.ui.PresetEditor = function(context) {
 
     function rawTagRow (tag) {
 
-        if (tag === undefined) tag = null;
+        if (tag === undefined) {
+            tag = null;
+        }
 
-        $selection = d3.select('.sidebar-component .tag-list');
+        var $selection = d3.select('.sidebar-component .tag-list');
 
-        $row = $selection.append('li')
+        var $row = $selection.append('li')
         .attr('class', 'tag-row cf');
 
-        $key = $row.append('div')
+        var $key = $row.append('div')
         .attr('class', 'key-wrap')
         .append('input')
         .property('type', 'text')
@@ -135,18 +142,30 @@ iD.ui.PresetEditor = function(context) {
         .attr('maxlength', 255)
         .on('input', inputevent)
         .on('keydown', keydown)
-        .value(function () { if (tag) return tag.key; })
+        .value(function () { if (tag) { 
+            return tag.key; 
+        }
+        else {
+            return "";
+        } 
+    });
 
-        $value = $row.append('div')
+        var $value = $row.append('div')
         .attr('class', 'input-wrap-position')
         .append('input')
         .property('type', 'text')
         .property('disabled', function() {return typeof(tag) !== 'undefined' ?  false : true;})
         .attr('class', 'value')
         .attr('maxlength', 255)
-        .value(function () {if (tag) return tag.value; });
+        .value(function () {if (tag) {
+            return tag.value;
+            }
+            else {
+                return "";
+            }
+        });
 
-        $remove = $row.append('button')
+        var $remove = $row.append('button')
         .attr('tabindex', -1)
         .attr('class', 'remove minor')
         .on('click', removeTag)
@@ -158,13 +177,14 @@ iD.ui.PresetEditor = function(context) {
     }
 
     function inputevent () {
-        row = d3.select(this.parentNode.parentNode);
+        var row = d3.select(this.parentNode.parentNode);
         row.select('input.value').property('disabled', false);
     }
 
     function keydown () {
-        row = d3.select(this.parentNode.parentNode);
-        if (d3.select(this).property('value').length == 0) {
+        var textArea = d3.select(this);
+        var row = d3.select(d3.select(this).node().parentNode.parentNode);
+        if (textArea.property('value').length == 0) {
             row.select('input.value').property('disabled', true);
         }
     }

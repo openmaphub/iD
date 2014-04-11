@@ -23,6 +23,7 @@ iD.Connection = function() {
         relationStr = 'relation',
         off;
 
+    connection.presetsURL = url + '/api/0.6/presets';
     connection.changesetURL = function(changesetId) {
         return url + '/changeset/' + changesetId;
     };

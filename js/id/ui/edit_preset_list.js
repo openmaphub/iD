@@ -17,7 +17,7 @@ iD.ui.EditPresetList = function(context, geometryType) {
         // var message = messagewrap.append('h3')
         //     .text(t('inspector.choose'));
 
-        presetListSection = selection.append('div')
+        var presetListSection = selection.append('div')
             .attr('class', 'preset-list-pane');
 
 
@@ -114,7 +114,7 @@ iD.ui.EditPresetList = function(context, geometryType) {
 
         // Filter presets that are editable based on the id.
         presets.collection = presets.collection.filter(function(preset) {
-            if (preset.id.startsWith('moabi')) {
+            if (preset.id.split('/')[0] == 'moabi') {
                 return preset
             };
         });

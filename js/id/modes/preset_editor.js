@@ -20,8 +20,8 @@ iD.modes.PresetEditor = function(context) {
 
         var newTags = d3.selectAll('.tag-row');
         newTags.each(function() {
-            row = d3.select(this);
-            key = row.selectAll('input.key').value(),
+            var row = d3.select(this);
+            var key = row.selectAll('input.key').value(),
             value = row.selectAll('input.value').value();
             tags[key] = value;
         });
@@ -40,7 +40,7 @@ iD.modes.PresetEditor = function(context) {
                 preset = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
 
             // FIXME: use connection.url
-            request = d3.xhr('http://127.0.0.1:3000/api/0.6/presets/'+id.split('/')[1]+'/update.json');
+            var request = d3.xhr(context.connection().presetsURL+'/'+id.split('/')[1]+'/update.json');
             request.header("Content-Type", "application/x-www-form-urlencoded")
             .post('json='+JSON.stringify(preset), function(error, response) {
               iD.data.presets.presets[id] = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
@@ -58,10 +58,11 @@ iD.modes.PresetEditor = function(context) {
         // New preset.
         // Get the ID for the preset from the API here.
         name = d3.select('#preset-input-name').value();
+        console.log(name);
         preset = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
 
         // FIXME: use connection.url
-        request = d3.xhr('http://127.0.0.1:3000/api/0.6/presets.json');
+        request = d3.xhr(context.connection().presetsURL+'.json');
         request
         .header("Content-Type", "application/x-www-form-urlencoded")
         .post('json='+JSON.stringify(preset), function(error, response) {
@@ -101,7 +102,6 @@ iD.modes.PresetEditor = function(context) {
     };
 
     mode.enter = function() {
-
         context.connection().authenticate(function() {
             context.ui().sidebar.show(ui);
         });
