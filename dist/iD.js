@@ -20031,7 +20031,6 @@ iD.modes.PresetEditor = function(context) {
         // New preset.
         // Get the ID for the preset from the API here.
         name = d3.select('#preset-editor-input-name').value();
-        console.log(name);
         preset = {'tags': tags, 'geometry': geometry, 'name': name, 'icon': icon, 'terms': terms};
 
         // FIXME: use connection.url
