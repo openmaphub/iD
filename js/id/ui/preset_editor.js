@@ -6,6 +6,9 @@ iD.ui.PresetEditor = function(context) {
 
         selection.html('');
 
+        // Hide the notice section.
+        d3.select('.notice').style('display', 'none');
+
         var header = selection.append('div')
         .attr('class', 'header fillL');
 
