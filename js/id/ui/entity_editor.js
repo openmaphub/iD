@@ -98,8 +98,6 @@ iD.ui.EntityEditor = function(context) {
                 .state(state)
                 .on('change', changeTags));
         
-        console.log(preset);
-
         $body.select('.raw-tag-editor')
             .call(rawTagEditor
                 .preset(preset)

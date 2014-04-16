@@ -270,7 +270,19 @@ window.iD = function () {
 
     if (moabi_presets) {
         for (var p in moabi_presets) {
-            // console.log(moabi_presets[p]);
+            var tags = d3.entries(moabi_presets[p].tags);
+            // _.rest(moabi_presets[p], function(t) {console.log(t);});
+            moabi_presets[p].tags = _.omit(moabi_presets[p].tags, function(tag) { console.log(tag); return tag == 'field';});
+            console.log(moabi_presets[p]);
+            moabi_presets[p]['fields'] = [];
+            tags.forEach(function(tag) {
+                if (tag.value == 'field') {
+                    console.log(moabi_presets[p]);
+                    var field = {'key': tag.key, 'label': tag.key, 'type': 'text'};
+                    iD.data.presets.fields[tag.key] = field;
+                    moabi_presets[p].fields.push(field.key);
+                }
+            });
             iD.data.presets.presets[p] = moabi_presets[p];
         }
     };

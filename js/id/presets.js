@@ -51,6 +51,15 @@ iD.presets = function() {
 
         if (d.presets) {
             _.forEach(d.presets, function(d, id) {
+                if (id.startsWith('moabi')) {
+                    var tags = d3.entries(d.tags);
+                    tags.forEach(function(tag) {
+                        if (tag.value == 'field') {
+                            var field = {'key': id, 'label': tag.key, 'type': 'text'};
+                            fields[id] = iD.presets.Field(id, field);
+                        }
+                    });
+                }
                 all.collection.push(iD.presets.Preset(id, d, fields));
             });
         }

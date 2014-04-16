@@ -7,6 +7,7 @@ iD.ui.preset = function(context) {
         id;
 
     function UIField(field, entity, show) {
+        console.log(field);
         field = _.clone(field);
 
         field.input = iD.ui.preset[field.type](field, context)
@@ -103,7 +104,7 @@ iD.ui.preset = function(context) {
         var $label = $enter.append('label')
             .attr('class', 'form-label')
             .attr('for', function(field) { return 'preset-input-' + field.id; })
-            .text(function(field) { return field.label(); });
+            .text(function(field) { console.log(field.label()); return field.label(); });
 
         var wrap = $label.append('div')
             .attr('class', 'form-label-button-wrap');
