@@ -9477,12 +9477,6 @@
         "default": true
     },
     {
-        "name": "MapQuest Open Aerial",
-        "type": "tms",
-        "template": "http://oatile{switch:1,2,3,4}.mqcdn.com/tiles/1.0.0/sat/{zoom}/{x}/{y}.png",
-        "default": true
-    },
-    {
         "name": "NLS - Bartholomew Half Inch, 1897-1907",
         "type": "tms",
         "template": "http://geo.nls.uk/mapdata2/bartholomew/great_britain/{zoom}/{x}/{-y}.png",
@@ -29038,5 +29032,66 @@
         ],
         "terms_text": "basemap.at",
         "id": "basemap.at"
-    }
+    },
+    {
+        "name": "Landsat 2012 #1",
+        "type": "tms",
+        "description": "Landsat 2012 layer 1.",
+        "template": "http://earthengine.google.org/static/hansen_2013/last_b457/{zoom}/{x}/{y}.jpg",
+        "scaleExtent": [
+            0,
+            18
+        ],
+        "terms_text": "© Landsat",
+        "default": true
+    },
+    {
+        "name": "Landsat 2012 #2",
+        "type": "tms",
+        "description": "Landsat 2012 layer 2.",
+        "template": "http://earthengine.google.org/static/hansen_2013/last_b543/{zoom}/{x}/{y}.jpg",
+        "scaleExtent": [
+            0,
+            18
+        ],
+        "terms_text": "© Landsat",
+        "default": true
+    },
+    {
+        "name": "Landsat 2000 #1",
+        "type": "tms",
+        "description": "Landsat 2000 layer 1.",
+        "template": "http://earthengine.google.org/static/hansen_2013/first_b457/{zoom}/{x}/{y}.jpg",
+        "scaleExtent": [
+            0,
+            18
+        ],
+        "terms_text": "© Landsat",
+        "default": true
+    },
+    {
+        "name": "Landsat 2000 #2",
+        "type": "tms",
+        "description": "Landsat 2000 layer 2.",
+        "template": "http://earthengine.google.org/static/hansen_2013/first_b543/{zoom}/{x}/{y}.jpg",
+        "scaleExtent": [
+            0,
+            18
+        ],
+        "terms_text": "© Landsat",
+        "default": true
+    },
+    {
+        "name": "Equateur Roads",
+        "type": "tms",
+        "description": "Landsat 2000 layer 2.",
+        "template": "http://{switch:a,b}.tiles.mapbox.com/v3/helsinki.equateur_roads/{zoom}/{x}/{y}.png",
+        "scaleExtent": [
+            0,
+            18
+        ],
+        "terms_text": "© Landsat",
+        "default": true,
+        "overlay": true
+    }            
 ]
