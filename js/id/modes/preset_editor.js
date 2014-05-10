@@ -11,7 +11,7 @@ iD.modes.PresetEditor = function(context) {
 
         var tags = {},
         fields = [],
-        geometry = ["point", "area"],
+        geometry = ["point", "area", "line"],
         terms = [],
         id,
         icon,
