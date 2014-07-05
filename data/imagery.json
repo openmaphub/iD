@@ -1,5 +1,18 @@
 [
     {
+        "name": "Moabi Base",
+        "type": "tms",
+        "description": "Moabi Base Layer.",
+        "template": "http://tiles.osm.moabi.org/moabi_base/{zoom}/{x}/{y}.png",
+        "scaleExtent": [
+            0,
+            18
+        ],
+        "id": "Moabi",
+        "terms_text": "© Moabi",
+        "default": true
+    },
+    {
         "name": "7th Series (OS7)",
         "type": "tms",
         "template": "http://ooc.openstreetmap.org/os7/{zoom}/{x}/{y}.jpg",
@@ -18618,19 +18631,122 @@
         "terms_text": "© OpenStreetMap contributors, CC-BY-SA"
     },
     {
-        "name": "OpenStreetMap GPS traces",
+        "name": "Mining Concessions",
         "type": "tms",
-        "description": "Public GPS traces uploaded to OpenStreetMap.",
-        "template": "http://{switch:a,b,c}.gps-tile.openstreetmap.org/lines/{zoom}/{x}/{y}.png",
+        "description": "Moabi Mining Concessions layer.",
+        "template": "http://tiles.osm.moabi.org/moabi_mining/{zoom}/{x}/{y}.png",
         "scaleExtent": [
             0,
             20
         ],
-        "terms_url": "http://www.openstreetmap.org/copyright",
-        "terms_text": "© OpenStreetMap contributors",
-        "terms_html": "© <a href='http://www.openstreetmap.org/copyright'>OpenStreetMap contributors</a>. North: <span style='display: inline-block; width: 10px; height: 10px; background-color: #7fed11;'></span> South: <span style='display: inline-block; width: 10px; height: 10px; background-color: #7f11ed;'></span> East: <span style='display: inline-block; width: 10px; height: 10px; background-color: #ff3f3f;'></span> West: <span style='display: inline-block; width: 10px; height: 10px; background-color: #00bfbf;'></span>",
+        "terms_url": "http://rdc.moabi.org/licensing/en/",
+        "terms_text": "© Moabi",
         "overlay": true
     },
+    {
+        "name": "Logging Concessions",
+        "type": "tms",
+        "description": "Moabi Logging Concessions layer.",
+        "template": "http://tiles.osm.moabi.org/moabi_logging/{zoom}/{x}/{y}.png",
+        "scaleExtent": [
+            0,
+            20
+        ],
+        "terms_url": "http://rdc.moabi.org/licensing/en/",
+        "terms_text": "© Moabi",
+        "overlay": true
+    },
+    {
+        "name": "Oil Concessions",
+        "type": "tms",
+        "description": "Moabi Oil Concessions layer.",
+        "template": "http://tiles.osm.moabi.org/moabi_oil/{zoom}/{x}/{y}.png",
+        "scaleExtent": [
+            0,
+            20
+        ],
+        "terms_url": "http://rdc.moabi.org/licensing/en/",
+        "terms_text": "© Moabi",
+        "overlay": true
+    },
+    {
+        "name": "Agricultural Concessions",
+        "type": "tms",
+        "description": "Moabi Agricultural Concessions layer.",
+        "template": "http://tiles.osm.moabi.org/moabi_palm/{zoom}/{x}/{y}.png",
+        "scaleExtent": [
+            0,
+            20
+        ],
+        "terms_url": "http://rdc.moabi.org/licensing/en/",
+        "terms_text": "© Moabi",
+        "overlay": true
+    },
+    {
+        "name": "REDD+ Projects",
+        "type": "tms",
+        "description": "REDD+ Projects layer.",
+        "template": "http://tiles.osm.moabi.org/moabi_redd_projects/{zoom}/{x}/{y}.png",
+        "scaleExtent": [
+            0,
+            20
+        ],
+        "terms_url": "http://rdc.moabi.org/licensing/en/",
+        "terms_text": "© Moabi",
+        "overlay": true
+    },
+    {
+        "name": "Indigenous Territory",
+        "type": "tms",
+        "description": "Indigenous Territory layer.",
+        "template": "http://tiles.osm.moabi.org/moabi_indigenous/{zoom}/{x}/{y}.png",
+        "scaleExtent": [
+            0,
+            20
+        ],
+        "terms_url": "http://rdc.moabi.org/licensing/en/",
+        "terms_text": "© Moabi",
+        "overlay": true
+    },
+    {
+        "name": "Protected Forest Areas",
+        "type": "tms",
+        "description": "Protected Forest Areas layer.",
+        "template": "http://tiles.osm.moabi.org/moabi_protected/{zoom}/{x}/{y}.png",
+        "scaleExtent": [
+            0,
+            20
+        ],
+        "terms_url": "http://rdc.moabi.org/licensing/en/",
+        "terms_text": "© Moabi",
+        "overlay": true
+    },
+    {
+        "name": "Dams and Energy Transmission Lines",
+        "type": "tms",
+        "description": "Dams and Energy Transmission Lines layer.",
+        "template": "http://tiles.osm.moabi.org/moabi_energy/{zoom}/{x}/{y}.png",
+        "scaleExtent": [
+            0,
+            20
+        ],
+        "terms_url": "http://rdc.moabi.org/licensing/en/",
+        "terms_text": "© Moabi",
+        "overlay": true
+    },
+    {
+        "name": "Road Rehabilitation Projects",
+        "type": "tms",
+        "description": "Road Rehabilitation Projects layer.",
+        "template": "http://tiles.osm.moabi.org/moabi_transport/{zoom}/{x}/{y}.png",
+        "scaleExtent": [
+            0,
+            20
+        ],
+        "terms_url": "http://rdc.moabi.org/licensing/en/",
+        "terms_text": "© Moabi",
+        "overlay": true
+    },          
     {
         "name": "Pangasinán/Bulacan (Phillipines HiRes)",
         "type": "tms",
