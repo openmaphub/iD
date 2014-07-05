@@ -14,7 +14,8 @@ iD.Background = function(context) {
         }
     });
 
-    backgroundSources.unshift(iD.BackgroundSource.None());
+    // Remove None from the list according to crowdcover/341 (https://github.com/crowdcover/crowdcover/issues/341)
+    // backgroundSources.unshift(iD.BackgroundSource.None());
 
     function findSource(id) {
         return _.find(backgroundSources, function(d) {

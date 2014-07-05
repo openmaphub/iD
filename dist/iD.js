@@ -22826,7 +22826,8 @@ iD.Background = function(context) {
         }
     });
 
-    backgroundSources.unshift(iD.BackgroundSource.None());
+    // Remove None from the list according to crowdcover/341 (https://github.com/crowdcover/crowdcover/issues/341)
+    // backgroundSources.unshift(iD.BackgroundSource.None());
 
     function findSource(id) {
         return _.find(backgroundSources, function(d) {
@@ -25582,6 +25583,8 @@ iD.ui.Background = function(context) {
                 .sources(context.map().extent())
                 .filter(filter);
 
+            console.log(sources);
+
             var layerLinks = layerList.selectAll('li.layer')
                 .data(sources, function(d) { return d.name(); });
 
@@ -27853,6 +27856,9 @@ iD.ui.PresetEditor = function(context) {
     function presetEditor(selection) {
 
         selection.html('');
+
+        // Hide the notice section.
+        d3.select('.notice').style('display', 'none');
 
         var header = selection.append('div')
         .attr('class', 'header fillL');
@@ -41541,25 +41547,6 @@ iD.introGraph = '{"n185954700":{"id":"n185954700","loc":[-85.642244,41.939081],"
             "overlay": true
         },
         {
-            "name": "MapBox Satellite",
-            "type": "tms",
-            "description": "Satellite and aerial imagery.",
-            "template": "http://{switch:a,b,c}.tiles.mapbox.com/v3/openstreetmap.map-4wvf9l0l/{zoom}/{x}/{y}.png",
-            "scaleExtent": [
-                0,
-                16
-            ],
-            "terms_url": "http://www.mapbox.com/about/maps/",
-            "terms_text": "Terms & Feedback",
-            "default": true
-        },
-        {
-            "name": "MapQuest Open Aerial",
-            "type": "tms",
-            "template": "http://oatile{switch:1,2,3,4}.mqcdn.com/tiles/1.0.0/sat/{zoom}/{x}/{y}.png",
-            "default": true
-        },
-        {
             "name": "NLS - Bartholomew Half Inch, 1897-1907",
             "type": "tms",
             "template": "http://geo.nls.uk/mapdata2/bartholomew/great_britain/{zoom}/{x}/{-y}.png",
@@ -50712,19 +50699,6 @@ iD.introGraph = '{"n185954700":{"id":"n185954700","loc":[-85.642244,41.939081],"
             ],
             "terms_url": "http://openstreetmap.org/",
             "terms_text": "© OpenStreetMap contributors, CC-BY-SA"
-        },
-        {
-            "name": "OpenStreetMap (Mapnik)",
-            "type": "tms",
-            "description": "The default OpenStreetMap layer.",
-            "template": "http://tile.openstreetmap.org/{zoom}/{x}/{y}.png",
-            "scaleExtent": [
-                0,
-                18
-            ],
-            "terms_url": "http://openstreetmap.org/",
-            "terms_text": "© OpenStreetMap contributors, CC-BY-SA",
-            "default": true
         },
         {
             "name": "OpenStreetMap GPS traces",
