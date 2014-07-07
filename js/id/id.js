@@ -270,8 +270,14 @@ window.iD = function () {
 
     if (moabi_presets) {
         for (var p in moabi_presets) {
-            // console.log(moabi_presets[p]);
             iD.data.presets.presets[p] = moabi_presets[p];
+        }
+    };
+
+    if (moabi_fields) {
+        for (var f in moabi_fields) {
+            var field_name = f.split('/')[1];
+            iD.data.presets.fields[field_name] = moabi_fields[f];
         }
     };
 
