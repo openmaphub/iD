@@ -300,7 +300,7 @@ iD.Features = function(context) {
     features.isHidden = function(entity, graph) {
         resolver = graph || resolver;
         return !!entity.version &&
-            (features.isHiddenFeature(entity, resolver) || features.isHiddenChild(entity, resolver));
+            (!features.isSelectedFeature(entity) && (features.isHiddenFeature(entity, resolver) || features.isHiddenChild(entity, resolver)));
     };
 
     features.filter = function(d, graph) {
@@ -314,6 +314,12 @@ iD.Features = function(context) {
             }
             return hidden;
         }) : d;
+    };
+
+    features.isSelectedFeature = function(entity) {
+        if (entity.id === featureID && feature.selection.enabled) {
+            return true;
+        }
     };
 
     return d3.rebind(features, dispatch, 'on');
