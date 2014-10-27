@@ -431,5 +431,11 @@ iD.Features = function(context) {
         return result;
     };
 
+    features.isSelectedFeature = function(entity) {
+        if (entity.id === featureID && feature.selection.enabled) {
+            return true;
+        }
+    };
+
     return d3.rebind(features, dispatch, 'on');
 };
