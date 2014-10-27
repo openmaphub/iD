@@ -315,6 +315,9 @@ en:
     others:
       description: Others
       tooltip: "Everything Else"
+    selection:
+      description: Selected Feature
+      tooltip: "Feature that is selected via the URL"
   area_fill:
     wireframe:
       description: No Fill (Wireframe)
