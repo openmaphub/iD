@@ -315,9 +315,9 @@ en:
     others:
       description: Others
       tooltip: "Everything Else"
-    focussed:
-      description: Focussed Feature
-      tooltip: "Feature that is focussed via the URL"
+    selection:
+      description: Selected Feature
+      tooltip: "Feature that is selected via the URL"
   area_fill:
     wireframe:
       description: No Fill (Wireframe)
@@ -731,4 +731,3 @@ en:
       help: "More documentation and this walkthrough are available here."
       save: "Don't forget to regularly save your changes!"
       start: "Start mapping!"
-
