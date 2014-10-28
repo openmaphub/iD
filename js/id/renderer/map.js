@@ -206,7 +206,7 @@ iD.Map = function(context) {
             supersurface.call(context.background());
         }
         // if zoom is 16+ loadTiles.
-        if (map.zoom() >= 16) {
+        if (map.zoom() >= context.minEditableZoom()) {
             context.connection().loadTiles(projection, dimensions);
         }
 
@@ -337,7 +337,7 @@ iD.Map = function(context) {
     map.zoomTo = function(entity, zoomLimits) {
         var extent = entity.extent(context.graph()),
             zoom = map.extentZoom(extent);
-        zoomLimits = zoomLimits || [16, 20];
+        zoomLimits = zoomLimits || [0, 20];
         map.centerZoom(extent.center(), Math.min(Math.max(zoom, zoomLimits[0]), zoomLimits[1]));
     };
 
@@ -401,8 +401,11 @@ iD.Map = function(context) {
     };
 
     map.editable = function() {
-        return map.zoom() >= (context.minZoom || 16);
+        return map.zoom() >= context.minEditableZoom();
     };
+
+    /* This is the dynamic minimum zoom level for the map.
+    It is used during draw operations so the user zoom out past the minimum editable zoom. */
 
     map.minzoom = function(_) {
         if (!arguments.length) return minzoom;

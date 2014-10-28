@@ -60,7 +60,7 @@ iD.Features = function(context) {
             defaultMax: (max || Infinity),
             enable: function() { this.enabled = true; this.currentMax = this.defaultMax; },
             disable: function() { this.enabled = false; this.currentMax = 0; },
-            hidden: function() { return (k != 'selection' && context.map().zoom() < 16 ) || this.count > this.currentMax * cullFactor; },
+            hidden: function() { return (k != 'selection' && context.map().zoom() < context.minEditableZoom() ) || this.count > this.currentMax * cullFactor; },
             autoHidden: function() { return this.hidden() && this.currentMax > 0; }
         };
     }
@@ -160,7 +160,6 @@ iD.Features = function(context) {
     if (featureID) {
         defineFeature('selection', function(entity) {
             if (entity.id === featureID) {
-                context.minZoom = 10;
                 return entity;
             }
         });
