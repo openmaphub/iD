@@ -198,13 +198,12 @@ iD.Map = function(context) {
         if (!difference) {
             supersurface.call(context.background());
         }
-
-        if (map.editable()) {
+        // if zoom is 16+ loadTiles.
+        if (map.zoom() >= 16) {
             context.connection().loadTiles(projection, dimensions);
-            drawVector(difference, extent);
-        } else {
-            editOff();
         }
+
+        drawVector(difference, extent);
 
         transformStart = [
             projection.scale() * 2 * Math.PI,
@@ -395,7 +394,7 @@ iD.Map = function(context) {
     };
 
     map.editable = function() {
-        return map.zoom() >= 16;
+        return map.zoom() >= (context.minZoom || 16);
     };
 
     map.minzoom = function(_) {
