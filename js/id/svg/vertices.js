@@ -154,8 +154,9 @@ iD.svg.Vertices = function(projection, context) {
                 continue;
 
             if (entity.id in selected ||
-                entity.hasInterestingTags() ||
-                entity.isIntersection(graph)) {
+                (context.map().editable() &&
+                (entity.hasInterestingTags() ||
+                 entity.isIntersection(graph)))) {
                 vertices.push(entity);
             }
         }

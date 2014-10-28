@@ -171,7 +171,6 @@ iD.Features = function(context) {
         });
         defineFeature('selection', function(entity) {
             if (entity.id === featureID) {
-                context.minZoom = 10;
                 return entity;
             }
         });

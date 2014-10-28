@@ -461,6 +461,9 @@ iD.Map = function(context) {
         return map.zoom() >= context.minEditableZoom();
     };
 
+    /* This is the dynamic minimum zoom level for the map.
+    It is used during draw operations so the user zoom out past the minimum editable zoom. */
+
     map.minzoom = function(_) {
         if (!arguments.length) return minzoom;
         minzoom = _;
