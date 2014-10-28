@@ -166,9 +166,6 @@ iD.Features = function(context) {
     var hash = window.location.hash;
     var featureID = iD.util.stringQs(hash.substring(1)).id;
     if (featureID) {
-        _.forEach(_.omit(feature, 'selection'), function (f) {
-            f.disable();
-        });
         defineFeature('selection', function(entity) {
             if (entity.id === featureID) {
                 return entity;
