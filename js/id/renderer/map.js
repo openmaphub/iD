@@ -216,6 +216,8 @@ iD.Map = function(context) {
             editOff();
         }
 
+        drawVector(difference, extent);
+
         transformStart = [
             projection.scale() * 2 * Math.PI,
             projection.translate().slice()];
