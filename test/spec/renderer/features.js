@@ -82,6 +82,7 @@ describe('iD.Features', function() {
         });
     });
 
+<<<<<<< HEAD
     describe("matching", function() {
         var graph = iD.Graph([
             // Points
