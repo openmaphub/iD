@@ -162,16 +162,10 @@ iD.Features = function(context) {
         return (geometry === 'line' || geometry === 'area');
     });
 
-    // Check if a way is in the hash.
-    var hash = window.location.hash;
-    var featureID = iD.util.stringQs(hash.substring(1)).id;
-    if (featureID) {
-        defineFeature('selection', function(entity) {
-            if (entity.id === featureID) {
-                return entity;
-            }
-        });
-    }
+    // Features selected via the URL hash.
+    defineFeature('focussed', function(entity) {
+        return entity.id === context.focussedID();
+    });
 
     function features() {}
 
@@ -443,10 +437,8 @@ iD.Features = function(context) {
         return entity.id === context.focussedID() && feature.focussed && feature.focussed.enabled;
     };
 
-    features.isSelectedFeature = function(entity) {
-        if (entity.id === featureID && feature.selection.enabled) {
-            return true;
-        }
+    features.isFocussedFeature = function(entity) {
+        return entity.id === context.focussedID() && feature.focussed && feature.focussed.enabled;
     };
 
     return d3.rebind(features, dispatch, 'on');
