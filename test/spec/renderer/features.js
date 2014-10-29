@@ -36,6 +36,7 @@ describe('iD.Features', function() {
         expect(disabled).to.not.include('water');
     });
 
+<<<<<<< HEAD
     describe("matching", function() {
         var graph = iD.Graph([
             // Points
@@ -488,20 +489,14 @@ describe('iD.Features', function() {
         expect(autoHidden, msg).to.include('points');
     });
 
-    it('focussed feature filter if a feature ID is present in the URL hash', function() {
+    it('focussed feature filter if a focussed ID', function() {
         context.focussedID('w16');
 
         var keys = features.keys(),
-            enabled = features.enabled(),
             hidden = features.hidden();
 
-        expect(keys).to.have.members([
-            'points', 'major_roads', 'minor_roads', 'paths',
-            'buildings', 'landuse', 'boundaries', 'water', 'rail',
-            'power', 'past_future', 'others', 'focussed'
-        ]);
-
-        expect(hidden).to.not.have.members(['focussed']);
+        expect(keys).to.include('focussed');
+        expect(hidden).not.to.include('focussed');
     });
 
 });
