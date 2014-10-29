@@ -60,7 +60,7 @@ iD.Features = function(context) {
             defaultMax: (max || Infinity),
             enable: function() { this.enabled = true; this.currentMax = this.defaultMax; },
             disable: function() { this.enabled = false; this.currentMax = 0; },
-            hidden: function() { return (k != 'selection' && context.map().zoom() < context.minEditableZoom() ) || this.count > this.currentMax * cullFactor; },
+            hidden: function() { return (k !== 'focussed' && context.map().zoom() < context.minEditableZoom() ) || this.count > this.currentMax * cullFactor; },
             autoHidden: function() { return this.hidden() && this.currentMax > 0; }
         };
     }
@@ -154,21 +154,18 @@ iD.Features = function(context) {
         }, true);
     });
 
-    // Check if a way is in the hash.
-    var hash = window.location.hash;
-    var featureID = iD.util.stringQs(hash.substring(1)).id;
-    if (featureID) {
-        defineFeature('selection', function(entity) {
-            if (entity.id === featureID) {
-                return entity;
-            }
-        });
-    }
+    // Features selected via the URL hash.
+    defineFeature('focussed', function(entity) {
+        return entity.id === context.focussedID();
+    });
 
     function features() {}
 
     features.keys = function() {
-        return _.keys(feature);
+        var keys = _.keys(feature);
+
+        if(context.focussedID()) return keys;
+        return _.without(keys, 'focussed');
     };
 
     features.enabled = function(k) {
@@ -285,7 +282,7 @@ iD.Features = function(context) {
     features.isHidden = function(entity, graph) {
         resolver = graph || resolver;
         return !!entity.version &&
-            (!features.isSelectedFeature(entity) && (features.isHiddenFeature(entity, resolver) || features.isHiddenChild(entity, resolver)));
+            (!features.isFocussedFeature(entity) && (features.isHiddenFeature(entity, resolver) || features.isHiddenChild(entity, resolver)));
     };
 
     features.filter = function(d, graph) {
@@ -295,10 +292,8 @@ iD.Features = function(context) {
         }) : d;
     };
 
-    features.isSelectedFeature = function(entity) {
-        if (entity.id === featureID && feature.selection.enabled) {
-            return true;
-        }
+    features.isFocussedFeature = function(entity) {
+        return entity.id === context.focussedID() && feature.focussed && feature.focussed.enabled;
     };
 
     return d3.rebind(features, dispatch, 'on');

@@ -129,15 +129,6 @@ iD.Map = function(context) {
         dispatch.drawn({full: true});
     }
 
-    function editOff() {
-        var mode = context.mode();
-        surface.selectAll('.layer *').remove();
-        dispatch.drawn({full: true});
-        if (!(mode && mode.id === 'browse')) {
-            context.enter(iD.modes.Browse(context));
-        }
-    }
-
     function zoomPan() {
         if (d3.event && d3.event.sourceEvent.type === 'dblclick') {
             if (!dblclickEnabled) {

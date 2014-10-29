@@ -5,6 +5,7 @@ describe("iD.svg.Vertices", function () {
 
     beforeEach(function () {
         context = iD();
+        context.map().zoom(context.minEditableZoom());
         surface = d3.select(document.createElementNS('http://www.w3.org/2000/svg', 'svg'))
             .call(iD.svg.Surface(context));
     });

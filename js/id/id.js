@@ -169,6 +169,14 @@ window.iD = function () {
         }
     };
 
+    var focussedID;
+    context.focussedID = function(_) {
+        if (!arguments.length) return focussedID;
+
+        focussedID = _;
+        return context;
+    };
+
     context.loadEntity = function(id, zoomTo) {
         if (zoomTo !== false) {
             connection.loadEntity(id, function(error, entity) {
