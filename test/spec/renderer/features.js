@@ -488,4 +488,20 @@ describe('iD.Features', function() {
         expect(autoHidden, msg).to.include('points');
     });
 
+    it('focussed feature filter if a feature ID is present in the URL hash', function() {
+        context.focussedID('w16');
+
+        var keys = features.keys(),
+            enabled = features.enabled(),
+            hidden = features.hidden();
+
+        expect(keys).to.have.members([
+            'points', 'major_roads', 'minor_roads', 'paths',
+            'buildings', 'landuse', 'boundaries', 'water', 'rail',
+            'power', 'past_future', 'others', 'focussed'
+        ]);
+
+        expect(hidden).to.not.have.members(['focussed']);
+    });
+
 });
