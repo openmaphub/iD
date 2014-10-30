@@ -28,12 +28,11 @@ iD.svg.Areas = function(projection, context) {
     }
 
     return function drawAreas(surface, graph, entities, filter) {
-        var simplify = false,
+        var simplify = !context.map().editable(),
+            path = iD.svg.Path(projection, graph, true, simplify),
             areas = {},
             multipolygon;
 
-        if (!context.map().editable()) simplify = true;
-        var path = iD.svg.Path(projection, graph, true, simplify);
 
         for (var i = 0; i < entities.length; i++) {
             var entity = entities[i];

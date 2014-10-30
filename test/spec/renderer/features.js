@@ -1,9 +1,11 @@
 describe('iD.Features', function() {
     var dimensions = [1000, 1000],
-        features;
+        features,
+        context;
 
     beforeEach(function() {
-        features = iD().features();
+        context = iD();
+        features = context.features();
     });
 
     it('returns feature keys', function() {
@@ -36,7 +38,6 @@ describe('iD.Features', function() {
         expect(disabled).to.not.include('water');
     });
 
-<<<<<<< HEAD
     describe("matching", function() {
         var graph = iD.Graph([
             // Points
