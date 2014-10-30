@@ -1,4 +1,4 @@
-iD.svg.Areas = function(projection) {
+iD.svg.Areas = function(projection, context) {
     // Patterns only work in Firefox when set directly on element.
     // (This is not a bug: https://bugzilla.mozilla.org/show_bug.cgi?id=750632)
     var patterns = {
@@ -28,9 +28,12 @@ iD.svg.Areas = function(projection) {
     }
 
     return function drawAreas(surface, graph, entities, filter) {
-        var path = iD.svg.Path(projection, graph, true),
+        var simplify = false,
             areas = {},
             multipolygon;
+
+        if (!context.map().editable()) simplify = true;
+        var path = iD.svg.Path(projection, graph, true, simplify);
 
         for (var i = 0; i < entities.length; i++) {
             var entity = entities[i];
