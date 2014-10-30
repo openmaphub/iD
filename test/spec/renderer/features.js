@@ -1,12 +1,11 @@
 describe('iD.Features', function() {
     var dimensions = [1000, 1000],
-        context,
-        features;
+        features,
+        context;
 
     beforeEach(function() {
         context = iD();
-        context.map().zoom(16);
-        features = iD.Features(context);
+        features = context.features();
     });
 
     describe('#keys', function() {
@@ -83,7 +82,6 @@ describe('iD.Features', function() {
         });
     });
 
-<<<<<<< HEAD
     describe("matching", function() {
         var graph = iD.Graph([
             // Points
