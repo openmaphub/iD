@@ -25,10 +25,9 @@ iD.svg.Lines = function(projection, context) {
 
     return function drawLines(surface, graph, entities, filter) {
         var ways = [], pathdata = {}, onewaydata = {},
-            simplify = false;
+            simplify = !context.map().editable(),
+            getPath = iD.svg.Path(projection, graph, false, simplify);
 
-        if (!context.map().editable()) simplify = true;
-        var getPath = iD.svg.Path(projection, graph);
 
         for (var i = 0; i < entities.length; i++) {
             var entity = entities[i],
