@@ -113,10 +113,6 @@ function simplifyDouglasPeucker(points, sqTolerance) {
 
 // both algorithms combined for awesome performance
 function simplify(points, tolerance, highestQuality) {
-
-    // since points is a GeoJSON, get the array of coordinates.
-    points = points.coordinates;
-
     if (points.length <= 1) return points;
 
     var sqTolerance = tolerance !== undefined ? tolerance * tolerance : 1;
