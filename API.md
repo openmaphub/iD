@@ -154,4 +154,4 @@ var iD = iD().
 
 ```
 
-This should be set with caution for performance reasons.
+This should be set with caution for performance reasons. The OpenStreetMap API has a limitation of 50000 nodes per request.
