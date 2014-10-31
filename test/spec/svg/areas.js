@@ -159,4 +159,50 @@ describe("iD.svg.Areas", function () {
 
         expect(surface.selectAll('.stroke')[0].length).to.equal(0);
     });
+
+    it("simplifies the polygon if the map is not editable", function() {
+        var result,
+            graph = iD.Graph([
+                iD.Node({id: '1', loc: [0, 0]}),
+                iD.Node({id: '2', loc: [0, 0]}),
+                iD.Node({id: '3', loc: [0, 0]}),
+                iD.Node({id: '4', loc: [0, 0]}),
+                iD.Node({id: '5', loc: [1, 1]}),
+                iD.Node({id: '6', loc: [1, 1]}),
+                iD.Node({id: '7', loc: [1, 1]}),
+                iD.Node({id: '8', loc: [1, 1]}),
+                iD.Node({id: '9', loc: [0, 1]}),
+                iD.Node({id: '10', loc: [0, 1]}),
+                iD.Node({id: '11', loc: [0, 1]}),
+                iD.Node({id: '12', loc: [0, 1]}),
+                iD.Way({id: 'w', tags: {building: 'yes'}, nodes: ['1', '2', '3', '4', '5', '6', '7',
+                    '8', '9', '10', '11', '12', '1']})
+            ]),
+            simplified = 'M480,250L482,247L480,247ZM8,14L951,14L951,485L8,485L8,14Z';
+
+        context.map().zoom(context.minEditableZoom() - 1);
+        surface.call(iD.svg.Areas(projection, context), graph, [graph.entity('w')], none);
+        result = surface.select('path.way.stroke').attr('d');
+
+        expect(result).to.equal(simplified);
+    });
+
+    it("no simplification if the map is editable", function() {
+        var result,
+            graph = iD.Graph([
+                iD.Node({id: '1', loc: [0, 0]}),
+                iD.Node({id: '2', loc: [1, 1]}),
+                iD.Node({id: '3', loc: [0, 1]}),
+                iD.Way({id: 'w', tags: {building: 'yes'}, nodes: ['1', '2', '3', '1']})
+            ]),
+            unsimplified = 'M480,250L482,247L480,247ZM8,14L480,14L951,14L951,73L951,'+
+                '132L951,191L951,250L951,308L951,367L951,426L951,485L480,485L8,'+
+                '485L8,426L8,367L8,308L8,250L8,191L8,132L8,73L8,14Z';
+
+            context.map().zoom(context.minEditableZoom());
+            surface.call(iD.svg.Areas(projection, context), graph, [graph.entity('w')], none);
+            result = surface.select('path.way.stroke').attr('d');
+
+            expect(result).to.equal(unsimplified);
+    });
 });
