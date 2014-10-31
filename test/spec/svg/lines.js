@@ -75,6 +75,59 @@ describe("iD.svg.Lines", function () {
         expect(surface.select('.stroke')).to.be.classed('tag-natural-wood');
     });
 
+    it("simplify line if map is not editable", function() {
+        var graph = iD.Graph([
+                iD.Node({id: 'a', loc: [0, 0]}),
+                iD.Node({id: 'b', loc: [0, 0]}),
+                iD.Node({id: 'c', loc: [0, 0]}),
+                iD.Node({id: 'd', loc: [0, 0]}),
+                iD.Node({id: 'e', loc: [1, 1]}),
+                iD.Node({id: 'f', loc: [1, 1]}),
+                iD.Node({id: 'g', loc: [1, 1]}),
+                iD.Node({id: 'h', loc: [1, 1]}),
+                iD.Node({id: 'i', loc: [0, 0]}),
+                iD.Node({id: 'j', loc: [1, 1]}),
+                iD.Node({id: 'k', loc: [1, 1]}),
+                iD.Node({id: 'l', loc: [1, 1]}),
+                iD.Node({id: 'm', loc: [1, 1]}),
+                iD.Way({id: 'w', tags: {highway: 'residential'}, nodes: ['a', 'b', 'c',
+                    'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm']})
+            ]),
+            simplified = 'M480,250L482,247';
+
+        context.map().zoom(context.minEditableZoom() - 1);
+        surface.call(iD.svg.Lines(projection, context), graph, [graph.entity('w')], all);
+
+        expect(surface.select('path.line.stroke').attr('d')).to.equal(simplified);
+    });
+
+    it("no simplification if map is editable", function() {
+        var graph = iD.Graph([
+                iD.Node({id: 'a', loc: [0, 0]}),
+                iD.Node({id: 'b', loc: [0, 0]}),
+                iD.Node({id: 'c', loc: [0, 0]}),
+                iD.Node({id: 'd', loc: [0, 0]}),
+                iD.Node({id: 'e', loc: [1, 1]}),
+                iD.Node({id: 'f', loc: [1, 1]}),
+                iD.Node({id: 'g', loc: [1, 1]}),
+                iD.Node({id: 'h', loc: [1, 1]}),
+                iD.Node({id: 'i', loc: [0, 0]}),
+                iD.Node({id: 'j', loc: [1, 1]}),
+                iD.Node({id: 'k', loc: [1, 1]}),
+                iD.Node({id: 'l', loc: [1, 1]}),
+                iD.Node({id: 'm', loc: [1, 1]}),
+                iD.Way({id: 'w', tags: {highway: 'residential'}, nodes: ['a', 'b', 'c',
+                    'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm']})
+            ]),
+            unsimplified = 'M480,250L480,250L480,250L480,250L482,247L482,'+
+                '247L482,247L482,247L480,250L482,247L482,247L482,247L482,247';
+
+        context.map().zoom(context.minEditableZoom());
+        surface.call(iD.svg.Lines(projection, context), graph, [graph.entity('w')], all);
+
+        expect(surface.select('path.line.stroke').attr('d')).to.equal(unsimplified);
+    });
+
     describe("z-indexing", function() {
         var graph = iD.Graph([
                 iD.Node({id: 'a', loc: [0, 0]}),

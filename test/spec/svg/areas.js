@@ -161,8 +161,7 @@ describe("iD.svg.Areas", function () {
     });
 
     it("simplifies the polygon if the map is not editable", function() {
-        var result,
-            graph = iD.Graph([
+        var graph = iD.Graph([
                 iD.Node({id: '1', loc: [0, 0]}),
                 iD.Node({id: '2', loc: [0, 0]}),
                 iD.Node({id: '3', loc: [0, 0]}),
@@ -182,14 +181,12 @@ describe("iD.svg.Areas", function () {
 
         context.map().zoom(context.minEditableZoom() - 1);
         surface.call(iD.svg.Areas(projection, context), graph, [graph.entity('w')], none);
-        result = surface.select('path.way.stroke').attr('d');
 
-        expect(result).to.equal(simplified);
+        expect(surface.select('path.way.stroke').attr('d')).to.equal(simplified);
     });
 
     it("no simplification if the map is editable", function() {
-        var result,
-            graph = iD.Graph([
+        var graph = iD.Graph([
                 iD.Node({id: '1', loc: [0, 0]}),
                 iD.Node({id: '2', loc: [1, 1]}),
                 iD.Node({id: '3', loc: [0, 1]}),
@@ -201,8 +198,7 @@ describe("iD.svg.Areas", function () {
 
             context.map().zoom(context.minEditableZoom());
             surface.call(iD.svg.Areas(projection, context), graph, [graph.entity('w')], none);
-            result = surface.select('path.way.stroke').attr('d');
 
-            expect(result).to.equal(unsimplified);
+            expect(surface.select('path.way.stroke').attr('d')).to.equal(unsimplified);
     });
 });
