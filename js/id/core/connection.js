@@ -3,17 +3,18 @@ iD.Connection = function(useHttps) {
       useHttps = window.location.protocol === 'https:';
     }
 
-    var event = d3.dispatch('authenticating', 'authenticated', 'auth', 'loading', 'loaded'),
-        protocol = useHttps ? 'https:' : 'http:',
-        url = protocol + '//www.openstreetmap.org',
+    var event = d3.dispatch('authenticating', 'authenticated', 'auth', 'loading', 'load', 'loaded'),
+        url = 'http://osm.moabi.org',
         connection = {},
         inflight = {},
         loadedTiles = {},
         tileZoom = 16,
         oauth = osmAuth({
-            url: protocol + '//www.openstreetmap.org',
-            oauth_consumer_key: '5A043yRSEugj4DJ5TljuapfnrflWDte8jTOcWLlT',
-            oauth_secret: 'aB3jKq1TRsCOUrfOIZ6oQMEDmv2ptV76PA54NGLL',
+            url: 'http://osm.moabi.org',
+            oauth_consumer_key: 'VRdt3N1nR4TNjFTiLt5tbAtVWpvUgMf5MGVfn8CG',
+            oauth_secret: '9Un91nyfRCfmF4xC9nnYTk8hz6KNVzeINgyWv15i',
+            // oauth_consumer_key: '5A043yRSEugj4DJ5TljuapfnrflWDte8jTOcWLlT',
+            // oauth_secret: 'aB3jKq1TRsCOUrfOIZ6oQMEDmv2ptV76PA54NGLL',
             loading: authenticating,
             done: authenticated
         }),
