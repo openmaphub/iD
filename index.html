@@ -233,9 +233,9 @@
         <div id='id-container'></div>
         <script>
         var id;
+        var customImagery = [];
         var customPresets = {
             presets: {
-
                 "area": {
                     "name": "Area",
                     "tags": {},
@@ -262,7 +262,7 @@
                 }
             },
 
-            "fields": {
+            fields: {
                 "name": {
                     "key": "name",
                     "type": "localized",
@@ -270,14 +270,14 @@
                     "placeholder": "Common name (if any)"
                 }
             },
-            "defaults": {
+            defaults: {
                 "area": ["moabi/21", "area"],
                 "line": ["moabi/21", "line"],
                 "point": ["moabi/21", "point"],
                 "relation": ["moabi/21", "relation"],
                 "vertex": ["moabi/21", "vertex"]
             },
-            "categories": {
+            categories: {
                 "category-moabi": {
                     geometry: "area",
                     icon: "land-use",
@@ -290,13 +290,46 @@
             iD.data.load(function() {
                 iD.util.asyncMap([
                     'http://osm.moabi.org/api/0.6/presets.json',
-                    'http://osm.moabi.org/api/0.6/fields.json'], d3.json, function(err, data) {
+                    'http://osm.moabi.org/api/0.6/fields.json',
+                    'http://osm.moabi.org/api/0.6/tiles.json'], d3.json, function(err, data) {
                             _.extend(customPresets.presets, data[0]);
                             _.extend(customPresets.fields, data[1]);
 
+                            _.each(data[2], function(d) {
+                                var thisImagery = {
+                                    name: d.name,
+                                    type: 'tms',
+                                    scaleExtent: [
+                                        0,
+                                        18
+                                    ],
+                                    template: d.url,
+                                    id: d.code,
+                                    terms_text: "© Moabi",
+                                    default: (d.name === 'Base' ? true: false),
+                                    overlay: (d.name === 'Base') ? false: true
+                                };
+                                customImagery.push(thisImagery);
+                            });
+
+                            var bing =     {
+                                "name": "Bing aerial imagery",
+                                "type": "bing",
+                                "description": "Satellite and aerial imagery.",
+                                "template": "http://www.bing.com/maps/",
+                                "scaleExtent": [
+                                    0,
+                                    22
+                                ],
+                                "id": "Bing",
+                                "default": true
+                            };
+
+                            customImagery.push(bing);
+
                             id = iD()
                                 .presets(customPresets)
-                                .imagery(iD.data.imagery)
+                                .imagery(customImagery)
                                 .taginfo(iD.taginfo())
                                 .minEditableZoom(10)
                                 .assetPath('dist/');
