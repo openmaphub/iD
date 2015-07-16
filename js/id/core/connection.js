@@ -60,7 +60,7 @@ iD.Connection = function(useHttps) {
             osmID = iD.Entity.id.toOSM(id);
 
         connection.loadFromURL(
-            url + '/api/0.6/' + type + '/' + osmID + (type !== 'node' ? '/full' : ''),
+            url + '/xml/' + type + '/' + osmID + (type !== 'node' ? '/full' : ''),
             function(err, entities) {
                 if (callback) callback(err, {data: entities});
             });
@@ -71,7 +71,7 @@ iD.Connection = function(useHttps) {
             osmID = iD.Entity.id.toOSM(id);
 
         connection.loadFromURL(
-            url + '/api/0.6/' + type + '/' + osmID + '/' + version,
+            url + '/xml/' + type + '/' + osmID + '/' + version,
             function(err, entities) {
                 if (callback) callback(err, {data: entities});
             });
@@ -84,7 +84,7 @@ iD.Connection = function(useHttps) {
 
             _.each(_.chunk(osmIDs, 150), function(arr) {
                 connection.loadFromURL(
-                    url + '/api/0.6/' + type + '?' + type + '=' + arr.join(),
+                    url + '/xml/' + type + '/' + arr.join(),
                     function(err, entities) {
                         if (callback) callback(err, {data: entities});
                     });
@@ -269,14 +269,14 @@ iD.Connection = function(useHttps) {
     connection.putChangeset = function(changes, comment, imageryUsed, callback) {
         oauth.xhr({
                 method: 'PUT',
-                path: '/api/0.6/changeset/create',
+                path: '/changeset/create',
                 options: { header: { 'Content-Type': 'text/xml' } },
                 content: JXON.stringify(connection.changesetJXON(connection.changesetTags(comment, imageryUsed)))
             }, function(err, changeset_id) {
                 if (err) return callback(err);
                 oauth.xhr({
                     method: 'POST',
-                    path: '/api/0.6/changeset/' + changeset_id + '/upload',
+                    path: '/changeset/' + changeset_id + '/upload',
                     options: { header: { 'Content-Type': 'text/xml' } },
                     content: JXON.stringify(connection.osmChangeJXON(changeset_id, changes))
                 }, function(err) {
@@ -287,7 +287,7 @@ iD.Connection = function(useHttps) {
                     window.setTimeout(function() { callback(null, changeset_id); }, 2500);
                     oauth.xhr({
                         method: 'PUT',
-                        path: '/api/0.6/changeset/' + changeset_id + '/close'
+                        path: '/changeset/' + changeset_id + '/close'
                     }, d3.functor(true));
                 });
             });
@@ -319,7 +319,7 @@ iD.Connection = function(useHttps) {
             callback(undefined, userDetails);
         }
 
-        oauth.xhr({ method: 'GET', path: '/api/0.6/user/details' }, done);
+        oauth.xhr({ method: 'GET', path: '/user/details' }, done);
     };
 
     connection.status = function(callback) {
@@ -369,7 +369,7 @@ iD.Connection = function(useHttps) {
             });
 
         function bboxUrl(tile) {
-            return url + '/api/0.6/map?bbox=' + tile.extent.toParam();
+            return url + '/xml/map?bbox=' + tile.extent.toParam();
         }
 
         _.filter(inflight, function(v, i) {
