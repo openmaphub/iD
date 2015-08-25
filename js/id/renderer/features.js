@@ -66,7 +66,7 @@ iD.Features = function(context) {
             defaultMax: (max || Infinity),
             enable: function() { this.enabled = true; this.currentMax = this.defaultMax; },
             disable: function() { this.enabled = false; this.currentMax = 0; },
-            hidden: function() { return (k !== 'focussed' && context.map().zoom() < context.minEditableZoom() ) || this.count > this.currentMax * cullFactor; },
+            hidden: function() { return (k !== 'focussed' && context.map().zoom() < context.minEditableZoom() ) || this.count > this.currentMax * _cullFactor; },
             autoHidden: function() { return this.hidden() && this.currentMax > 0; }
         };
     }
@@ -174,7 +174,7 @@ iD.Features = function(context) {
     };
 
     features.keys = function() {
-        var keys = _.keys(feature);
+        var keys = _keys;
 
         if(context.focussedID()) return keys;
         return _.without(keys, 'focussed');
@@ -356,7 +356,9 @@ iD.Features = function(context) {
                 if (geometry === 'vertex') {
                     parents = resolver.parentWays(entity);
                 } else {   // 'line', 'area', 'relation'
-                    parents = resolver.parentRelations(entity);
+                    if(resolver){
+                      parents = resolver.parentRelations(entity);
+                    }                  
                 }
             }
             _cache[ent].parents = parents;
@@ -411,11 +413,19 @@ iD.Features = function(context) {
         }) : false;
     };
 
-    features.isHidden = function(entity, graph) {
-        resolver = graph || resolver;
-        return !!entity.version &&
-            (!features.isFocussedFeature(entity) && (features.isHiddenFeature(entity, resolver) || features.isHiddenChild(entity, resolver)));
-    };
+
+    features.isHidden = function(entity, resolver, geometry) {
+        if (!entity.version) return false;
+
+        if (geometry === 'vertex')
+            return features.isHiddenChild(entity, resolver, geometry);
+        if (geometry === 'point')
+            return features.isHiddenFeature(entity, resolver, geometry);
+
+        return !features.isFocussedFeature(entity) &&
+               (features.isHiddenFeature(entity, resolver, geometry) || features.isHiddenChild(entity, resolver, geometry));
+   };
+
 
     features.filter = function(d, resolver) {
         if (!_hidden.length)
