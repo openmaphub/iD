@@ -236,6 +236,7 @@ iD.Features = function(context) {
         var hidden = features.hidden(),
             keys = features.keys();
         resolver = graph || resolver;
+    };
 
     features.resetStats = function() {
         _.each(_features, function(f) { f.count = 0; });
