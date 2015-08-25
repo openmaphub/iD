@@ -1,20 +1,14 @@
-iD.Connection = function(useHttps) {
-    if (typeof useHttps !== 'boolean') {
-      useHttps = window.location.protocol === 'https:';
-    }
-
-    var event = d3.dispatch('authenticating', 'authenticated', 'auth', 'loading', 'load', 'loaded'),
-        url = 'http://osm.moabi.org',
+iD.Connection = function() {
+    var event = d3.dispatch('authenticating', 'authenticated', 'auth', 'loading', 'loaded'),
+        url = 'http://localhost:4000',
         connection = {},
         inflight = {},
         loadedTiles = {},
         tileZoom = 16,
         oauth = osmAuth({
-            url: 'http://osm.moabi.org',
-            oauth_consumer_key: 'VRdt3N1nR4TNjFTiLt5tbAtVWpvUgMf5MGVfn8CG',
-            oauth_secret: '9Un91nyfRCfmF4xC9nnYTk8hz6KNVzeINgyWv15i',
-            // oauth_consumer_key: '5A043yRSEugj4DJ5TljuapfnrflWDte8jTOcWLlT',
-            // oauth_secret: 'aB3jKq1TRsCOUrfOIZ6oQMEDmv2ptV76PA54NGLL',
+            url: 'http://localhost:4000',
+            oauth_consumer_key: 'abc123',
+            oauth_secret: 'ssh-secret',
             loading: authenticating,
             done: authenticated
         }),
@@ -251,7 +245,7 @@ iD.Connection = function(useHttps) {
     };
 
     connection.changesetTags = function(comment, imageryUsed) {
-        var detected = iD.detect(),
+        var detected = iD.as(),
             tags = {
                 created_by: 'iD ' + iD.version,
                 imagery_used: imageryUsed.join(';').substr(0, 255),
@@ -268,6 +262,7 @@ iD.Connection = function(useHttps) {
 
     connection.putChangeset = function(changes, comment, imageryUsed, callback) {
         oauth.xhr({
+                url: 'http://localhost:4000',
                 method: 'PUT',
                 path: '/changeset/create',
                 options: { header: { 'Content-Type': 'text/xml' } },
@@ -275,6 +270,7 @@ iD.Connection = function(useHttps) {
             }, function(err, changeset_id) {
                 if (err) return callback(err);
                 oauth.xhr({
+                    url: 'http://localhost:4000',
                     method: 'POST',
                     path: '/changeset/' + changeset_id + '/upload',
                     options: { header: { 'Content-Type': 'text/xml' } },
@@ -286,6 +282,7 @@ iD.Connection = function(useHttps) {
                     // Add delay to allow for postgres replication #1646 #2678
                     window.setTimeout(function() { callback(null, changeset_id); }, 2500);
                     oauth.xhr({
+                        url: 'http://localhost:4000',
                         method: 'PUT',
                         path: '/changeset/' + changeset_id + '/close'
                     }, d3.functor(true));
