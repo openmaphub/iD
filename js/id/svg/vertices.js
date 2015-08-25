@@ -12,7 +12,7 @@ iD.svg.Vertices = function(projection, context) {
         var vertices = {};
 
         function addChildVertices(entity) {
-            if (!context.features().isHiddenFeature(entity, graph, entity.geometry(graph))) {
+            if (!context.features().isHidden(entity) && context.map().editable()) {
                 var i;
                 if (entity.type === 'way') {
                     for (i = 0; i < entity.nodes.length; i++) {

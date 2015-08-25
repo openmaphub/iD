@@ -27,16 +27,6 @@ describe("iD.svg.Vertices", function () {
 
         context.map().zoom(context.minEditableZoom() - 1);
         surface.call(iD.svg.Vertices(projection, context), graph, [node], 17);
-        expect(surface.select('.vertex')).to.be.classed('shared');
-    });
-
-    it("no vertices are drawn if map is not editable", function () {
-        var node = iD.Node({loc: [0, 0], tags: {amenity: 'atm'}}),
-            way = iD.Way({nodes: [node.id], tags: {highway: 'residential'}}),
-            graph = iD.Graph([node, way]);
-
-        context.map().zoom(context.minEditableZoom() - 1);
-        surface.call(iD.svg.Vertices(projection, context), graph, [node], 17);
 
         expect(surface.select('.vertex').empty()).to.be.true;
 

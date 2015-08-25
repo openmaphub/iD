@@ -105,6 +105,15 @@ iD.modes.Select = function(context, selectedIDs) {
             }
         }
 
+        context.map().on('move.select', function() {
+            context.surface().call(radialMenu.close);
+
+            var focussedID = context.focussedID();
+            if (!context.map().editable() && (selectedIDs.length !== 1 || selectedIDs[0] !== focussedID)) {
+                context.enter(iD.modes.Browse(context));
+            }
+        });
+
         function dblclick() {
             var target = d3.select(d3.event.target),
                 datum = target.datum();

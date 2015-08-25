@@ -66,7 +66,7 @@ iD.Features = function(context) {
             defaultMax: (max || Infinity),
             enable: function() { this.enabled = true; this.currentMax = this.defaultMax; },
             disable: function() { this.enabled = false; this.currentMax = 0; },
-            hidden: function() { return !context.editable() || this.count > this.currentMax * _cullFactor; },
+            hidden: function() { return (k !== 'focussed' && context.map().zoom() < context.minEditableZoom() ) || this.count > this.currentMax * cullFactor; },
             autoHidden: function() { return this.hidden() && this.currentMax > 0; }
         };
     }
@@ -174,7 +174,10 @@ iD.Features = function(context) {
     };
 
     features.keys = function() {
-        return _keys;
+        var keys = _.keys(feature);
+
+        if(context.focussedID()) return keys;
+        return _.without(keys, 'focussed');
     };
 
     features.enabled = function(k) {
@@ -408,16 +411,10 @@ iD.Features = function(context) {
         }) : false;
     };
 
-    features.isHidden = function(entity, resolver, geometry) {
-        if (!entity.version) return false;
-
-        if (geometry === 'vertex')
-            return features.isHiddenChild(entity, resolver, geometry);
-        if (geometry === 'point')
-            return features.isHiddenFeature(entity, resolver, geometry);
-
-        return features.isHiddenFeature(entity, resolver, geometry) ||
-               features.isHiddenChild(entity, resolver, geometry);
+    features.isHidden = function(entity, graph) {
+        resolver = graph || resolver;
+        return !!entity.version &&
+            (!features.isFocussedFeature(entity) && (features.isHiddenFeature(entity, resolver) || features.isHiddenChild(entity, resolver)));
     };
 
     features.filter = function(d, resolver) {
@@ -432,6 +429,10 @@ iD.Features = function(context) {
             }
         }
         return result;
+    };
+
+    features.isFocussedFeature = function(entity) {
+        return entity.id === context.focussedID() && feature.focussed && feature.focussed.enabled;
     };
 
     features.isFocussedFeature = function(entity) {
