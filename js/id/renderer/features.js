@@ -358,7 +358,7 @@ iD.Features = function(context) {
                 } else {   // 'line', 'area', 'relation'
                     if(resolver){
                       parents = resolver.parentRelations(entity);
-                    }                  
+                    }
                 }
             }
             _cache[ent].parents = parents;
@@ -442,15 +442,7 @@ iD.Features = function(context) {
     };
 
     features.isFocussedFeature = function(entity) {
-        return entity.id === context.focussedID() && feature.focussed && feature.focussed.enabled;
-    };
-
-    features.isFocussedFeature = function(entity) {
-        return entity.id === context.focussedID() && feature.focussed && feature.focussed.enabled;
-    };
-
-    features.isFocussedFeature = function(entity) {
-        return entity.id === context.focussedID() && feature.focussed && feature.focussed.enabled;
+        return entity.id === context.focussedID() && _features.focussed && _features.focussed.enabled;
     };
 
     return d3.rebind(features, dispatch, 'on');
