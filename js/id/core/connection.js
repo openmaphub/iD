@@ -365,9 +365,14 @@ iD.Connection = function() {
                 };
             });
 
-        function bboxUrl(tile) {
-            return url + '/xml/map?bbox=' + tile.extent.toParam();
-        }
+           function bboxUrl(tile) {
+             var layer_id = iD.util.stringQs(window.location.hash).layer_id;
+             var urlPath =  url + '/xml/map?bbox=';
+             if(layer_id){
+               urlPath = url + '/xml/map/'+ layer_id + '?bbox=';
+             }
+              return urlPath + tile.extent.toParam();
+            }
 
         _.filter(inflight, function(v, i) {
             var wanted = _.find(tiles, function(tile) {
