@@ -54,7 +54,7 @@ iD.Connection = function() {
             osmID = iD.Entity.id.toOSM(id);
 
         connection.loadFromURL(
-            url + '/xml/' + type + '/' + osmID + (type !== 'node' ? '/full' : ''),
+            url + '/api/0.6/' + type + '/' + osmID + (type !== 'node' ? '/full' : ''),
             function(err, entities) {
                 if (callback) callback(err, {data: entities});
             });
@@ -65,7 +65,7 @@ iD.Connection = function() {
             osmID = iD.Entity.id.toOSM(id);
 
         connection.loadFromURL(
-            url + '/xml/' + type + '/' + osmID + '/' + version,
+            url + '/api/0.6/' + type + '/' + osmID + '/' + version,
             function(err, entities) {
                 if (callback) callback(err, {data: entities});
             });
@@ -78,7 +78,7 @@ iD.Connection = function() {
 
             _.each(_.chunk(osmIDs, 150), function(arr) {
                 connection.loadFromURL(
-                    url + '/xml/' + type + '/' + arr.join(),
+                    url + '/api/0.6/' + type + '/' + arr.join(),
                     function(err, entities) {
                         if (callback) callback(err, {data: entities});
                     });
