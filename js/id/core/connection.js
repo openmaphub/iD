@@ -1,14 +1,14 @@
 iD.Connection = function() {
     var event = d3.dispatch('authenticating', 'authenticated', 'auth', 'loading', 'loaded'),
-        url = 'http://localhost:4000',
+        url = OMH_CONFIG.AUTH_URL,
         connection = {},
         inflight = {},
         loadedTiles = {},
         tileZoom = 16,
         oauth = osmAuth({
-            url: 'http://localhost:4000',
-            oauth_consumer_key: 'abc123',
-            oauth_secret: 'ssh-secret',
+            url: OMH_CONFIG.AUTH_URL,
+            oauth_consumer_key: OMH_CONFIG.OAUTH_CONSUMER_KEY,
+            oauth_secret: OMH_CONFIG.OAUTH_SECRET,
             loading: authenticating,
             done: authenticated
         }),
@@ -236,7 +236,7 @@ iD.Connection = function() {
         return {
             osmChange: {
                 '@version': 0.3,
-                '@generator': 'iD',
+                '@generator': 'MapHubs-iD',
                 'create': nest(changes.created.map(rep), ['node', 'way', 'relation']),
                 'modify': nest(changes.modified.map(rep), ['node', 'way', 'relation']),
                 'delete': _.extend(nest(changes.deleted.map(rep), ['relation', 'way', 'node']), {'@if-unused': true})
@@ -247,7 +247,7 @@ iD.Connection = function() {
     connection.changesetTags = function(comment, imageryUsed) {
         var detected = iD.detect(),
             tags = {
-                created_by: 'iD ' + iD.version,
+                created_by: 'MapHubs-iD ' + iD.version,
                 imagery_used: imageryUsed.join(';').substr(0, 255),
                 host: (window.location.origin + window.location.pathname).substr(0, 255),
                 locale: detected.locale
@@ -262,7 +262,7 @@ iD.Connection = function() {
 
     connection.putChangeset = function(changes, comment, imageryUsed, callback) {
         oauth.xhr({
-                url: 'http://localhost:4000',
+                url: OMH_CONFIG.AUTH_URL,
                 method: 'PUT',
                 path: '/changeset/create',
                 options: { header: { 'Content-Type': 'text/xml' } },
@@ -270,7 +270,7 @@ iD.Connection = function() {
             }, function(err, changeset_id) {
                 if (err) return callback(err);
                 oauth.xhr({
-                    url: 'http://localhost:4000',
+                    url: OMH_CONFIG.AUTH_URL,
                     method: 'POST',
                     path: '/changeset/' + changeset_id + '/upload',
                     options: { header: { 'Content-Type': 'text/xml' } },
@@ -282,7 +282,7 @@ iD.Connection = function() {
                     // Add delay to allow for postgres replication #1646 #2678
                     window.setTimeout(function() { callback(null, changeset_id); }, 2500);
                     oauth.xhr({
-                        url: 'http://localhost:4000',
+                        url: OMH_CONFIG.AUTH_URL,
                         method: 'PUT',
                         path: '/changeset/' + changeset_id + '/close'
                     }, d3.functor(true));
