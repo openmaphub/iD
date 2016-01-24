@@ -146,10 +146,10 @@
     "inspector": {
         "no_documentation_combination": "لا توجد وثائق متاحة لهذه المجموعة من العلامات",
         "no_documentation_key": "لا توجد وثائق متاحة لهذه الكلمة",
-        "view_on_osm": "openstreetmap.org شاهد على",
+        "view_on_osm": "maphubs.com شاهد على",
         "choose": "حدد نوع الميزة",
         "results": "{n} نتائج {search}",
-        "reference": "OpenStreetMap شاهد على ويكي"
+        "reference": "MapHubs شاهد على ويكي"
     },
     "background": {
         "title": "الخلفية",
@@ -165,7 +165,7 @@
     },
     "save": {
         "title": "حفظ",
-        "help": " مما يجعلها مرئية للمستخدمين الآخرين OpenStreetMap حفظ التغييرات إلى",
+        "help": " مما يجعلها مرئية للمستخدمين الآخرين MapHubs حفظ التغييرات إلى",
         "no_changes": ".لا تغييرات للحفظ"
     }
 }

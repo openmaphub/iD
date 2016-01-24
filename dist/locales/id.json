@@ -216,7 +216,7 @@
     },
     "zoom_in_edit": "Perbesar untuk bisa menyunting",
     "logout": "keluar",
-    "loading_auth": "Menghubungkan dengan OpenStreetMap...",
+    "loading_auth": "Menghubungkan dengan MapHubs...",
     "report_a_bug": "laporkan sebuah kerusakan",
     "status": {
         "error": "Tak bisa terhubung dengan API.",
@@ -226,8 +226,8 @@
     "commit": {
         "title": "Simpan Perubahan",
         "description_placeholder": "Deskripsi singkat kontribusi Anda",
-        "upload_explanation": "Perubahan yang anda unggah akan tampil di seluruh peta yang menggunakan data OpenStreetMap.",
-        "upload_explanation_with_user": "Perubahan yang anda unggah sebagai {user} akan tampil di seluruh peta yang menggunakan data OpenStreetMap.",
+        "upload_explanation": "Perubahan yang anda unggah akan tampil di seluruh peta yang menggunakan data MapHubs.",
+        "upload_explanation_with_user": "Perubahan yang anda unggah sebagai {user} akan tampil di seluruh peta yang menggunakan data MapHubs.",
         "save": "Simpan",
         "cancel": "Batal",
         "warnings": "Peringatan",
@@ -251,7 +251,7 @@
         "no_documentation_combination": "Tidak ada dokumentasi yang tersedia untuk kombinasi tanda ini",
         "no_documentation_key": "Tidak ada dokumentasi tersedia untuk kunci ini",
         "show_more": "Tampilkan Lainnya",
-        "view_on_osm": "Lihat di openstreetmap.org",
+        "view_on_osm": "Lihat di maphubs.com",
         "all_tags": "Semua Tags",
         "all_members": "Semua anggota",
         "all_relations": "Seluruh relasi",
@@ -259,7 +259,7 @@
         "role": "Aturan",
         "choose": "Pilih Tipe Fitur",
         "results": "{n}hasil untuk {search}",
-        "reference": "Lihat di OpenStreetMap Wiki",
+        "reference": "Lihat di MapHubs Wiki",
         "back_tooltip": "Ubah Fitur",
         "remove": "Buang",
         "search": "Cari",
@@ -311,25 +311,25 @@
     },
     "save": {
         "title": "Simpan",
-        "help": "Simpan perubahan ke OpenStreetMap, jadikan mereka terlihat oleh pengguna lain.",
+        "help": "Simpan perubahan ke MapHubs, jadikan mereka terlihat oleh pengguna lain.",
         "no_changes": "Tak ada perubahan yang bisa disimpan.",
-        "uploading": "Mengunggah perubahan ke OpenStreetMap.",
+        "uploading": "Mengunggah perubahan ke MapHubs.",
         "unsaved_changes": "Anda mememiliki perubahan yang belum tersimpan"
     },
     "success": {
         "edited_osm": "OSM tersunting!",
-        "just_edited": "Anda baru saja menyunting OpenStreetMap!",
+        "just_edited": "Anda baru saja menyunting MapHubs!",
         "view_on_osm": "Lihat di OSM",
         "facebook": "Bagikan di Facebook",
         "twitter": "Berbagi di Twitter",
         "google": "Berbagi di Google+",
-        "help_html": "Perubahan yang anda buat seharusnya akan muncul di layer \"Standar\" dalam beberapa menit. Layer lain dan fitur tertentu, mungkin akan membutuhkan waktu lama\n(<a href='https://help.openstreetmap.org/questions/4705/why-havent-my-changes-appeared-on-the-map' target='_blank'>Penjelasan lebih lanjut</a>).\n"
+        "help_html": "Perubahan yang anda buat seharusnya akan muncul di layer \"Standar\" dalam beberapa menit. Layer lain dan fitur tertentu, mungkin akan membutuhkan waktu lama\n(<a href='https://help.maphubs.com/questions/4705/why-havent-my-changes-appeared-on-the-map' target='_blank'>Penjelasan lebih lanjut</a>).\n"
     },
     "confirm": {
         "okay": "Baiklah"
     },
     "splash": {
-        "welcome": "Selamat datang di penyuting iD OpenStreetMap",
+        "welcome": "Selamat datang di penyuting iD MapHubs",
         "text": "iD begitu bersahabat namun juga alat yang kuat untuk berperan dalam peta dunia gratis terbaik. Ini adalah versi {version}. Untuk informasi lebih lihat {website} dan laporkan kesalahan di {github}.",
         "walkthrough": "Memulai Perjalanan",
         "start": "Sunting Sekarang"
@@ -348,7 +348,7 @@
         "untagged_point": "Titik Tak-bertanda",
         "untagged_line": "Garis tak bertanda",
         "untagged_area": "Area tak bertanda",
-        "many_deletions": "Anda menghapus {n} obyek. Apakah anda yakin? Ini akan menghapus dari peta yang semua orang lihat pada openstreetmap.org.",
+        "many_deletions": "Anda menghapus {n} obyek. Apakah anda yakin? Ini akan menghapus dari peta yang semua orang lihat pada maphubs.com.",
         "tag_suggests_area": "Penanda {tag} menyarankan garis sebaiknya dalam bentuk area, tapi ini bukan sebuah area",
         "untagged_point_tooltip": "Pilih tipe fitur yang menjelaskan apa identitas poin ini.",
         "untagged_line_tooltip": "Pilih tipe fitur yang menjelaskan apa identitas garis ini.",
@@ -377,7 +377,7 @@
     "intro": {
         "navigation": {
             "title": "Navigasi",
-            "drag": "Area peta utama menampilkan data OpenStreetMap pada bagian atas dari latar. Anda dapat bernavigasi dengan menggeser dan mengskrol, seperti peta web lainnya. **Geser petanya!**",
+            "drag": "Area peta utama menampilkan data MapHubs pada bagian atas dari latar. Anda dapat bernavigasi dengan menggeser dan mengskrol, seperti peta web lainnya. **Geser petanya!**",
             "select": "Fitur peta dapat diwakili dengan tiga cara: dengan titik, garis, atau area. Semua fitur dapat dipilih dengan mengklik mereka. **Klik sebuah titik untuk memilihnya.**",
             "header": "Header menunjukan tipe fitur.",
             "pane": "Ketika sebuah fitur terpilih, fitur penyunting akan tampil. Header menunjukan tipe fitur dan panel utama yang menunjukan atribut fitur, seperti nama dan alamat. **Tutup fitur penyunting dengan mengklik tombol tutup di bagian kanan atas.**"

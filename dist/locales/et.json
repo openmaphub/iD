@@ -207,13 +207,13 @@
     },
     "zoom_in_edit": "Muutmiseks suurenda sisse",
     "logout": "Logi välja",
-    "loading_auth": "OpenStreetMap'iga ühendamine...",
+    "loading_auth": "MapHubs'iga ühendamine...",
     "report_a_bug": "teata veast",
     "commit": {
         "title": "Salvesta muudatused",
         "description_placeholder": "Muudatuste lühikirjeldus",
-        "upload_explanation": "Su salvestatavad muudatused on nähtaval kõikidel kaartidel mis kasutavad OpenStreetMap-i andmeid.",
-        "upload_explanation_with_user": "Su kasutajana {user} salvestatavad muudatused on nähtaval kõikidel kaartidel, mis kasutavad OpenStreetMap-i andmeid.",
+        "upload_explanation": "Su salvestatavad muudatused on nähtaval kõikidel kaartidel mis kasutavad MapHubs-i andmeid.",
+        "upload_explanation_with_user": "Su kasutajana {user} salvestatavad muudatused on nähtaval kõikidel kaartidel, mis kasutavad MapHubs-i andmeid.",
         "save": "Salvesta",
         "cancel": "Tühista",
         "warnings": "Hoiatused",
@@ -237,7 +237,7 @@
         "no_documentation_combination": "Selle sildi kohta puudub dokumentatsioon",
         "no_documentation_key": "Selle objektiliigi kohta puudub informatsioon",
         "show_more": "Näita rohkem",
-        "view_on_osm": "Vaata openstreetmap.org lehel",
+        "view_on_osm": "Vaata maphubs.com lehel",
         "all_tags": "Kõik sildid",
         "all_members": "Kõik liikmed",
         "all_relations": "Kõik seosed",
@@ -245,7 +245,7 @@
         "role": "Roll",
         "choose": "Vali objekti liik",
         "results": "{n} tulemust otsingule {search}",
-        "reference": "Vaata OpenStreetMap Wiki lehel",
+        "reference": "Vaata MapHubs Wiki lehel",
         "back_tooltip": "Muuda objekti",
         "remove": "Eemalda",
         "search": "Otsi",
@@ -278,25 +278,25 @@
     },
     "save": {
         "title": "Salvesta",
-        "help": "Salvesta muudatused OpenStreetMap'i, tehes need teistele kasutajatele nähtavaks.",
+        "help": "Salvesta muudatused MapHubs'i, tehes need teistele kasutajatele nähtavaks.",
         "no_changes": "Salvestamist vajavad muudatused puuduvad.",
-        "uploading": "Muudatuste üleslaadimine OpenStreetMap'i.",
+        "uploading": "Muudatuste üleslaadimine MapHubs'i.",
         "unsaved_changes": "Sul on salvestamata muudatusi"
     },
     "success": {
         "edited_osm": "Sa täiendasid OSM-i!",
-        "just_edited": "Sa täiendasid just OpenStreetMap-i!",
+        "just_edited": "Sa täiendasid just MapHubs-i!",
         "view_on_osm": "Vaata OSM lehel",
         "facebook": "Jaga Facebook-is",
         "twitter": "Jaga Twitteris",
         "google": "Jaga Google+-is",
-        "help_html": "Sinu muudatused peaks \"Standard\" kihile ilmuma mõne minuti pärast. Teiste kihtidega ja teatud objektidega võib kauem aega minna, \n(<a href='https://help.openstreetmap.org/questions/4705/why-havent-my-changes-appeared-on-the-map' target='_blank'>vaata lisaks</a>).\n"
+        "help_html": "Sinu muudatused peaks \"Standard\" kihile ilmuma mõne minuti pärast. Teiste kihtidega ja teatud objektidega võib kauem aega minna, \n(<a href='https://help.maphubs.com/questions/4705/why-havent-my-changes-appeared-on-the-map' target='_blank'>vaata lisaks</a>).\n"
     },
     "confirm": {
         "okay": "Korras"
     },
     "splash": {
-        "welcome": "Tere tulemast kasutama iD OpenStreetMap redaktorit",
+        "welcome": "Tere tulemast kasutama iD MapHubs redaktorit",
         "text": "iD on kasutajasõbralik ja samas võimas töövahend parima vaba maailmakaardi täiendamiseks. See on versioon {version}. Rohkem infot võib leida veebilehelt {website} ja vigadest saab teatada lehel {github}.",
         "walkthrough": "Alusta tutvustust",
         "start": "Alusta muutmist"
@@ -315,7 +315,7 @@
         "untagged_point": "Sildistamata punkt",
         "untagged_line": "Sildistamata joon",
         "untagged_area": "Sildistamata ala",
-        "many_deletions": "Sa oled kustutamas {n} objkti. Oled sa kindel, et soovid seda teha. See kustutab need kaardilt, mida kõik teised näevad openstreetmap.org lehel.",
+        "many_deletions": "Sa oled kustutamas {n} objkti. Oled sa kindel, et soovid seda teha. See kustutab need kaardilt, mida kõik teised näevad maphubs.com lehel.",
         "tag_suggests_area": "Silt {tag} viitab, et joon peaks olema ala, kuid see pole ala.",
         "deprecated_tags": "Iganenud sildid: {tags}"
     },
@@ -330,12 +330,12 @@
     },
     "help": {
         "title": "Abi",
-        "imagery": "# Aerofoto\n\nAerofotod on kaardistamisel oluliseks algallikaks. Valik aerofotosid on kättesaadavad paremal asuva redaktori taustaseadete menüü kaudu, vaikimisi on taustaks [Bing Maps](http://www.bing.com/maps/) satelliitfoto.\n\nMaa-ameti aerofoto taustana kasutamiseks lisa kohandatud tausta valikusse aadress kujul http://kaart.maakaart.ee/orto/{z}/{x}/{y}.jpeg. Selleks, et avada OSM ID-redaktor vaikimisi Maa-ameti ortofoto taustaga, kasuta veebibrauseris aadressi http://www.openstreetmap.org/edit#background=custom:http://kaart.maakaart.ee/orto/{z}/{x}/{y}.jpeg&map=@zoom/@lon/@lat, milles @zoom/@lon/@lat asenda reaalsete väärtustega (näit. 15/59.3438/24.5892).\n\nMõnikord on aerofoto kaardiandmete suhtes nihkes. Kui märkad mitmeid taustaga nihkes olevaid teid, ära asu kohe nende asukohti muutma, vaid kohanda vastavalt aerofoto asendit taustaseadete menüü valiku 'Korrigeeri nihet' abil.\n"
+        "imagery": "# Aerofoto\n\nAerofotod on kaardistamisel oluliseks algallikaks. Valik aerofotosid on kättesaadavad paremal asuva redaktori taustaseadete menüü kaudu, vaikimisi on taustaks [Bing Maps](http://www.bing.com/maps/) satelliitfoto.\n\nMaa-ameti aerofoto taustana kasutamiseks lisa kohandatud tausta valikusse aadress kujul http://kaart.maakaart.ee/orto/{z}/{x}/{y}.jpeg. Selleks, et avada OSM ID-redaktor vaikimisi Maa-ameti ortofoto taustaga, kasuta veebibrauseris aadressi http://www.maphubs.com/edit#background=custom:http://kaart.maakaart.ee/orto/{z}/{x}/{y}.jpeg&map=@zoom/@lon/@lat, milles @zoom/@lon/@lat asenda reaalsete väärtustega (näit. 15/59.3438/24.5892).\n\nMõnikord on aerofoto kaardiandmete suhtes nihkes. Kui märkad mitmeid taustaga nihkes olevaid teid, ära asu kohe nende asukohti muutma, vaid kohanda vastavalt aerofoto asendit taustaseadete menüü valiku 'Korrigeeri nihet' abil.\n"
     },
     "intro": {
         "navigation": {
             "title": "Navigeerimine",
-            "drag": "Peamises kaardivaates on näha aluskaardi peal olevad OpenStreetMap andmed. Vaate liigutamine toimub hiirega lohistades ja kerides, sarnaselt teiste kaartidega. **Lohista kaarti!**",
+            "drag": "Peamises kaardivaates on näha aluskaardi peal olevad MapHubs andmed. Vaate liigutamine toimub hiirega lohistades ja kerides, sarnaselt teiste kaartidega. **Lohista kaarti!**",
             "select": "Kaardi objekte saab esitada kolmel viisil: kasutades punkte, jooni või alasid. Kõiki objekte saab valida nendel klikkides. **Kliki punktil, et see valida.**"
         },
         "points": {

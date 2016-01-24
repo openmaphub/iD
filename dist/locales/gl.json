@@ -216,7 +216,7 @@
     },
     "zoom_in_edit": "Fai zoom para editar.",
     "logout": "cerrar sesión",
-    "loading_auth": "Conectando con OpenStreetMap...",
+    "loading_auth": "Conectando con MapHubs...",
     "report_a_bug": "informar dun erro",
     "status": {
         "error": "Non se puido conectar coa API.",
@@ -226,8 +226,8 @@
     "commit": {
         "title": "Gardar Cambios",
         "description_placeholder": "Breve descrición das túas contribucións",
-        "upload_explanation": "Os cambios que subas serán visibles en tódolos mapas que usen os datos de OpenStreetMap.",
-        "upload_explanation_with_user": "Os cambios que subas como {user} serán visibles en tódolos mapas que usen os datos de OpenStreetMap.",
+        "upload_explanation": "Os cambios que subas serán visibles en tódolos mapas que usen os datos de MapHubs.",
+        "upload_explanation_with_user": "Os cambios que subas como {user} serán visibles en tódolos mapas que usen os datos de MapHubs.",
         "save": "Gardar",
         "cancel": "Cancelar",
         "warnings": "Avisos",
@@ -251,7 +251,7 @@
         "no_documentation_combination": "Non hai ningunha documentación dispoñible para esta combinación de etiquetas",
         "no_documentation_key": "Non hai ningunha documentación dispoñible para esta clave",
         "show_more": "Mostrar máis",
-        "view_on_osm": "Ver en openstreetmap.org",
+        "view_on_osm": "Ver en maphubs.com",
         "all_tags": "Tódalas etiquetas",
         "all_members": "Tódolos membros",
         "all_relations": "Tódalas relacións",
@@ -259,7 +259,7 @@
         "role": "Rol",
         "choose": "Escolle o tipo de elemento",
         "results": "{n} resultados para {search}",
-        "reference": "Ver na Wiki de OpenStreetMap",
+        "reference": "Ver na Wiki de MapHubs",
         "back_tooltip": "Cambiar tipo de elemento",
         "remove": "Eliminar",
         "search": "Buscar",
@@ -293,25 +293,25 @@
     },
     "save": {
         "title": "Gardar",
-        "help": "Gardar os cambios en OpenStreetMap, facéndoos visibles aos demáis usuarios.",
+        "help": "Gardar os cambios en MapHubs, facéndoos visibles aos demáis usuarios.",
         "no_changes": "Non hai cambios para gardar.",
-        "uploading": "Subindo cambios a OpenStreetMap.",
+        "uploading": "Subindo cambios a MapHubs.",
         "unsaved_changes": "Tes cambios sen gardar"
     },
     "success": {
         "edited_osm": "OSM editado!",
-        "just_edited": "Acabas de editar OpenStreetMap!",
+        "just_edited": "Acabas de editar MapHubs!",
         "view_on_osm": "Ver en OSM",
         "facebook": "Compartir no Facebook",
         "twitter": "Compartir en Twitter",
         "google": "Compartir en Google+",
-        "help_html": "Os teus cambios deberían aparecer na capa \"Estándar\" nuns minutos. Outras capas, e determinados elementos, poden tardar máis tempo (<a href='https://help.openstreetmap.org/questions/4705/why-havent-my-changes-appeared-on-the-map' target='_blank'>detalles</a>).\n"
+        "help_html": "Os teus cambios deberían aparecer na capa \"Estándar\" nuns minutos. Outras capas, e determinados elementos, poden tardar máis tempo (<a href='https://help.maphubs.com/questions/4705/why-havent-my-changes-appeared-on-the-map' target='_blank'>detalles</a>).\n"
     },
     "confirm": {
         "okay": "Vale"
     },
     "splash": {
-        "welcome": "Benvido ao editor de OpenStreetMap iD",
+        "welcome": "Benvido ao editor de MapHubs iD",
         "text": "iD é unha amigable pero potente ferramenta para contribuir ao mellor mapa libre do mundo. Esta é a versión {version}. Para obter máis información visita {website} e informa de erros en {github}.",
         "walkthrough": "Comezar o titorial.",
         "start": "Editar agora"
@@ -330,7 +330,7 @@
         "untagged_point": "Punto sen etiquetar",
         "untagged_line": "Liña sen etiquetar",
         "untagged_area": "Área sen etiquetar",
-        "many_deletions": "Estás borrando {n} obxectos. Estás seguro de querer facelo? Esta acción quitaraos do mapa que os demáis ven en openstreetmap.org.",
+        "many_deletions": "Estás borrando {n} obxectos. Estás seguro de querer facelo? Esta acción quitaraos do mapa que os demáis ven en maphubs.com.",
         "tag_suggests_area": "A etiqueta {tag} suxire que a liña debería ser unha área, pero non é unha área.",
         "untagged_point_tooltip": "Escolle un tipo de elemento que describa o que é este punto.",
         "untagged_line_tooltip": "Escolle un tipo de elemento que describa o que é esta liña.",
@@ -358,7 +358,7 @@
     "intro": {
         "navigation": {
             "title": "Navegación",
-            "drag": "A área principal do mapa mostra os datos de OpenStreetMap sobre un fondo. Podes navegar polo mapa arrastrando e desprazándote, igual que calquera mapa de internet. **Arrastra o mapa!**",
+            "drag": "A área principal do mapa mostra os datos de MapHubs sobre un fondo. Podes navegar polo mapa arrastrando e desprazándote, igual que calquera mapa de internet. **Arrastra o mapa!**",
             "select": "Os elementos do mapa represéntanse de tres formas: usando puntos, liñas ou áreas. Calquera elemento se pode seleccionar facendo clic nel. **Fai clic no punto para seleccionalo.**",
             "header": "Na cabeceira móstrase o tipo de elemento.",
             "pane": "Cando un elemento é seleccionado, móstrase o editor de elementos. A cabeceira mostra o tipo de elemento e o panel principal mostra os atributos do elemento como, por exemplo, o seu nome e o seu enderezo. **Pecha o editor de elementos co botón de cerre da parte superior dereita.**"

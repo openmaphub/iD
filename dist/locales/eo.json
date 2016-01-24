@@ -112,7 +112,7 @@
         "changes": "{count} ŝanĝoj"
     },
     "inspector": {
-        "reference": "Vidi en la vikio de OpenStreetMap",
+        "reference": "Vidi en la vikio de MapHubs",
         "check": {
             "yes": "Jes",
             "no": "Ne"

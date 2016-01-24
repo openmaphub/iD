@@ -179,7 +179,7 @@ en:
     localized_translation_name: Name
   zoom_in_edit: Zoom in to Edit
   logout: logout
-  loading_auth: "Connecting to OpenStreetMap..."
+  loading_auth: "Connecting to MapHubs..."
   report_a_bug: report a bug
   feature_info:
     hidden_warning: "{count} hidden features"
@@ -192,8 +192,8 @@ en:
     title: Save Changes
     description_placeholder: Brief description of your contributions
     message_label: Changeset comment
-    upload_explanation: "The changes you upload will be visible on all maps that use OpenStreetMap data."
-    upload_explanation_with_user: "The changes you upload as {user} will be visible on all maps that use OpenStreetMap data."
+    upload_explanation: "The changes you upload will be visible on all maps that use MapHubs data."
+    upload_explanation_with_user: "The changes you upload as {user} will be visible on all maps that use MapHubs data."
     save: Save
     cancel: Cancel
     changes: "{count} Changes"
@@ -240,7 +240,7 @@ en:
     role: Role
     choose: Select feature type
     results: "{n} results for {search}"
-    reference: View on OpenStreetMap Wiki
+    reference: View on MapHubs Wiki
     back_tooltip: Change feature
     remove: Remove
     search: Search
@@ -335,12 +335,12 @@ en:
     reset: Reset
   save:
     title: Save
-    help: "Save changes to OpenStreetMap, making them visible to other users."
+    help: "Save changes to MapHubs, making them visible to other users."
     no_changes: No changes to save.
     error: Errors occurred while trying to save
     status_code: "Server returned status code {code}"
     unknown_error_details: "Please ensure you are connected to the internet."
-    uploading: Uploading changes to OpenStreetMap.
+    uploading: Uploading changes to MapHubs.
     unsaved_changes: You have unsaved changes
     conflict:
       header: Resolve conflicting edits
@@ -366,7 +366,7 @@ en:
       tags: 'You changed the <b>{tag}</b> tag to "{local}" and {user} changed it to "{remote}".'
   success:
     edited_osm: "Edited OSM!"
-    just_edited: "You just edited OpenStreetMap!"
+    just_edited: "You just edited MapHubs!"
     view_on_osm: "View on OSM"
     facebook: "Share on Facebook"
     twitter: "Share on Twitter"
@@ -378,7 +378,7 @@ en:
     okay: "Okay"
     cancel: "Cancel"
   splash:
-    welcome: Welcome to the iD OpenStreetMap editor
+    welcome: Welcome to the iD MapHubs editor
     text: "iD is a friendly but powerful tool for contributing to the world's best free world map. This is version {version}. For more information see {website} and report bugs at {github}."
     walkthrough: "Start the Walkthrough"
     start: "Edit Now"
@@ -418,13 +418,13 @@ en:
     help: |
       # Help
 
-      This is an editor for [OpenStreetMap](http://www.openstreetmap.org/), the
+      This is an editor for [MapHubs](http://www.maphubs.com/), the
       free and editable map of the world. You can use it to add and update
       data in your area, making an open-source and open-data map of the world
       better for everyone.
 
       Edits that you make on this map will be visible to everyone who uses
-      OpenStreetMap. In order to make an edit, you'll need to
+      MapHubs. In order to make an edit, you'll need to
       [log in](https://www.openstreetmap.org/login).
 
       The [iD editor](http://ideditor.com/) is a collaborative project with [source
@@ -459,7 +459,7 @@ en:
 
       If everything looks good, you can enter a short comment explaining the change
       you made, and click 'Save' again to post the changes
-      to [OpenStreetMap.org](http://www.openstreetmap.org/), where they are visible
+      to [MapHubs.org](http://www.openstreetmap.org/), where they are visible
       to all other users and available for others to build and improve upon.
 
       If you can't finish your edits in one sitting, you can leave the editor
@@ -529,7 +529,7 @@ en:
     gps: |
       # GPS
 
-      GPS data is the most trusted source of data for OpenStreetMap. This editor
+      GPS data is the most trusted source of data for MapHubs. This editor
       supports local traces - `.gpx` files on your local computer. You can collect
       this kind of GPS trace with a number of smartphone applications as well as
       personal GPS hardware.
@@ -542,9 +542,9 @@ en:
       line. Click on the 'Map Data' menu on the right side to enable,
       disable, or zoom to this new GPX-powered layer.
 
-      The GPX track isn't directly uploaded to OpenStreetMap - the best way to
+      The GPX track isn't directly uploaded to MapHubs - the best way to
       use it is to draw on the map, using it as a guide for the new features that
-      you add, and also to [upload it to OpenStreetMap](http://www.openstreetmap.org/trace/create)
+      you add, and also to [upload it to MapHubs]()
       for other users to use.
     imagery: |
       # Imagery
@@ -568,7 +568,7 @@ en:
 
       Addresses are some of the most useful information for the map.
 
-      Although addresses are often represented as parts of streets, in OpenStreetMap
+      Although addresses are often represented as parts of streets, in MapHubs
       they're recorded as attributes of buildings and places along streets.
 
       You can add address information to places mapped as building outlines
@@ -611,7 +611,7 @@ en:
     buildings: |
       # Buildings
 
-      OpenStreetMap is the world's largest database of buildings. You can create
+      MapHubs is the world's largest database of buildings. You can create
       and improve this database.
 
       ### Selecting
@@ -633,7 +633,7 @@ en:
       ### Creating
 
       One of the main questions around adding buildings to the map is that
-      OpenStreetMap records buildings both as shapes and points. The rule of thumb
+      MapHubs records buildings both as shapes and points. The rule of thumb
       is to _map a building as a shape whenever possible_, and map companies, homes,
       amenities, and other things that operate out of buildings as points placed
       within the building shape.
@@ -655,7 +655,7 @@ en:
     relations: |
       # Relations
 
-      A relation is a special type of feature in OpenStreetMap that groups together
+      A relation is a special type of feature in MapHubs that groups together
       other features. For example, two common types of relations are *route relations*,
       which group together sections of road that belong to a specific freeway or
       highway, and *multipolygons*, which group together several lines that define
@@ -690,7 +690,7 @@ en:
   intro:
     navigation:
       title: "Navigation"
-      drag: "The main map area shows OpenStreetMap data on top of a background. You can navigate by dragging and scrolling, just like any web map. **Drag the map!**"
+      drag: "The main map area shows MapHubs data on top of a background. You can navigate by dragging and scrolling, just like any web map. **Drag the map!**"
       select: "Map features are represented three ways: using points, lines or areas. All features can be selected by clicking on them. **Click on the point to select it.**"
       header: "The header shows us the feature type."
       pane: "When a feature is selected, the feature editor is displayed. The header shows us the feature type and the main pane shows the feature's attributes, such as its name and address. **Close the feature editor with the close button in the top right.**"

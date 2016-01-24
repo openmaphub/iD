@@ -156,7 +156,7 @@
     },
     "zoom_in_edit": "Pietuvināt, lai labotu",
     "logout": "atslēgties",
-    "loading_auth": "Savienojas ar OpenStreetMap...",
+    "loading_auth": "Savienojas ar MapHubs...",
     "report_a_bug": "ziņot par kļūdu",
     "status": {
         "error": "Nevarēja savienoties ar API."
@@ -183,12 +183,12 @@
         "no_documentation_combination": "Šai apzīmējumu kombinācijai nav piejama dokumentācija",
         "no_documentation_key": "Šai vērtībai nav piejama dokumentācija",
         "show_more": "Rādīt vairāk",
-        "view_on_osm": "Apskatīt openstreetmap.org",
+        "view_on_osm": "Apskatīt maphubs.com",
         "all_members": "Visi biedri",
         "role": "Loma",
         "choose": "Izvēlieties objekta tipu",
         "results": "Atrasti {n} rezultāti meklējot {search}",
-        "reference": "Skatīt OpenStreetMap wiki →",
+        "reference": "Skatīt MapHubs wiki →",
         "remove": "Noņemt ",
         "search": "Meklēt",
         "unknown": "Nezināms",
@@ -215,7 +215,7 @@
     },
     "success": {
         "edited_osm": "Jūs izmainījāt OSM!",
-        "just_edited": "Jūs nupat rediģējāt OpenStreetMap",
+        "just_edited": "Jūs nupat rediģējāt MapHubs",
         "view_on_osm": "Apskatīt OSM",
         "facebook": "Dalīties Facebook",
         "twitter": "Dalīties uz Facebook",
@@ -225,7 +225,7 @@
         "okay": "Labi"
     },
     "splash": {
-        "welcome": "Laipni lūgti iD OpenStreetMap redaktorā",
+        "welcome": "Laipni lūgti iD MapHubs redaktorā",
         "start": "Labot tagad"
     },
     "source_switch": {
@@ -241,7 +241,7 @@
     "validations": {
         "untagged_line": "Neapzīmēta līnija",
         "untagged_area": "Neapzīmēts apgabals",
-        "many_deletions": "Jūs dzēšat {n} objektus. Vai tiešām vēlaties to darīt? Tie tiks izdzēsti no kartes, ko visi var aplūkt openstreetmap.org.",
+        "many_deletions": "Jūs dzēšat {n} objektus. Vai tiešām vēlaties to darīt? Tie tiks izdzēsti no kartes, ko visi var aplūkt maphubs.com.",
         "tag_suggests_area": "Apzīmējums {tag} parasti tiek lietots apgabaliem, bet objekts nav apgabals",
         "deprecated_tags": "Novecojuši apzīmējumi: {tags}"
     },

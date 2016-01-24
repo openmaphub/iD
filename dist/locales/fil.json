@@ -189,7 +189,7 @@
     },
     "zoom_in_edit": "Mag-zoom in para makapag-edit",
     "logout": "Mag-logout",
-    "loading_auth": "Kumokonekta sa OpenStreetMap ...",
+    "loading_auth": "Kumokonekta sa MapHubs ...",
     "report_a_bug": "I-ulat ang bug",
     "status": {
         "error": "Hindi maka-konekta sa API."
@@ -198,7 +198,7 @@
         "title": "I-save ang mga binago.",
         "description_placeholder": "Maikling paglalarawan ng iyong mga ambag o edits",
         "message_label": "Mag-commit mensahe",
-        "upload_explanation": "Ang mga pagbabagong na-upload ay makikita sa lahat ng mapang gumagamit ng datos ng OpenStreetMap.",
+        "upload_explanation": "Ang mga pagbabagong na-upload ay makikita sa lahat ng mapang gumagamit ng datos ng MapHubs.",
         "save": "I-save",
         "cancel": "Kanselahin",
         "warnings": "Mga babala",
@@ -222,14 +222,14 @@
         "no_documentation_combination": "Walang documentation para sa kumbinasyon ng mga tag na ginamit",
         "no_documentation_key": "Walang \"documentation\" na magagamit para sa \"key\" na ito.",
         "show_more": "Higit pang detalye",
-        "view_on_osm": "Tingnan sa openstreetmap.org",
+        "view_on_osm": "Tingnan sa maphubs.com",
         "all_tags": "Lahat ng tags",
         "all_members": "Lahat ng kasapi",
         "all_relations": "Lahat ng \"relation\"",
         "new_relation": "Bagong relation ...",
         "choose": "Pumili ng uri ng \"features\"",
         "results": "{n} mga resulta para sa {search}",
-        "reference": "Tingnan sa OpenStreetMap Wiki",
+        "reference": "Tingnan sa MapHubs Wiki",
         "back_tooltip": "Baguhin ang \"feature\"",
         "remove": "Alisin",
         "search": "Mag-search",
@@ -258,10 +258,10 @@
     },
     "save": {
         "title": "I-save",
-        "help": "I-save ang mga pagbabago sa OpenStreetMap upang makita ng ibang gumagamit ng datos.",
+        "help": "I-save ang mga pagbabago sa MapHubs upang makita ng ibang gumagamit ng datos.",
         "no_changes": "Walang mga pagbabago upang i-save.",
         "error": "May error habang sinusubukang i-save",
-        "uploading": "Ina-upload ang mga pagbabago sa OpenStreetMap.",
+        "uploading": "Ina-upload ang mga pagbabago sa MapHubs.",
         "unsaved_changes": "Mayroon kang hindi na-save ng mga pagbabago"
     },
     "success": {
@@ -275,7 +275,7 @@
         "okay": "Okay"
     },
     "splash": {
-        "welcome": "Maligayang pagdating sa iD OpenStreetMap editor",
+        "welcome": "Maligayang pagdating sa iD MapHubs editor",
         "text": "Ang iD ay isang simple ngunit magandang editor para sa pag-edit ng libreng mapa ng buong mundo.  Ito ay bersyon {version}. Para sa karagdagang impormasyon tingnan ang {website} at i-ulat ang mga bugs sa {github}.",
         "walkthrough": "Simulan ang \"Walkthrough\"",
         "start": "Simulan ang pag-edit"
@@ -294,7 +294,7 @@
         "untagged_point": "Walang tag na punto o tuldok",
         "untagged_line": "Walang tag na linya",
         "untagged_area": "Walang tag na area o poligon",
-        "many_deletions": "Nagbura ka ng {n} bagay sa mapa. Sigurado ka bang gusto mong gawin ito? Ito ay tatanggalin sa mapa na nakikita sa openstreetmap.org.",
+        "many_deletions": "Nagbura ka ng {n} bagay sa mapa. Sigurado ka bang gusto mong gawin ito? Ito ay tatanggalin sa mapa na nakikita sa maphubs.com.",
         "tag_suggests_area": "Ang tag na {tag} ay kalimitang para sa mga area o poligon sublait ito ay nasa linya lamang.",
         "untagged_tooltip": "Pumili ng uri ng \"feature\" na naglalarawan kung ano ang {geometry} na ito.",
         "deprecated_tags": "Hindi na ginagamit na \"tag\": {tags}"

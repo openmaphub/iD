@@ -174,7 +174,7 @@
         "no_documentation_combination": "ఈ ట్యాగ్ కాంబినేషన్ కి సంబంధించి ఎటువంటి సమాధానము లేదు",
         "no_documentation_key": "ఈ కీకి సంబంధించి ఎటువంటి సమాధానము లేదు",
         "show_more": "మరింత చూపించు",
-        "view_on_osm": "openstreetmap.org లో చూడండి",
+        "view_on_osm": "maphubs.com లో చూడండి",
         "all_tags": "అన్ని ట్యాగులు",
         "all_members": "అందరు సభ్యులు",
         "all_relations": "అన్ని సంబంధాలు",
@@ -182,7 +182,7 @@
         "role": "పాత్ర",
         "choose": "విశేష రకాన్ని ఎంచుకోండి",
         "results": "{search} కి {n} ఫలితాలు",
-        "reference": "OpenStreetMap వికీలో చూడండి",
+        "reference": "MapHubs వికీలో చూడండి",
         "back_tooltip": "విశేషం మార్పు",
         "remove": "తొలగించు",
         "search": "వెతుకు",
@@ -210,7 +210,7 @@
         "unsaved_changes": "భద్రపరచని మార్పులు ఉన్నాయి"
     },
     "success": {
-        "just_edited": "మీరు ఇప్పుడే OpenStreetMapను మార్చారు",
+        "just_edited": "మీరు ఇప్పుడే MapHubsను మార్చారు",
         "view_on_osm": "OSM/ఓఎస్ఎం లో వీక్షించు",
         "facebook": "ఫేస్‌బుక్‌లో పంచుకోండి",
         "twitter": "ట్విట్టర్లో పంచుకోండి",

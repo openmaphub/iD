@@ -134,7 +134,7 @@
         "localized_translation_name": "Nume"
     },
     "logout": "logout",
-    "loading_auth": "Conectare la OpenStreetMap..",
+    "loading_auth": "Conectare la MapHubs..",
     "commit": {
         "title": "Salveaza modificarile",
         "description_placeholder": "O scurtă descriere a contribuției tale.",
@@ -158,7 +158,7 @@
         "no_documentation_combination": "Nu este documentație disponibilă pentru combinația de tag-uri (cuvinte cheie)",
         "no_documentation_key": "Nu este documentație pentru această cheie.",
         "show_more": "Arată mai mult",
-        "view_on_osm": "Vezi pe openstreetmap.org",
+        "view_on_osm": "Vezi pe maphubs.com",
         "all_members": "Toți membrii",
         "all_relations": "Toate relațiile",
         "role": "Rol",
@@ -194,7 +194,7 @@
         "title": "Salveaza",
         "help": "Salvează modificările pe OpenSteetMap, făcându-le disponibile către alți utilizatori.",
         "no_changes": "Nici o modificare de salvat.",
-        "uploading": "Încarcă modificările in OpenStreetMap",
+        "uploading": "Încarcă modificările in MapHubs",
         "unsaved_changes": "Ai modificări nesalvate."
     },
     "success": {
@@ -204,7 +204,7 @@
         "google": "Distribuie pe Google+"
     },
     "splash": {
-        "welcome": "Bine ai venit în editorul iD OpenStreetMap",
+        "welcome": "Bine ai venit în editorul iD MapHubs",
         "walkthrough": "Începe ghidul",
         "start": "Editează acum"
     },

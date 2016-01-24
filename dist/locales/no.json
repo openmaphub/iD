@@ -151,7 +151,7 @@
         "localized_translation_name": "Navn"
     },
     "logout": "logg ut",
-    "loading_auth": "Kobler til OpenStreetMap...",
+    "loading_auth": "Kobler til MapHubs...",
     "report_a_bug": "meld en programvarefeil",
     "commit": {
         "title": "Lagre endringer",
@@ -199,20 +199,20 @@
     },
     "save": {
         "title": "Lagre",
-        "help": "Lagre endringene i OpenStreetMap, slik at de blir synlige for andre brukere.",
+        "help": "Lagre endringene i MapHubs, slik at de blir synlige for andre brukere.",
         "no_changes": "Ingen endringer å lagre.",
-        "uploading": "Laster opp endringer til OpenStreetMap.",
+        "uploading": "Laster opp endringer til MapHubs.",
         "unsaved_changes": "Du har ulagrede endringer"
     },
     "success": {
-        "just_edited": "Du har akkurat endret OpenStreetMap!",
+        "just_edited": "Du har akkurat endret MapHubs!",
         "view_on_osm": "Vis på OSM",
         "facebook": "Del på Facebook",
         "twitter": "Del på Twitter",
         "google": "Del på Google+"
     },
     "splash": {
-        "welcome": "Velkommen til iD OpenStreetMap editor",
+        "welcome": "Velkommen til iD MapHubs editor",
         "walkthrough": "Begynn Gjennomgangen",
         "start": "Rediger Nå"
     },
@@ -228,7 +228,7 @@
     "validations": {
         "untagged_line": "Utagget linje",
         "untagged_area": "Utagget areal",
-        "many_deletions": "Du skal slette {n} objekter. Er du sikker på at du vil gjøre dette? Dette vil slette dem fra kartet som alle andre ser på openstreetmap.org.",
+        "many_deletions": "Du skal slette {n} objekter. Er du sikker på at du vil gjøre dette? Dette vil slette dem fra kartet som alle andre ser på maphubs.com.",
         "tag_suggests_area": "Taggen {tag} anbefaler at linje bør være et areal, men dette er ikke et areal"
     },
     "zoom": {
