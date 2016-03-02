@@ -248,7 +248,6 @@
         <div id='id-container'></div>
         <script>
         var id;
-        var customImagery = [];
         var customPresets = {
             presets: {
                 "area": {
@@ -305,47 +304,16 @@
             iD.data.load(function() {
                 iD.util.asyncMap([
                     'http://osm.moabi.org/api/0.6/presets.json',
-                    'http://osm.moabi.org/api/0.6/fields.json',
-                    'http://osm.moabi.org/api/0.6/tiles.json'], d3.json, function(err, data) {
+                    'http://osm.moabi.org/api/0.6/fields.json'], d3.json, function(err, data) {
                             _.each(data[0], function(d, index) {
                                 customPresets.presets[index] = _.omit(d, 'group_id');
                             });
                             _.extend(customPresets.fields, data[1]);
-                            _.each(data[2], function(d) {
-                                var thisImagery = {
-                                    name: d.name,
-                                    type: 'tms',
-                                    scaleExtent: [
-                                        0,
-                                        18
-                                    ],
-                                    template: d.url,
-                                    id: d.code,
-                                    terms_text: "© Moabi",
-                                    default: (d.name === 'Base' ? true: false),
-                                    overlay: (d.name === 'Base') ? false: true
-                                };
-                                customImagery.push(thisImagery);
-                            });
 
-                            var bing =     {
-                                "name": "Bing aerial imagery",
-                                "type": "bing",
-                                "description": "Satellite and aerial imagery.",
-                                "template": "http://www.bing.com/maps/",
-                                "scaleExtent": [
-                                    0,
-                                    22
-                                ],
-                                "id": "Bing",
-                                "default": true
-                            };
-
-                            customImagery.push(bing);
 
                             id = iD()
                                 .presets(customPresets)
-                                .imagery(customImagery)
+                                .imagery(iD.data.imagery)
                                 .taginfo(iD.taginfo())
                                 .minEditableZoom(10)
                                 .assetPath('dist/');
