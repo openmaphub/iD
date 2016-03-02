@@ -226,6 +226,10 @@
         },
         {
             "key": "amenity",
+            "value": "ferry_terminal"
+        },
+        {
+            "key": "amenity",
             "value": "fire_station"
         },
         {
@@ -250,6 +254,10 @@
         },
         {
             "key": "amenity",
+            "value": "hunting_stand"
+        },
+        {
+            "key": "amenity",
             "value": "kindergarten"
         },
         {
@@ -262,6 +270,10 @@
         },
         {
             "key": "amenity",
+            "value": "motorcycle_parking"
+        },
+        {
+            "key": "amenity",
             "value": "nightclub"
         },
         {
@@ -271,6 +283,10 @@
         {
             "key": "amenity",
             "value": "parking_entrance"
+        },
+        {
+            "key": "amenity",
+            "value": "parking_space"
         },
         {
             "key": "amenity",
@@ -393,6 +409,42 @@
             "value": "university"
         },
         {
+            "key": "vending",
+            "value": "cigarettes"
+        },
+        {
+            "key": "vending",
+            "value": "condoms"
+        },
+        {
+            "key": "vending",
+            "value": "drinks"
+        },
+        {
+            "key": "vending",
+            "value": "excrement_bags"
+        },
+        {
+            "key": "vending",
+            "value": "news_papers"
+        },
+        {
+            "key": "vending",
+            "value": "parcel_pickup;parcel_mail_in"
+        },
+        {
+            "key": "vending",
+            "value": "parking_tickets"
+        },
+        {
+            "key": "vending",
+            "value": "public_transport_tickets"
+        },
+        {
+            "key": "vending",
+            "value": "sweets"
+        },
+        {
             "key": "amenity",
             "value": "vending_machine"
         },
@@ -403,6 +455,14 @@
         {
             "key": "amenity",
             "value": "waste_basket"
+        },
+        {
+            "key": "amenity",
+            "value": "waste_disposal"
+        },
+        {
+            "key": "amenity",
+            "value": "water_point"
         },
         {
             "key": "area",
@@ -592,6 +652,10 @@
         {
             "key": "building",
             "value": "school"
+        },
+        {
+            "key": "building",
+            "value": "semidetached_house"
         },
         {
             "key": "building",
@@ -1237,6 +1301,14 @@
         },
         {
             "key": "sport",
+            "value": "rugby_league"
+        },
+        {
+            "key": "sport",
+            "value": "rugby_union"
+        },
+        {
+            "key": "sport",
             "value": "skateboard"
         },
         {
@@ -1268,6 +1340,10 @@
             "value": "sports_centre"
         },
         {
+            "key": "sport",
+            "value": "swimming"
+        },
+        {
             "key": "leisure",
             "value": "stadium"
         },
@@ -1278,6 +1354,10 @@
         {
             "key": "leisure",
             "value": "track"
+        },
+        {
+            "key": "leisure",
+            "value": "water_park"
         },
         {
             "key": "man_made"
@@ -1292,6 +1372,10 @@
         },
         {
             "key": "man_made",
+            "value": "chimney"
+        },
+        {
+            "key": "man_made",
             "value": "cutline"
         },
         {
@@ -1301,6 +1385,14 @@
         {
             "key": "man_made",
             "value": "flagpole"
+        },
+        {
+            "key": "man_made",
+            "value": "gasometer"
+        },
+        {
+            "key": "man_made",
+            "value": "groyne"
         },
         {
             "key": "man_made",
@@ -1336,6 +1428,10 @@
         },
         {
             "key": "man_made",
+            "value": "surveillance"
+        },
+        {
+            "key": "man_made",
             "value": "survey_point"
         },
         {
@@ -1359,6 +1455,10 @@
             "value": "water_works"
         },
         {
+            "key": "man_made",
+            "value": "works"
+        },
+        {
             "key": "military",
             "value": "airfield"
         },
@@ -1372,7 +1472,27 @@
         },
         {
             "key": "military",
+            "value": "checkpoint"
+        },
+        {
+            "key": "military",
+            "value": "danger_area"
+        },
+        {
+            "key": "military",
+            "value": "naval_base"
+        },
+        {
+            "key": "military",
+            "value": "obstacle_course"
+        },
+        {
+            "key": "military",
             "value": "range"
+        },
+        {
+            "key": "military",
+            "value": "training_area"
         },
         {
             "key": "natural"
@@ -2069,6 +2189,10 @@
         },
         {
             "key": "shop",
+            "value": "storage_rental"
+        },
+        {
+            "key": "shop",
             "value": "supermarket"
         },
         {
@@ -2165,6 +2289,10 @@
         {
             "key": "tourism",
             "value": "chalet"
+        },
+        {
+            "key": "tourism",
+            "value": "gallery"
         },
         {
             "key": "tourism",
@@ -2319,7 +2447,15 @@
             "value": "route_master"
         },
         {
+            "key": "type",
+            "value": "site"
+        },
+        {
             "key": "waterway"
+        },
+        {
+            "key": "waterway",
+            "value": "boatyard"
         },
         {
             "key": "waterway",
@@ -2332,6 +2468,10 @@
         {
             "key": "waterway",
             "value": "ditch"
+        },
+        {
+            "key": "waterway",
+            "value": "dock"
         },
         {
             "key": "waterway",
@@ -2356,6 +2496,10 @@
         {
             "key": "waterway",
             "value": "stream"
+        },
+        {
+            "key": "waterway",
+            "value": "water_point"
         },
         {
             "key": "waterway",

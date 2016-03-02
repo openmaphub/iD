@@ -46,11 +46,12 @@ iD.presets.Preset = function(id, preset, fields) {
     };
 
     preset.terms = function() {
-        return preset.t('terms', {'default': ''}).split(',');
+        return preset.t('terms', {'default': ''}).toLowerCase().trim().split(/\s*,+\s*/);
     };
 
     preset.isFallback = function() {
-        return Object.keys(preset.tags).length === 0;
+        var tagCount = Object.keys(preset.tags).length;
+        return tagCount === 0 || (tagCount === 1 && preset.tags.hasOwnProperty('area'));
     };
 
     preset.reference = function(geometry) {

@@ -456,6 +456,9 @@
             "vertex",
             "line"
         ],
+        "terms": [
+            "seat"
+        ],
         "tags": {
             "amenity": "bench"
         },
@@ -519,12 +522,15 @@
             "area"
         ],
         "terms": [
-            "bike"
+            "bike",
+            "repair",
+            "chain",
+            "pump"
         ],
         "tags": {
             "amenity": "bicycle_repair_station"
         },
-        "name": "Bicycle Repair Station"
+        "name": "Bicycle Repair Tool Stand"
     },
     "amenity/biergarten": {
         "icon": "beer",
@@ -609,6 +615,7 @@
             "area"
         ],
         "terms": [
+            "bistro",
             "coffee",
             "tea"
         ],
@@ -849,7 +856,7 @@
         "name": "Courthouse"
     },
     "amenity/dentist": {
-        "icon": "hospital",
+        "icon": "dentist",
         "fields": [
             "address",
             "building_area",
@@ -868,7 +875,7 @@
         },
         "name": "Dentist"
     },
-    "amenity/doctor": {
+    "amenity/doctors": {
         "icon": "hospital",
         "fields": [
             "address",
@@ -963,6 +970,25 @@
         ],
         "name": "Fast Food"
     },
+    "amenity/ferry_terminal": {
+        "icon": "ferry",
+        "fields": [
+            "network",
+            "operator",
+            "address",
+            "building_area"
+        ],
+        "geometry": [
+            "point",
+            "vertex",
+            "area"
+        ],
+        "terms": [],
+        "tags": {
+            "amenity": "ferry_terminal"
+        },
+        "name": "Ferry Terminal"
+    },
     "amenity/fire_station": {
         "icon": "fire-station",
         "fields": [
@@ -995,7 +1021,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "geometry": [
@@ -1005,6 +1030,7 @@
         "terms": [
             "petrol",
             "fuel",
+            "gasoline",
             "propane",
             "diesel",
             "lng",
@@ -1079,6 +1105,18 @@
         },
         "name": "Hospital Grounds"
     },
+    "amenity/hunting_stand": {
+        "geometry": [
+            "point",
+            "vertex",
+            "area"
+        ],
+        "terms": [],
+        "tags": {
+            "amenity": "hunting_stand"
+        },
+        "name": "Hunting Stand"
+    },
     "amenity/kindergarten": {
         "icon": "school",
         "fields": [
@@ -1134,6 +1172,24 @@
         },
         "name": "Marketplace"
     },
+    "amenity/motorcycle_parking": {
+        "icon": "scooter",
+        "fields": [
+            "capacity",
+            "operator",
+            "covered",
+            "access_simple"
+        ],
+        "geometry": [
+            "point",
+            "vertex",
+            "area"
+        ],
+        "tags": {
+            "amenity": "motorcycle_parking"
+        },
+        "name": "Motorcycle Parking"
+    },
     "amenity/nightclub": {
         "icon": "bar",
         "fields": [
@@ -1168,6 +1224,8 @@
             "access_simple",
             "supervised",
             "park_ride",
+            "surface",
+            "maxstay",
             "address"
         ],
         "geometry": [
@@ -1194,6 +1252,21 @@
             "amenity": "parking_entrance"
         },
         "name": "Parking Garage Entrance/Exit"
+    },
+    "amenity/parking_space": {
+        "fields": [
+            "capacity"
+        ],
+        "geometry": [
+            "point",
+            "vertex",
+            "area"
+        ],
+        "terms": [],
+        "tags": {
+            "amenity": "parking_space"
+        },
+        "name": "Parking Space"
     },
     "amenity/pharmacy": {
         "icon": "pharmacy",
@@ -1419,7 +1492,7 @@
             "operator",
             "address",
             "building_area",
-            "collection_times"
+            "opening_hours"
         ],
         "geometry": [
             "point",
@@ -1839,7 +1912,8 @@
             "building_area",
             "access_toilets",
             "gender",
-            "fee"
+            "fee",
+            "diaper"
         ],
         "geometry": [
             "point",
@@ -1904,7 +1978,171 @@
         },
         "name": "University Grounds"
     },
-    "amenity/vending_machine": {
+    "amenity/vending_machine/cigarettes": {
+        "fields": [
+            "operator"
+        ],
+        "geometry": [
+            "point"
+        ],
+        "terms": [
+            "cigarette"
+        ],
+        "tags": {
+            "amenity": "vending_machine",
+            "vending": "cigarettes"
+        },
+        "name": "Cigarette Vending Machine"
+    },
+    "amenity/vending_machine/condoms": {
+        "fields": [
+            "operator"
+        ],
+        "geometry": [
+            "point"
+        ],
+        "terms": [
+            "condom"
+        ],
+        "tags": {
+            "amenity": "vending_machine",
+            "vending": "condoms"
+        },
+        "name": "Condom Vending Machine"
+    },
+    "amenity/vending_machine/drinks": {
+        "fields": [
+            "operator"
+        ],
+        "geometry": [
+            "point"
+        ],
+        "terms": [
+            "drink",
+            "soda",
+            "beverage",
+            "juice",
+            "pop"
+        ],
+        "tags": {
+            "amenity": "vending_machine",
+            "vending": "drinks"
+        },
+        "name": "Drink Vending Machine"
+    },
+    "amenity/vending_machine/excrement_bags": {
+        "fields": [
+            "operator"
+        ],
+        "geometry": [
+            "point"
+        ],
+        "terms": [
+            "excrement bags",
+            "poop",
+            "dog",
+            "animal"
+        ],
+        "tags": {
+            "amenity": "vending_machine",
+            "vending": "excrement_bags"
+        },
+        "name": "Excrement Bag Vending Machine"
+    },
+    "amenity/vending_machine/news_papers": {
+        "fields": [
+            "operator"
+        ],
+        "geometry": [
+            "point"
+        ],
+        "terms": [
+            "newspaper"
+        ],
+        "tags": {
+            "amenity": "vending_machine",
+            "vending": "news_papers"
+        },
+        "name": "Newspaper Vending Machine"
+    },
+    "amenity/vending_machine/parcel_pickup_dropoff": {
+        "fields": [
+            "operator"
+        ],
+        "geometry": [
+            "point"
+        ],
+        "terms": [
+            "parcel",
+            "mail",
+            "pickup"
+        ],
+        "tags": {
+            "amenity": "vending_machine",
+            "vending": "parcel_pickup;parcel_mail_in"
+        },
+        "name": "Parcel Pickup/Dropoff Vending Machine"
+    },
+    "amenity/vending_machine/parking_tickets": {
+        "fields": [
+            "operator"
+        ],
+        "geometry": [
+            "point"
+        ],
+        "terms": [
+            "parking",
+            "ticket"
+        ],
+        "tags": {
+            "amenity": "vending_machine",
+            "vending": "parking_tickets"
+        },
+        "name": "Parking Ticket Vending Machine"
+    },
+    "amenity/vending_machine/public_transport_tickets": {
+        "fields": [
+            "operator"
+        ],
+        "geometry": [
+            "point"
+        ],
+        "terms": [
+            "bus",
+            "train",
+            "ferry",
+            "rail",
+            "ticket",
+            "transportation"
+        ],
+        "tags": {
+            "amenity": "vending_machine",
+            "vending": "public_transport_tickets"
+        },
+        "name": "Transit Ticket Vending Machine"
+    },
+    "amenity/vending_machine/sweets": {
+        "fields": [
+            "operator"
+        ],
+        "geometry": [
+            "point"
+        ],
+        "terms": [
+            "candy",
+            "gum",
+            "chip",
+            "pretzel",
+            "cookie",
+            "cracker"
+        ],
+        "tags": {
+            "amenity": "vending_machine",
+            "vending": "sweets"
+        },
+        "name": "Snack Vending Machine"
+    },
+    "amenity/vending_machine/vending_machine": {
         "fields": [
             "vending",
             "operator"
@@ -1912,11 +2150,7 @@
         "geometry": [
             "point"
         ],
-        "terms": [
-            "snack",
-            "soda",
-            "ticket"
-        ],
+        "terms": [],
         "tags": {
             "amenity": "vending_machine"
         },
@@ -1955,12 +2189,41 @@
             "amenity": "waste_basket"
         },
         "terms": [
+            "bin",
             "rubbish",
             "litter",
             "trash",
             "garbage"
         ],
         "name": "Waste Basket"
+    },
+    "amenity/waste_disposal": {
+        "icon": "waste-basket",
+        "geometry": [
+            "point",
+            "vertex"
+        ],
+        "tags": {
+            "amenity": "waste_disposal"
+        },
+        "terms": [
+            "rubbish",
+            "litter",
+            "trash"
+        ],
+        "name": "Garbage Dumpster"
+    },
+    "amenity/water_point": {
+        "icon": "water",
+        "geometry": [
+            "area",
+            "vertex",
+            "point"
+        ],
+        "tags": {
+            "amenity": "water_point"
+        },
+        "name": "RV Drinking Water"
     },
     "area": {
         "name": "Area",
@@ -2201,11 +2464,13 @@
             "address"
         ],
         "geometry": [
+            "point",
             "area"
         ],
         "tags": {
             "building": "*"
         },
+        "matchScore": 0.4,
         "terms": [],
         "name": "Building"
     },
@@ -2216,12 +2481,12 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "apartments"
         },
+        "matchScore": 0.5,
         "name": "Apartments"
     },
     "building/barn": {
@@ -2231,12 +2496,12 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "barn"
         },
+        "matchScore": 0.5,
         "name": "Barn"
     },
     "building/bunker": {
@@ -2245,12 +2510,12 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "bunker"
         },
+        "matchScore": 0.5,
         "name": "Bunker",
         "searchable": false
     },
@@ -2261,12 +2526,12 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "cabin"
         },
+        "matchScore": 0.5,
         "name": "Cabin"
     },
     "building/cathedral": {
@@ -2276,13 +2541,13 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "cathedral"
         },
-        "name": "Cathedral"
+        "matchScore": 0.5,
+        "name": "Cathedral Building"
     },
     "building/chapel": {
         "icon": "place-of-worship",
@@ -2291,13 +2556,13 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "chapel"
         },
-        "name": "Chapel"
+        "matchScore": 0.5,
+        "name": "Chapel Building"
     },
     "building/church": {
         "icon": "place-of-worship",
@@ -2306,13 +2571,13 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "church"
         },
-        "name": "Church"
+        "matchScore": 0.5,
+        "name": "Church Building"
     },
     "building/college": {
         "icon": "building",
@@ -2321,7 +2586,6 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "terms": [
@@ -2330,6 +2594,7 @@
         "tags": {
             "building": "college"
         },
+        "matchScore": 0.5,
         "name": "College Building"
     },
     "building/commercial": {
@@ -2340,12 +2605,12 @@
             "smoking"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "commercial"
         },
+        "matchScore": 0.5,
         "name": "Commercial Building"
     },
     "building/construction": {
@@ -2355,12 +2620,12 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "construction"
         },
+        "matchScore": 0.5,
         "name": "Building Under Construction"
     },
     "building/detached": {
@@ -2370,13 +2635,20 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "detached"
         },
-        "name": "Detached Home"
+        "terms": [
+            "home",
+            "single",
+            "family",
+            "residence",
+            "dwelling"
+        ],
+        "matchScore": 0.5,
+        "name": "Detached House"
     },
     "building/dormitory": {
         "icon": "building",
@@ -2386,12 +2658,12 @@
             "smoking"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "dormitory"
         },
+        "matchScore": 0.5,
         "name": "Dormitory"
     },
     "building/entrance": {
@@ -2406,18 +2678,18 @@
         "searchable": false
     },
     "building/garage": {
+        "icon": "warehouse",
         "fields": [
             "capacity"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "garage"
         },
-        "name": "Garage",
-        "icon": "warehouse"
+        "matchScore": 0.5,
+        "name": "Garage"
     },
     "building/garages": {
         "icon": "warehouse",
@@ -2425,12 +2697,12 @@
             "capacity"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "garages"
         },
+        "matchScore": 0.5,
         "name": "Garages"
     },
     "building/greenhouse": {
@@ -2440,12 +2712,12 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "greenhouse"
         },
+        "matchScore": 0.5,
         "name": "Greenhouse"
     },
     "building/hospital": {
@@ -2455,12 +2727,12 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "hospital"
         },
+        "matchScore": 0.5,
         "name": "Hospital Building"
     },
     "building/hotel": {
@@ -2471,12 +2743,12 @@
             "smoking"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "hotel"
         },
+        "matchScore": 0.5,
         "name": "Hotel Building"
     },
     "building/house": {
@@ -2486,22 +2758,28 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "house"
         },
+        "terms": [
+            "home",
+            "family",
+            "residence",
+            "dwelling"
+        ],
+        "matchScore": 0.5,
         "name": "House"
     },
     "building/hut": {
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "hut"
         },
+        "matchScore": 0.5,
         "name": "Hut"
     },
     "building/industrial": {
@@ -2511,12 +2789,12 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "industrial"
         },
+        "matchScore": 0.5,
         "name": "Industrial Building"
     },
     "building/kindergarten": {
@@ -2526,7 +2804,6 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "terms": [
@@ -2536,6 +2813,7 @@
         "tags": {
             "building": "kindergarten"
         },
+        "matchScore": 0.5,
         "name": "Preschool/Kindergarten Building"
     },
     "building/public": {
@@ -2546,12 +2824,12 @@
             "smoking"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "public"
         },
+        "matchScore": 0.5,
         "name": "Public Building"
     },
     "building/residential": {
@@ -2561,12 +2839,12 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "residential"
         },
+        "matchScore": 0.5,
         "name": "Residential Building"
     },
     "building/retail": {
@@ -2577,12 +2855,12 @@
             "smoking"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "retail"
         },
+        "matchScore": 0.5,
         "name": "Retail Building"
     },
     "building/roof": {
@@ -2591,12 +2869,12 @@
             "address"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "roof"
         },
+        "matchScore": 0.5,
         "name": "Roof"
     },
     "building/school": {
@@ -2606,7 +2884,6 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "terms": [
@@ -2618,7 +2895,32 @@
         "tags": {
             "building": "school"
         },
+        "matchScore": 0.5,
         "name": "School Building"
+    },
+    "building/semidetached_house": {
+        "icon": "building",
+        "fields": [
+            "address",
+            "levels"
+        ],
+        "geometry": [
+            "area"
+        ],
+        "tags": {
+            "building": "semidetached_house"
+        },
+        "terms": [
+            "home",
+            "double",
+            "duplex",
+            "twin",
+            "family",
+            "residence",
+            "dwelling"
+        ],
+        "matchScore": 0.5,
+        "name": "Semi-Detached House"
     },
     "building/shed": {
         "icon": "building",
@@ -2627,12 +2929,12 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "shed"
         },
+        "matchScore": 0.5,
         "name": "Shed"
     },
     "building/stable": {
@@ -2642,12 +2944,12 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "stable"
         },
+        "matchScore": 0.5,
         "name": "Stable"
     },
     "building/static_caravan": {
@@ -2657,12 +2959,12 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "static_caravan"
         },
+        "matchScore": 0.5,
         "name": "Static Mobile Home"
     },
     "building/terrace": {
@@ -2672,12 +2974,20 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "terrace"
         },
+        "terms": [
+            "home",
+            "terrace",
+            "brownstone",
+            "family",
+            "residence",
+            "dwelling"
+        ],
+        "matchScore": 0.5,
         "name": "Row Houses"
     },
     "building/train_station": {
@@ -2694,6 +3004,7 @@
         "tags": {
             "building": "train_station"
         },
+        "matchScore": 0.5,
         "name": "Train Station",
         "searchable": false
     },
@@ -2704,7 +3015,6 @@
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "terms": [
@@ -2713,21 +3023,22 @@
         "tags": {
             "building": "university"
         },
+        "matchScore": 0.5,
         "name": "University Building"
     },
     "building/warehouse": {
-        "icon": "building",
+        "icon": "warehouse",
         "fields": [
             "address",
             "levels"
         ],
         "geometry": [
-            "point",
             "area"
         ],
         "tags": {
             "building": "warehouse"
         },
+        "matchScore": 0.5,
         "name": "Warehouse"
     },
     "craft": {
@@ -3710,6 +4021,7 @@
         "name": "Pedestrian Crosswalk"
     },
     "footway/sidewalk": {
+        "icon": "highway-footway",
         "fields": [
             "surface",
             "lit",
@@ -4428,7 +4740,7 @@
             "lit",
             "width",
             "incline_steps",
-            "access"
+            "handrail"
         ],
         "icon": "highway-steps",
         "geometry": [
@@ -4543,9 +4855,27 @@
         },
         "terms": [
             "woods road",
-            "fire road"
+            "forest road",
+            "logging road",
+            "fire road",
+            "farm road",
+            "agricultural road",
+            "ranch road",
+            "carriage road",
+            "primitive",
+            "unmaintained",
+            "rut",
+            "offroad",
+            "4wd",
+            "4x4",
+            "four wheel drive",
+            "atv",
+            "quad",
+            "jeep",
+            "double track",
+            "two track"
         ],
-        "name": "Track"
+        "name": "Unmaintained Track Road"
     },
     "highway/traffic_signals": {
         "geometry": [
@@ -4554,6 +4884,9 @@
         "tags": {
             "highway": "traffic_signals"
         },
+        "fields": [
+            "traffic_signals"
+        ],
         "terms": [
             "light",
             "stoplight",
@@ -4634,7 +4967,7 @@
             "highway": "unclassified"
         },
         "terms": [],
-        "name": "Unclassified Road"
+        "name": "Minor Road"
     },
     "historic": {
         "fields": [
@@ -4767,8 +5100,11 @@
         "tags": {
             "landuse": "allotments"
         },
-        "terms": [],
-        "name": "Allotments"
+        "terms": [
+            "allotment",
+            "garden"
+        ],
+        "name": "Community Garden"
     },
     "landuse/basin": {
         "geometry": [
@@ -5160,7 +5496,7 @@
             "sport_ice",
             "operator",
             "address",
-            "building_area",
+            "building",
             "opening_hours"
         ],
         "geometry": [
@@ -5331,6 +5667,40 @@
         "terms": [],
         "name": "Basketball Court"
     },
+    "leisure/pitch/rugby_league": {
+        "icon": "america-football",
+        "fields": [
+            "surface",
+            "lit"
+        ],
+        "geometry": [
+            "point",
+            "area"
+        ],
+        "tags": {
+            "leisure": "pitch",
+            "sport": "rugby_league"
+        },
+        "terms": [],
+        "name": "Rugby League Field"
+    },
+    "leisure/pitch/rugby_union": {
+        "icon": "america-football",
+        "fields": [
+            "surface",
+            "lit"
+        ],
+        "geometry": [
+            "point",
+            "area"
+        ],
+        "tags": {
+            "leisure": "pitch",
+            "sport": "rugby_union"
+        },
+        "terms": [],
+        "name": "Rugby Union Field"
+    },
     "leisure/pitch/skateboard": {
         "icon": "pitch",
         "fields": [
@@ -5447,7 +5817,7 @@
         },
         "name": "Slipway"
     },
-    "leisure/sports_center": {
+    "leisure/sports_centre": {
         "icon": "pitch",
         "fields": [
             "sport",
@@ -5466,6 +5836,28 @@
             "gym"
         ],
         "name": "Sports Center / Gym"
+    },
+    "leisure/sports_centre/swimming": {
+        "icon": "swimming",
+        "fields": [
+            "access_simple",
+            "operator",
+            "address",
+            "building"
+        ],
+        "geometry": [
+            "point",
+            "area"
+        ],
+        "terms": [
+            "dive",
+            "water"
+        ],
+        "tags": {
+            "leisure": "sports_centre",
+            "sport": "swimming"
+        },
+        "name": "Swimming Pool Facility"
     },
     "leisure/stadium": {
         "icon": "pitch",
@@ -5491,8 +5883,11 @@
         ],
         "geometry": [
             "point",
-            "vertex",
             "area"
+        ],
+        "terms": [
+            "dive",
+            "water"
         ],
         "tags": {
             "leisure": "swimming_pool"
@@ -5516,6 +5911,26 @@
             "leisure": "track"
         },
         "name": "Racetrack (non-Motorsport)"
+    },
+    "leisure/water_park": {
+        "icon": "swimming",
+        "fields": [
+            "operator",
+            "address"
+        ],
+        "geometry": [
+            "point",
+            "area"
+        ],
+        "terms": [
+            "swim",
+            "pool",
+            "dive"
+        ],
+        "tags": {
+            "leisure": "water_park"
+        },
+        "name": "Water Park"
     },
     "line": {
         "name": "Line",
@@ -5569,6 +5984,16 @@
         },
         "name": "Breakwater"
     },
+    "man_made/chimney": {
+        "geometry": [
+            "point",
+            "area"
+        ],
+        "tags": {
+            "man_made": "chimney"
+        },
+        "name": "Chimney"
+    },
     "man_made/cutline": {
         "geometry": [
             "line"
@@ -5597,6 +6022,29 @@
         },
         "name": "Flagpole",
         "icon": "embassy"
+    },
+    "man_made/gasometer": {
+        "geometry": [
+            "point",
+            "area"
+        ],
+        "terms": [
+            "gas holder"
+        ],
+        "tags": {
+            "man_made": "gasometer"
+        },
+        "name": "Gasometer"
+    },
+    "man_made/groyne": {
+        "geometry": [
+            "line",
+            "area"
+        ],
+        "tags": {
+            "man_made": "groyne"
+        },
+        "name": "Groyne"
     },
     "man_made/lighthouse": {
         "icon": "lighthouse",
@@ -5678,7 +6126,7 @@
         "name": "Pier"
     },
     "man_made/pipeline": {
-        "icon": "pipeline",
+        "icon": "pipeline-line",
         "fields": [
             "location",
             "operator"
@@ -5729,6 +6177,16 @@
             "man_made": "storage_tank"
         },
         "name": "Storage Tank"
+    },
+    "man_made/surveillance": {
+        "icon": "camera",
+        "geometry": [
+            "point"
+        ],
+        "tags": {
+            "man_made": "surveillance"
+        },
+        "name": "Surveillance"
     },
     "man_made/survey_point": {
         "icon": "monument",
@@ -5819,6 +6277,24 @@
         },
         "name": "Water Works"
     },
+    "man_made/works": {
+        "geometry": [
+            "point",
+            "area"
+        ],
+        "terms": [
+            "car assembly plant",
+            "aluminium processing plant",
+            "brewery",
+            "furniture manufacture factory",
+            "oil refinery",
+            "plastic recycling"
+        ],
+        "tags": {
+            "man_made": "works"
+        },
+        "name": "Works"
+    },
     "military/airfield": {
         "icon": "airfield",
         "geometry": [
@@ -5856,6 +6332,54 @@
         },
         "name": "Bunker"
     },
+    "military/checkpoint": {
+        "geometry": [
+            "point",
+            "vertex",
+            "area"
+        ],
+        "terms": [],
+        "tags": {
+            "military": "checkpoint"
+        },
+        "name": "Checkpoint"
+    },
+    "military/danger_area": {
+        "geometry": [
+            "point",
+            "vertex",
+            "area"
+        ],
+        "terms": [],
+        "tags": {
+            "military": "danger_area"
+        },
+        "name": "Danger Area"
+    },
+    "military/naval_base": {
+        "geometry": [
+            "point",
+            "vertex",
+            "area"
+        ],
+        "terms": [],
+        "tags": {
+            "military": "naval_base"
+        },
+        "name": "Naval Base"
+    },
+    "military/obstacle_course": {
+        "geometry": [
+            "point",
+            "vertex",
+            "area"
+        ],
+        "terms": [],
+        "tags": {
+            "military": "obstacle_course"
+        },
+        "name": "Obstacle Course"
+    },
     "military/range": {
         "geometry": [
             "point",
@@ -5867,6 +6391,18 @@
             "military": "range"
         },
         "name": "Military Range"
+    },
+    "military/training_area": {
+        "geometry": [
+            "point",
+            "vertex",
+            "area"
+        ],
+        "terms": [],
+        "tags": {
+            "military": "training_area"
+        },
+        "name": "Training area"
     },
     "natural": {
         "fields": [
@@ -6080,8 +6616,8 @@
     },
     "natural/tree": {
         "fields": [
-            "leaf_type",
-            "leaf_cycle",
+            "leaf_type_singular",
+            "leaf_cycle_singular",
             "denotation"
         ],
         "icon": "park",
@@ -7209,7 +7745,7 @@
         "searchable": false
     },
     "route/ferry": {
-        "icon": "ferry",
+        "icon": "ferry-line",
         "geometry": [
             "line"
         ],
@@ -7296,8 +7832,9 @@
         "name": "Antiques Shop"
     },
     "shop/art": {
-        "icon": "art-gallery",
+        "icon": "shop",
         "fields": [
+            "artwork_type",
             "operator",
             "address",
             "building_area",
@@ -7307,10 +7844,15 @@
             "point",
             "area"
         ],
+        "terms": [
+            "art*",
+            "exhibit*",
+            "gallery"
+        ],
         "tags": {
             "shop": "art"
         },
-        "name": "Art Gallery"
+        "name": "Art Store"
     },
     "shop/baby_goods": {
         "icon": "shop",
@@ -7452,6 +7994,10 @@
         "geometry": [
             "point",
             "area"
+        ],
+        "terms": [
+            "bike",
+            "repair"
         ],
         "tags": {
             "shop": "bicycle"
@@ -7780,7 +8326,7 @@
         "name": "Cosmetics Store"
     },
     "shop/craft": {
-        "icon": "art-gallery",
+        "icon": "shop",
         "fields": [
             "operator",
             "address",
@@ -7794,6 +8340,11 @@
         "tags": {
             "shop": "craft"
         },
+        "terms": [
+            "art*",
+            "paint*",
+            "frame"
+        ],
         "name": "Arts and Crafts Store"
     },
     "shop/curtain": {
@@ -8067,6 +8618,12 @@
         "tags": {
             "shop": "frame"
         },
+        "terms": [
+            "art*",
+            "paint*",
+            "photo*",
+            "frame"
+        ],
         "name": "Framing Shop"
     },
     "shop/funeral_directors": {
@@ -8914,6 +9471,23 @@
         },
         "name": "Stationery Store"
     },
+    "shop/storage_rental": {
+        "icon": "shop",
+        "fields": [
+            "operator",
+            "address",
+            "building",
+            "opening_hours"
+        ],
+        "geometry": [
+            "point",
+            "area"
+        ],
+        "tags": {
+            "shop": "storage_rental"
+        },
+        "name": "Storage Rental"
+    },
     "shop/supermarket": {
         "icon": "grocery",
         "fields": [
@@ -9367,6 +9941,31 @@
         },
         "name": "Chalet"
     },
+    "tourism/gallery": {
+        "icon": "art-gallery",
+        "fields": [
+            "artwork_type",
+            "operator",
+            "address",
+            "building_area",
+            "opening_hours"
+        ],
+        "geometry": [
+            "point",
+            "area"
+        ],
+        "terms": [
+            "art*",
+            "exhibit*",
+            "paint*",
+            "photo*",
+            "sculpt*"
+        ],
+        "tags": {
+            "tourism": "gallery"
+        },
+        "name": "Art Gallery"
+    },
     "tourism/guest_house": {
         "icon": "lodging",
         "fields": [
@@ -9469,11 +10068,15 @@
             "area"
         ],
         "terms": [
-            "exhibition",
-            "foundation",
+            "art*",
+            "exhibit*",
             "gallery",
+            "foundation",
             "hall",
-            "institution"
+            "institution",
+            "paint*",
+            "photo*",
+            "sculpt*"
         ],
         "tags": {
             "tourism": "museum"
@@ -9953,6 +10556,19 @@
             "network"
         ]
     },
+    "type/site": {
+        "geometry": [
+            "relation"
+        ],
+        "tags": {
+            "type": "site"
+        },
+        "name": "Site",
+        "icon": "relation",
+        "fields": [
+            "site"
+        ]
+    },
     "vertex": {
         "name": "Other",
         "tags": {},
@@ -9976,6 +10592,21 @@
         },
         "searchable": false,
         "name": "Waterway"
+    },
+    "waterway/boatyard": {
+        "icon": "harbor",
+        "fields": [
+            "operator"
+        ],
+        "geometry": [
+            "area",
+            "vertex",
+            "point"
+        ],
+        "tags": {
+            "waterway": "boatyard"
+        },
+        "name": "Boatyard"
     },
     "waterway/canal": {
         "icon": "waterway-canal",
@@ -10016,6 +10647,22 @@
         },
         "name": "Ditch"
     },
+    "waterway/dock": {
+        "icon": "harbor",
+        "fields": [
+            "dock",
+            "operator"
+        ],
+        "geometry": [
+            "area",
+            "vertex",
+            "point"
+        ],
+        "tags": {
+            "waterway": "dock"
+        },
+        "name": "Dock"
+    },
     "waterway/drain": {
         "icon": "waterway-stream",
         "fields": [
@@ -10034,7 +10681,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "geometry": [
@@ -10161,6 +10807,18 @@
         },
         "name": "Stream"
     },
+    "waterway/water_point": {
+        "icon": "water",
+        "geometry": [
+            "area",
+            "vertex",
+            "point"
+        ],
+        "tags": {
+            "waterway": "water_point"
+        },
+        "name": "Marine Drinking Water"
+    },
     "waterway/weir": {
         "icon": "dam",
         "geometry": [
@@ -10186,7 +10844,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10205,7 +10862,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10224,7 +10880,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10243,7 +10898,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10262,7 +10916,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10281,7 +10934,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10300,7 +10952,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10319,7 +10970,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10338,7 +10988,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10357,7 +11006,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10376,7 +11024,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10395,7 +11042,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10414,7 +11060,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10433,7 +11078,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10452,7 +11096,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10471,7 +11114,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10490,7 +11132,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10509,7 +11150,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10528,7 +11168,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10547,7 +11186,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10566,7 +11204,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10585,7 +11222,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10604,7 +11240,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10623,7 +11258,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10642,7 +11276,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10661,7 +11294,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10680,7 +11312,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10699,7 +11330,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10718,7 +11348,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10737,7 +11366,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10756,7 +11384,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10775,7 +11402,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10794,7 +11420,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10813,7 +11438,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10832,7 +11456,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10851,7 +11474,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10870,7 +11492,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10889,7 +11510,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10908,7 +11528,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10927,7 +11546,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10946,7 +11564,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10965,7 +11582,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -10984,7 +11600,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11003,7 +11618,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11022,7 +11636,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11041,7 +11654,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11060,7 +11672,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11079,7 +11690,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11098,7 +11708,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11117,7 +11726,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11136,7 +11744,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11155,7 +11762,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11174,7 +11780,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11193,7 +11798,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11212,7 +11816,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11231,7 +11834,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11250,7 +11852,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11269,7 +11870,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11288,7 +11888,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11307,7 +11906,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11326,7 +11924,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11345,7 +11942,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11364,7 +11960,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11383,7 +11978,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11402,7 +11996,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11421,7 +12014,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11440,7 +12032,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11459,7 +12050,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11478,7 +12068,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11497,7 +12086,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11516,7 +12104,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11535,7 +12122,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11554,7 +12140,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11573,7 +12158,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11592,7 +12176,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11611,7 +12194,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11630,7 +12212,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11649,7 +12230,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11668,7 +12248,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11687,7 +12266,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11706,7 +12284,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11725,7 +12302,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11744,7 +12320,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11763,7 +12338,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11782,7 +12356,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11801,7 +12374,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11820,7 +12392,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11839,7 +12410,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11858,7 +12428,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11877,7 +12446,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11896,7 +12464,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11915,7 +12482,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11934,7 +12500,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11953,7 +12518,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11972,7 +12536,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -11991,7 +12554,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12010,7 +12572,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12029,7 +12590,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12048,7 +12608,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12067,7 +12626,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12086,7 +12644,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12105,7 +12662,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12124,7 +12680,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12143,7 +12698,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12162,7 +12716,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12181,7 +12734,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12200,7 +12752,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12219,7 +12770,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12238,7 +12788,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12257,7 +12806,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12276,7 +12824,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12295,7 +12842,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12314,7 +12860,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12333,7 +12878,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12352,7 +12896,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12371,7 +12914,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12390,7 +12932,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12409,7 +12950,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12428,7 +12968,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12447,7 +12986,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12466,7 +13004,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12485,7 +13022,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12504,7 +13040,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12523,7 +13058,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12542,7 +13076,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12561,7 +13094,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12580,7 +13112,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12599,7 +13130,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12618,7 +13148,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12637,7 +13166,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12656,7 +13184,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12675,7 +13202,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12694,7 +13220,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12713,7 +13238,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12732,7 +13256,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12751,7 +13274,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12770,7 +13292,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12789,7 +13310,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12808,7 +13328,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12828,7 +13347,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12847,7 +13365,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12866,7 +13383,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12885,7 +13401,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12904,7 +13419,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12923,7 +13437,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12942,7 +13455,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12961,7 +13473,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12980,7 +13491,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -12999,7 +13509,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13018,7 +13527,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13037,7 +13545,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13056,7 +13563,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13075,7 +13581,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13094,7 +13599,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13113,7 +13617,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13132,7 +13635,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13151,7 +13653,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13170,7 +13671,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13189,7 +13689,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13208,7 +13707,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13227,7 +13725,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13246,7 +13743,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13265,7 +13761,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13284,7 +13779,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13303,7 +13797,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13322,7 +13815,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13341,7 +13833,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13360,7 +13851,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true
@@ -13379,7 +13869,6 @@
         "fields": [
             "operator",
             "address",
-            "building_area",
             "opening_hours"
         ],
         "suggestion": true

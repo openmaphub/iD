@@ -205,7 +205,7 @@ iD.Connection = function() {
                     tag: _.map(tags, function(value, key) {
                         return { '@k': key, '@v': value };
                     }),
-                    '@version': 0.3,
+                    '@version': 0.6,
                     '@generator': 'iD'
                 }
             }
@@ -286,7 +286,8 @@ iD.Connection = function() {
                     oauth.xhr({
                         url: OMH_CONFIG.AUTH_URL,
                         method: 'PUT',
-                        path: '/changeset/' + changeset_id + '/close'
+                        path: '/changeset/' + changeset_id + '/close',
+                        options: { header: { 'Content-Type': 'text/xml' } }
                     }, d3.functor(true));
                 });
             });
@@ -319,6 +320,23 @@ iD.Connection = function() {
         }
 
         oauth.xhr({ method: 'GET', path: '/user/details' }, done);
+    };
+
+    connection.userChangesets = function(callback) {
+        connection.userDetails(function(err, user) {
+            if (err) return callback(err);
+
+            function done(changesets) {
+                callback(undefined, Array.prototype.map.call(changesets.getElementsByTagName('changeset'),
+                    function (changeset) {
+                        return { tags: getTags(changeset) };
+                    }));
+            }
+
+            d3.xml(url + '/api/0.6/changesets?user=' + user.id).get()
+                .on('load', done)
+                .on('error', callback);
+        });
     };
 
     connection.status = function(callback) {

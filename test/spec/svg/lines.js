@@ -9,7 +9,7 @@ describe("iD.svg.Lines", function () {
     beforeEach(function () {
         context = iD().presets(iD.data.presets);
         surface = d3.select(document.createElementNS('http://www.w3.org/2000/svg', 'svg'))
-            .call(iD.svg.Surface(iD()));
+            .call(iD.svg.Layers(iD()));
     });
 
     it("adds way and line classes", function () {

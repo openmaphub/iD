@@ -9,6 +9,7 @@ iD.modes.Select = function(context, selectedIDs) {
         behaviors = [
             iD.behavior.Copy(context),
             iD.behavior.Paste(context),
+            iD.behavior.Breathe(context),
             iD.behavior.Hover(context),
             iD.behavior.Select(context),
             iD.behavior.Lasso(context),
@@ -26,7 +27,7 @@ iD.modes.Select = function(context, selectedIDs) {
 
     function singular() {
         if (selectedIDs.length === 1) {
-            return context.entity(selectedIDs[0]);
+            return context.hasEntity(selectedIDs[0]);
         }
     }
 
@@ -105,15 +106,6 @@ iD.modes.Select = function(context, selectedIDs) {
             }
         }
 
-        context.map().on('move.select', function() {
-            context.surface().call(radialMenu.close);
-
-            var focussedID = context.focussedID();
-            if (!context.map().editable() && (selectedIDs.length !== 1 || selectedIDs[0] !== focussedID)) {
-                context.enter(iD.modes.Browse(context));
-            }
-        });
-
         function dblclick() {
             var target = d3.select(d3.event.target),
                 datum = target.datum();
@@ -154,6 +146,12 @@ iD.modes.Select = function(context, selectedIDs) {
             }
         }
 
+        function esc() {
+            if (!context.inIntro()) {
+                context.enter(iD.modes.Browse(context));
+            }
+        }
+
 
         behaviors.forEach(function(behavior) {
             context.install(behavior);
@@ -166,13 +164,13 @@ iD.modes.Select = function(context, selectedIDs) {
         operations.unshift(iD.operations.Delete(selectedIDs, context));
 
         keybinding
-            .on('⎋', function() { context.enter(iD.modes.Browse(context)); }, true)
+            .on('⎋', esc, true)
             .on('space', toggleMenu);
 
         operations.forEach(function(operation) {
             operation.keys.forEach(function(key) {
                 keybinding.on(key, function() {
-                    if (!operation.disabled()) {
+                    if (!(context.inIntro() || operation.disabled())) {
                         operation();
                     }
                 });

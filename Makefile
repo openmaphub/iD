@@ -1,32 +1,26 @@
 # See the README for installation instructions.
 
 all: \
-	$(MAKI_TARGETS) \
 	$(BUILDJS_TARGETS) \
 	dist/iD.css \
 	dist/iD.js \
 	dist/iD.min.js \
-	dist/img/line-presets.png \
-	dist/img/relation-presets.png
+	dist/img/iD-sprite.svg \
+	dist/img/maki-sprite.svg
 
-MAKI_TARGETS = \
-	css/feature-icons.css \
-	data/feature-icons.json
 
-MAKI_SOURCES = \
-	data/line-icons.json \
-	data/relation-icons.json \
-	node_modules/maki/www/maki-sprite.json \
-	dist/img/maki-sprite.png
-
-$(MAKI_TARGETS): $(MAKI_SOURCES) data/maki_sprite.js
-	node data/maki_sprite.js
+MAKI_SOURCES = node_modules/maki/src/*.svg
 
 $(MAKI_SOURCES): node_modules/.install
 
-dist/img/maki-sprite.png: node_modules/maki/www/images/maki-sprite.png
-	cp $< $@
+dist/img/maki-sprite.svg: $(MAKI_SOURCES) Makefile
+	node_modules/.bin/svg-sprite --symbol --symbol-dest . --symbol-sprite $@ $(MAKI_SOURCES)
 
+data/feature-icons.json: $(MAKI_SOURCES)
+	cp -f node_modules/maki/www/maki-sprite.json $@
+
+dist/img/iD-sprite.svg: svg/iD-sprite.src.svg svg/iD-sprite.json
+	node svg/spriteify.js --svg svg/iD-sprite.src.svg --json svg/iD-sprite.json > $@
 
 BUILDJS_TARGETS = \
 	data/presets/categories.json \
@@ -41,6 +35,7 @@ BUILDJS_TARGETS = \
 
 BUILDJS_SOURCES = \
 	$(filter-out $(BUILDJS_TARGETS), $(shell find data -type f -name '*.json')) \
+	data/feature-icons.json \
 	data/core.yaml
 
 $(BUILDJS_TARGETS): $(BUILDJS_SOURCES) build.js
@@ -56,7 +51,6 @@ dist/iD.js: \
 	js/lib/d3.one.js \
 	js/lib/d3.dimensions.js \
 	js/lib/d3.trigger.js \
-	js/lib/d3.typeahead.js \
 	js/lib/d3.curtain.js \
 	js/lib/d3.value.js \
 	js/lib/diff3.js \
@@ -70,6 +64,7 @@ dist/iD.js: \
 	js/lib/simplify.js \
 	js/id/start.js \
 	js/id/id.js \
+	js/id/services.js \
 	js/id/services/*.js \
 	js/id/util.js \
 	js/id/util/*.js \
@@ -109,32 +104,30 @@ dist/iD.min.js: dist/iD.js Makefile
 	@rm -f $@
 	node_modules/.bin/uglifyjs $< -c -m -o $@
 
-dist/iD.css: $(MAKI_TARGETS) css/*.css
-	cat css/reset.css css/map.css css/app.css css/feature-icons.css > $@
+dist/iD.css: css/*.css
+	cat css/reset.css css/map.css css/app.css > $@
 
 node_modules/.install: package.json
-	npm install && touch node_modules/.install
+	npm install
+	touch node_modules/.install
 
 clean:
-	rm -f $(MAKI_TARGETS) $(BUILDJS_TARGETS) dist/iD*.js dist/iD.css
+	rm -f $(BUILDJS_TARGETS) data/feature-icons.json dist/iD*.js dist/iD.css dist/img/*.svg
 
 translations:
 	node data/update_locales
 
 imagery:
-	npm install editor-imagery-index@git://github.com/osmlab/editor-imagery-index.git#gh-pages && node data/update_imagery
+	npm install editor-layer-index@git://github.com/osmlab/editor-layer-index.git#gh-pages
+	node data/update_imagery
 
 suggestions:
 	npm install name-suggestion-index@git://github.com/osmlab/name-suggestion-index.git
 	cp node_modules/name-suggestion-index/name-suggestions.json data/name-suggestions.json
 
-SPRITE = inkscape --export-area-page
-
-dist/img/line-presets.png: svg/line-presets.svg
-	if [ `which inkscape` ]; then $(SPRITE) --export-png=$@ $<; else echo "Inkscape is not installed"; fi;
-
-dist/img/relation-presets.png: svg/relation-presets.svg
-	if [ `which inkscape` ]; then $(SPRITE) --export-png=$@ $<; else echo "Inkscape is not installed"; fi;
+wikipedias:
+	npm install wmf-sitematrix@git://github.com/osmlab/wmf-sitematrix.git
+	cp node_modules/wmf-sitematrix/wikipedia.min.json data/wikipedia.json
 
 D3_FILES = \
 	node_modules/d3/src/start.js \

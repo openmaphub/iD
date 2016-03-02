@@ -52,7 +52,7 @@ iD.svg.Lines = function(projection, context) {
         });
 
         var layergroup = surface
-            .select('.layer-lines')
+            .selectAll('.layer-lines')
             .selectAll('g.layergroup')
             .data(d3.range(-10, 11));
 
@@ -88,7 +88,7 @@ iD.svg.Lines = function(projection, context) {
         lines
             .sort(waystack)
             .attr('d', getPath)
-            .call(iD.svg.TagClasses().tags(iD.svg.MultipolygonMemberTags(graph)));
+            .call(iD.svg.TagClasses().tags(iD.svg.RelationMemberTags(graph)));
 
         lines.exit()
             .remove();
@@ -118,6 +118,10 @@ iD.svg.Lines = function(projection, context) {
 
         oneways
             .attr('d', function(d) { return d.d; });
+
+        if (iD.detect().ie) {
+            oneways.each(function() { this.parentNode.insertBefore(this, this); });
+        }
 
         oneways.exit()
             .remove();
