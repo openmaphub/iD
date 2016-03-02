@@ -215,6 +215,7 @@ iD.Connection = function() {
     // Generate [osmChange](http://wiki.openstreetmap.org/wiki/OsmChange)
     // XML. Returns a string.
     connection.osmChangeJXON = function(changeset_id, changes) {
+      var layer_id = iD.util.stringQs(window.location.hash).layer_id;
         function nest(x, order) {
             var groups = {};
             for (var i = 0; i < x.length; i++) {
@@ -236,6 +237,7 @@ iD.Connection = function() {
         return {
             osmChange: {
                 '@version': 0.3,
+                '@layerid': layer_id,
                 '@generator': 'MapHubs-iD',
                 'create': nest(changes.created.map(rep), ['node', 'way', 'relation']),
                 'modify': nest(changes.modified.map(rep), ['node', 'way', 'relation']),
