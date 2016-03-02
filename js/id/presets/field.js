@@ -1,6 +1,5 @@
 iD.presets.Field = function(id, field) {
     field = _.clone(field);
-    field._label = field.label;
 
     field.id = id;
 
@@ -13,8 +12,7 @@ iD.presets.Field = function(id, field) {
     };
 
     field.label = function() {
-        return field.t('label', {'default': field._label});
-        // return field.t('label', {'default': id});
+        return field.t('label', {'default': id});
     };
 
     var placeholder = field.placeholder;

@@ -1,11 +1,12 @@
 describe('iD.Features', function() {
     var dimensions = [1000, 1000],
-        features,
-        context;
+        context,
+        features;
 
     beforeEach(function() {
         context = iD();
-        features = context.features();
+        context.map().zoom(16);
+        features = iD.Features(context);
     });
 
     describe('#keys', function() {

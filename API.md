@@ -175,7 +175,7 @@ var iD = iD()
 
 ### Minimum Editable Zoom
 
-The minimum zoom at which iD enters the edit mode is configured using the `iD().minEditableZoom()` accessor. The default value is 16. To change this initialise iD as 
+The minimum zoom at which iD enters the edit mode is configured using the `iD().minEditableZoom()` accessor. The default value is 16. To change this initialise iD as
 
 ```js
 

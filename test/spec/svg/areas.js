@@ -1,13 +1,11 @@
 describe("iD.svg.Areas", function () {
     var surface,
-        context,
         projection = d3.geo.projection(function(x, y) { return [x, y]; })
             .clipExtent([[0, 0], [Infinity, Infinity]]),
         all = d3.functor(true),
         none = d3.functor(false);
 
     beforeEach(function () {
-        context = iD().presets(iD.data.presets);
         surface = d3.select(document.createElementNS('http://www.w3.org/2000/svg', 'svg'))
             .call(iD.svg.Layers(iD()));
     });

@@ -66,7 +66,7 @@ iD.Features = function(context) {
             defaultMax: (max || Infinity),
             enable: function() { this.enabled = true; this.currentMax = this.defaultMax; },
             disable: function() { this.enabled = false; this.currentMax = 0; },
-            hidden: function() { return (k !== 'focussed' && context.map().zoom() < context.minEditableZoom() ) || this.count > this.currentMax * _cullFactor; },
+            hidden: function() { return !context.editable() || this.count > this.currentMax * _cullFactor; },
             autoHidden: function() { return this.hidden() && this.currentMax > 0; }
         };
     }
@@ -162,10 +162,6 @@ iD.Features = function(context) {
         return (geometry === 'line' || geometry === 'area');
     });
 
-    // Features selected via the URL hash.
-    defineFeature('focussed', function(entity) {
-        return entity.id === context.focussedID();
-    });
 
     function features() {}
 
@@ -174,10 +170,7 @@ iD.Features = function(context) {
     };
 
     features.keys = function() {
-        var keys = _keys;
-
-        if(context.focussedID()) return keys;
-        return _.without(keys, 'focussed');
+        return _keys;
     };
 
     features.enabled = function(k) {
@@ -223,22 +216,10 @@ iD.Features = function(context) {
     };
 
     features.toggle = function(k) {
-       if (feature[k]) {
-           (function(f) { return f.enabled ? f.disable() : f.enable(); }(feature[k]));
-           update();
-       }
-   };
-
-   features.count = function(k) {
-       return feature[k] && feature[k].count;
-   };
-
-
-
-    features.gatherStats = function(d, graph, dimensions) {
-        var hidden = features.hidden(),
-            keys = features.keys();
-        resolver = graph || resolver;
+        if (_features[k]) {
+            (function(f) { return f.enabled ? f.disable() : f.enable(); }(_features[k]));
+            update();
+        }
     };
 
     features.resetStats = function() {
@@ -414,7 +395,6 @@ iD.Features = function(context) {
         }) : false;
     };
 
-
     features.isHidden = function(entity, resolver, geometry) {
         if (!_hidden.length) return false;
         if (!entity.version) return false;
@@ -434,10 +414,6 @@ iD.Features = function(context) {
             }
         }
         return result;
-    };
-
-    features.isFocussedFeature = function(entity) {
-        return entity.id === context.focussedID() && _features.focussed && _features.focussed.enabled;
     };
 
     return d3.rebind(features, dispatch, 'on');

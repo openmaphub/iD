@@ -1,4 +1,4 @@
-iD.svg.Lines = function(projection, context) {
+iD.svg.Lines = function(projection) {
 
     var highway_stack = {
         motorway: 0,
@@ -25,9 +25,7 @@ iD.svg.Lines = function(projection, context) {
 
     return function drawLines(surface, graph, entities, filter) {
         var ways = [], pathdata = {}, onewaydata = {},
-            simplify = !context.map().editable(),
-            getPath = iD.svg.Path(projection, graph, false, simplify);
-
+            getPath = iD.svg.Path(projection, graph);
 
         for (var i = 0; i < entities.length; i++) {
             var entity = entities[i],

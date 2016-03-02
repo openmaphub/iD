@@ -323,9 +323,6 @@ en:
     others:
       description: Others
       tooltip: "Everything Else"
-    focussed:
-      description: Focussed Feature
-      tooltip: "Feature that is focussed via the URL"
   area_fill:
     wireframe:
       description: No Fill (Wireframe)
