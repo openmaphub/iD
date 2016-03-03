@@ -181,7 +181,7 @@ en:
     localized_translation_name: Name
   zoom_in_edit: Zoom in to Edit
   logout: logout
-  loading_auth: "Connecting to OpenStreetMap..."
+  loading_auth: "Connecting to MapHubs..."
   report_a_bug: Report a bug
   help_translate: Help translate
   feature_info:
@@ -205,7 +205,7 @@ en:
     deleted: Deleted
     created: Created
     about_changeset_comments: About changeset comments
-    about_changeset_comments_link: //wiki.openstreetmap.org/wiki/Good_changeset_comments
+    about_changeset_comments_link: //wiki.maphubs.org/wiki/Good_changeset_comments
   contributors:
     list: "Edits by {users}"
     truncated_list: "Edits by {users} and {count} others"
@@ -237,7 +237,7 @@ en:
     no_documentation_combination: There is no documentation available for this tag combination
     no_documentation_key: There is no documentation available for this key
     show_more: Show More
-    view_on_osm: View on openstreetmap.org
+    view_on_osm: View on maphubs.org
     all_fields: All fields
     all_tags: All tags
     all_members: All members
@@ -378,7 +378,7 @@ en:
     google: "Share on Google+"
     help_html: Your changes should appear in the "Standard" layer in a few minutes. Other layers, and certain features, may take longer.
     help_link_text: Details
-    help_link_url: "https://wiki.openstreetmap.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F"
+    help_link_url: "https://wiki.maphubs.org/wiki/FAQ#I_have_just_made_some_changes_to_the_map._How_do_I_get_to_see_my_changes.3F"
   confirm:
     okay: "Okay"
     cancel: "Cancel"
@@ -399,7 +399,7 @@ en:
     untagged_point: Untagged point
     untagged_line: Untagged line
     untagged_area: Untagged area
-    many_deletions: "You're deleting {n} objects. Are you sure you want to do this? This will delete them from the map that everyone else sees on openstreetmap.org."
+    many_deletions: "You're deleting {n} objects. Are you sure you want to do this? This will delete them from the map that everyone else sees on maphubs.org."
     tag_suggests_area: "The tag {tag} suggests line should be area, but it is not an area"
     untagged_point_tooltip: "Select a feature type that describes what this point is."
     untagged_line_tooltip: "Select a feature type that describes what this line is."
@@ -435,10 +435,10 @@ en:
 
       Edits that you make on this map will be visible to everyone who uses
       MapHubs. In order to make an edit, you'll need to
-      [log in](https://www.openstreetmap.org/login).
+      [log in](https://www.maphubs.org/login).
 
       The [iD editor](http://ideditor.com/) is a collaborative project with [source
-      code available on GitHub](https://github.com/openstreetmap/iD).
+      code available on GitHub](https://github.com/maphubs/iD).
     editing_saving: |
       # Editing & Saving
 
@@ -469,7 +469,7 @@ en:
 
       If everything looks good, you can enter a short comment explaining the change
       you made, and click 'Save' again to post the changes
-      to [MapHubs.org](http://www.openstreetmap.org/), where they are visible
+      to [MapHubs.org](http://www.maphubs.org/), where they are visible
       to all other users and available for others to build and improve upon.
 
       If you can't finish your edits in one sitting, you can leave the editor
@@ -478,7 +478,7 @@ en:
 
       ### Using the editor
 
-      A list of available keyboard shortcuts can be found [here](http://wiki.openstreetmap.org/wiki/ID/Shortcuts).
+      A list of available keyboard shortcuts can be found [here](http://wiki.maphubs.org/wiki/ID/Shortcuts).
 
     roads: |
       # Roads
@@ -539,7 +539,7 @@ en:
     gps: |
       # GPS
 
-      Collected GPS traces are one valuable source of data for OpenStreetMap. This editor
+      Collected GPS traces are one valuable source of data for MapHubs. This editor
       supports local traces - `.gpx` files on your local computer. You can collect
       this kind of GPS trace with a number of smartphone applications as well as
       personal GPS hardware.
@@ -612,7 +612,7 @@ en:
       other details, like a Wikipedia link, wheelchair access, and more.
 
       At the bottom of the inspector, click 'Additional tags' to add arbitrary
-      other tags to the element. [Taginfo](http://taginfo.openstreetmap.org/) is a
+      other tags to the element. [Taginfo](http://taginfo.maphubs.org/) is a
       great resource for learn more about popular tag combinations.
 
       Changes you make in the inspector are automatically applied to the map.

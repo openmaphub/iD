@@ -173,7 +173,7 @@
     },
     "zoom_in_edit": "Zoom inn for å redigere",
     "logout": "logg ut",
-    "loading_auth": "Kobler til OpenStreetMap...",
+    "loading_auth": "Kobler til MapHubs...",
     "commit": {
         "title": "Lagre endringer",
         "description_placeholder": "Kort beskrivelse av dine bidrag",
@@ -216,7 +216,7 @@
         "role": "Rolle",
         "choose": "Velg egenskapstype",
         "results": "{n} resultater for {search}",
-        "reference": "Les mere på OpenStreetMap Wiki",
+        "reference": "Les mere på MapHubs Wiki",
         "back_tooltip": "Endre funksjon",
         "remove": "Fjern",
         "search": "Søk",
@@ -313,9 +313,9 @@
     },
     "save": {
         "title": "Lagre",
-        "help": "Lagre endringene i OpenStreetMap, slik at de blir synlige for andre brukere.",
+        "help": "Lagre endringene i MapHubs, slik at de blir synlige for andre brukere.",
         "no_changes": "Ingen endringer å lagre.",
-        "uploading": "Laster opp endringer til OpenStreetMap.",
+        "uploading": "Laster opp endringer til MapHubs.",
         "unsaved_changes": "Du har ulagrede endringer",
         "conflict": {
             "previous": "< Forrige",
@@ -326,7 +326,7 @@
     },
     "success": {
         "edited_osm": "Redigert OSM!",
-        "just_edited": "Du har akkurat endret OpenStreetMap!",
+        "just_edited": "Du har akkurat endret MapHubs!",
         "view_on_osm": "Vis på OSM",
         "facebook": "Del på Facebook",
         "twitter": "Del på Twitter",
@@ -338,7 +338,7 @@
         "cancel": "Avbryt"
     },
     "splash": {
-        "welcome": "Velkommen til iD OpenStreetMap editor",
+        "welcome": "Velkommen til iD MapHubs editor",
         "walkthrough": "Begynn Gjennomgangen",
         "start": "Rediger Nå"
     },
@@ -354,7 +354,7 @@
     "validations": {
         "untagged_line": "Utagget linje",
         "untagged_area": "Utagget areal",
-        "many_deletions": "Du skal slette {n} objekter. Er du sikker på at du vil gjøre dette? Dette vil slette dem fra kartet som alle andre ser på openstreetmap.org.",
+        "many_deletions": "Du skal slette {n} objekter. Er du sikker på at du vil gjøre dette? Dette vil slette dem fra kartet som alle andre ser på maphubs.com.",
         "tag_suggests_area": "Taggen {tag} anbefaler at linje bør være et areal, men dette er ikke et areal"
     },
     "zoom": {

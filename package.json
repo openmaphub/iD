@@ -1,7 +1,7 @@
 {
-  "name": "iD",
+  "name": "maphubs-editor",
   "version": "1.9.0",
-  "description": "A friendly editor for OpenStreetMap",
+  "description": "Editor for MapHubs (fork of the OpenStreetMap iD Editor)",
   "main": "iD.js",
   "directories": {
     "doc": "docs",
@@ -12,7 +12,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/openstreetmap/iD.git"
+    "url": "git://github.com/maphubs/iD.git"
   },
   "keywords": [
     "editor",

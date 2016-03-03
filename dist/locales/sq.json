@@ -211,7 +211,7 @@
     },
     "zoom_in_edit": "Zmadhoni për të redaktuar",
     "logout": "dil",
-    "loading_auth": "Lidh me OpenStreetMap...",
+    "loading_auth": "Lidh me MapHubs...",
     "feature_info": {
         "hidden_warning": "{count} tipare të fshehura",
         "hidden_details": "Këto tipare janë aktualisht të fshehura: {details}"
@@ -224,8 +224,8 @@
     "commit": {
         "title": "Kryej Ndryshimet",
         "description_placeholder": "Përmbledhja e redaktimeve",
-        "upload_explanation": "Redaktimet qe ju ngarkoni do jen të dukshëm në të gjithë hartat që përdorin të dhëna OpenStreetMap.",
-        "upload_explanation_with_user": "Redaktimet qe ju ngarkoni si {user} do jen të dukshëm në të gjithë hartat që përdorin të dhëna OpenStreetMap.",
+        "upload_explanation": "Redaktimet qe ju ngarkoni do jen të dukshëm në të gjithë hartat që përdorin të dhëna MapHubs.",
+        "upload_explanation_with_user": "Redaktimet qe ju ngarkoni si {user} do jen të dukshëm në të gjithë hartat që përdorin të dhëna MapHubs.",
         "save": "Ruaj",
         "cancel": "Anullo",
         "changes": "{count} Ndryshime",
@@ -270,7 +270,7 @@
         "no_documentation_combination": "Nuk ka dokumentim disponueshëm për këtë kombinin etiketave",
         "no_documentation_key": "Nuk ka dokumentim disponueshëm për këte çelës",
         "show_more": "Paraqit më tepër",
-        "view_on_osm": "Shiko në openstreetmap.org",
+        "view_on_osm": "Shiko në maphubs.com",
         "all_tags": "Të gjithë etiketat",
         "all_members": "Të gjithë anëtarët",
         "all_relations": "Të gjithë lidhjet",
@@ -278,7 +278,7 @@
         "role": "Rol",
         "choose": "Zgjidhni llojën e tiparit",
         "results": "{n} rezultate për {search}",
-        "reference": "Shiko në OpenStreetMap Wiki",
+        "reference": "Shiko në MapHubs Wiki",
         "back_tooltip": "Ndrysho tiparin",
         "remove": "Hiq",
         "search": "Kërko",

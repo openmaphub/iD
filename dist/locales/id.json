@@ -220,7 +220,7 @@
     },
     "zoom_in_edit": "Perbesar untuk bisa menyunting",
     "logout": "keluar",
-    "loading_auth": "Menghubungkan dengan OpenStreetMap...",
+    "loading_auth": "Menghubungkan dengan MapHubs...",
     "feature_info": {
         "hidden_warning": "{count} fitur tersembunyi",
         "hidden_details": "Fitur-fitur berikut saat ini tersembunyi: {details}"
@@ -234,8 +234,8 @@
         "title": "Simpan Perubahan",
         "description_placeholder": "Deskripsi singkat kontribusi Anda",
         "message_label": "Komentar set perubahan",
-        "upload_explanation": "Perubahan yang anda unggah akan tampil di seluruh peta yang menggunakan data OpenStreetMap.",
-        "upload_explanation_with_user": "Perubahan yang anda unggah sebagai {user} akan tampil di seluruh peta yang menggunakan data OpenStreetMap.",
+        "upload_explanation": "Perubahan yang anda unggah akan tampil di seluruh peta yang menggunakan data MapHubs.",
+        "upload_explanation_with_user": "Perubahan yang anda unggah sebagai {user} akan tampil di seluruh peta yang menggunakan data MapHubs.",
         "save": "Simpan",
         "cancel": "Batal",
         "changes": "{count} Perubahan",
@@ -280,7 +280,7 @@
         "no_documentation_combination": "Tidak ada dokumentasi yang tersedia untuk kombinasi tanda ini",
         "no_documentation_key": "Tidak ada dokumentasi tersedia untuk kunci ini",
         "show_more": "Tampilkan Lainnya",
-        "view_on_osm": "Lihat di openstreetmap.org",
+        "view_on_osm": "Lihat di maphubs.com",
         "all_tags": "Semua tag",
         "all_members": "Semua anggota",
         "all_relations": "Semua relasi",
@@ -288,7 +288,7 @@
         "role": "Aturan",
         "choose": "Pilih Tipe Fitur",
         "results": "{n} hasil untuk {search}",
-        "reference": "Lihat di OpenStreetMap Wiki",
+        "reference": "Lihat di MapHubs Wiki",
         "back_tooltip": "Ubah Fitur",
         "remove": "Buang",
         "search": "Cari",
@@ -403,12 +403,12 @@
     },
     "save": {
         "title": "Simpan",
-        "help": "Simpan perubahan ke OpenStreetMap, jadikan mereka terlihat oleh pengguna lain.",
+        "help": "Simpan perubahan ke MapHubs, jadikan mereka terlihat oleh pengguna lain.",
         "no_changes": "Tak ada perubahan yang bisa disimpan.",
         "error": "Kesalahan terjadi saat mencoba menyimpan",
         "status_code": "Server mengembalikan kode status {code}",
         "unknown_error_details": "Mohon pastikan Anda terhubung dengan internet.",
-        "uploading": "Mengunggah perubahan ke OpenStreetMap.",
+        "uploading": "Mengunggah perubahan ke MapHubs.",
         "unsaved_changes": "Anda mememiliki perubahan yang belum tersimpan",
         "conflict": {
             "header": "Menyelesaikan suntingan bertentangan",
@@ -435,7 +435,7 @@
     },
     "success": {
         "edited_osm": "OSM tersunting!",
-        "just_edited": "Anda baru saja menyunting OpenStreetMap!",
+        "just_edited": "Anda baru saja menyunting MapHubs!",
         "view_on_osm": "Lihat di OSM",
         "facebook": "Bagikan di Facebook",
         "twitter": "Bagikan di Twitter",
@@ -446,7 +446,7 @@
         "cancel": "Batal"
     },
     "splash": {
-        "welcome": "Selamat datang di penyuting iD OpenStreetMap",
+        "welcome": "Selamat datang di penyuting iD MapHubs",
         "text": "iD begitu bersahabat namun juga alat yang kuat untuk berperan dalam peta dunia gratis terbaik. Ini adalah versi {version}. Untuk informasi lebih lihat {website} dan laporkan kesalahan di {github}.",
         "walkthrough": "Memulai Perjalanan",
         "start": "Sunting Sekarang"
@@ -465,7 +465,7 @@
         "untagged_point": "Titik tak bertanda",
         "untagged_line": "Garis tak bertanda",
         "untagged_area": "Area tak bertanda",
-        "many_deletions": "Anda menghapus {n} obyek. Apakah anda yakin? Ini akan menghapus dari peta yang semua orang lihat pada openstreetmap.org.",
+        "many_deletions": "Anda menghapus {n} obyek. Apakah anda yakin? Ini akan menghapus dari peta yang semua orang lihat pada maphubs.com.",
         "tag_suggests_area": "Penanda {tag} menyarankan garis sebaiknya dalam bentuk area, tapi ini bukan sebuah area",
         "untagged_point_tooltip": "Pilih tipe fitur yang menjelaskan apa identitas poin ini.",
         "untagged_line_tooltip": "Pilih tipe fitur yang menjelaskan apa identitas garis ini.",
@@ -489,17 +489,17 @@
     },
     "help": {
         "title": "Bantuan",
-        "help": "# Bantuan\n\nIni adalah penyunting untuk [OpenStreetMap](http://www.openstreetmap.org/),\npeta dunia yang gratis dan dapat disunting. Anda dapat menggunakannya\nuntuk menambah dan memperbarui data di area Anda, membuat peta dunia\nbersumber dan berdata terbuka lebih baik untuk semua orang.\n\nSuntingan yang Anda buat di peta ini akan terlihat oleh semua pengguna\nOpenStreetMap. Untuk membuat suntingan, Anda perlu\n[log in](https://www.openstreetmap.org/login).\n\n[iD editor](http://ideditor.com/) adalah proyek kerja sama dengan [source\ncode available on GitHub](https://github.com/openstreetmap/iD).\n",
-        "editing_saving": "# Menyunting & Menyimpan\n\nPenyunting dirancang untuk bekerja secara daring, dan Anda mengaksesnya\nmelalui situs web sekarang.\n\n### Memilih Fitur\n\nUntuk memilih fitur peta, seperti jalan atau titik ketertarikan, klik\npada fitur di peta. Hal ini akan membuat fitur yang terpilih lebih cerah, membuka panel\nberisi perinciannya, dan menampilkan menu berisi hal-hal yang Anda dapat lakukan dengan fitur tersebut.\n\nUntuk memilih beberapa fitur, tahan tombol 'Shift'. Lalu klik pada\nfitur yang mau dipilih, atau geser pada peta untuk menggambar persegi panjang.\nIni akan menggambar sebuah kotak dan memilih semua titik di dalamnya.\n\n### Menyimpan Suntingan\n\nSaat Anda membuat perubahan seperti menyunting jalan, bangunan, dan tempat, perubahan ini\ndisimpan secara lokal sampai Anda menyimpan ke server. Jangan khawatir jika Anda\nmembuat kesalahan - Anda dapat membatalkan perubahan dengan menekan tombol undo, dan mengembalikan\nperubahan dengan menekan tombol redo.\n\nKlik 'Simpan' untuk menyelesaikan sekelompok perubahan - seperti, jika Anda telah melengkapi\nsebuah area di kota dan akan memulai di area baru lain. Anda memiliki kesempatan\nuntuk meninjau kembali apa yang telah dilakukan, dan penyunting akan memberikan saran berguna\ndan peringatan jika sesuatu terkesan janggal dengan perubahan tersebut.\n\nJika semua terlihat baik, Anda dapat memasukkan penjelasan pendek mengenai perubahan\nyang Anda buat, dan klik 'Simpan' lagi untuk mengirim perubahan\nke [OpenStreetMap.org](http://www.openstreetmap.org/), yang akan terlihat\noleh seluruh pengguna dan tersedia bagi yang lain untuk dibangun dan diperbaiki.\n\nJika Anda tidak bisa menyelesaikan suntingan dalam sekali waktu, Anda dapat meninggalkan jendela penyunting\ndan kembali (pada peramban dan komputer yang sama), dan aplikasi penyunting akan menawarkan untuk mengembalikan kembali apa yang sudah dikerjakan.\n\n### Menggunakan penyunting\n\nDaftar shortcut untuk keyboard tersedia [here](http://wiki.openstreetmap.org/wiki/ID/Shortcuts).\n",
+        "help": "# Bantuan\n\nIni adalah penyunting untuk [MapHubs](http://www.maphubs.com/),\npeta dunia yang gratis dan dapat disunting. Anda dapat menggunakannya\nuntuk menambah dan memperbarui data di area Anda, membuat peta dunia\nbersumber dan berdata terbuka lebih baik untuk semua orang.\n\nSuntingan yang Anda buat di peta ini akan terlihat oleh semua pengguna\nMapHubs. Untuk membuat suntingan, Anda perlu\n[log in](https://www.maphubs.com/login).\n\n[iD editor](http://ideditor.com/) adalah proyek kerja sama dengan [source\ncode available on GitHub](https://github.com/openstreetmap/iD).\n",
+        "editing_saving": "# Menyunting & Menyimpan\n\nPenyunting dirancang untuk bekerja secara daring, dan Anda mengaksesnya\nmelalui situs web sekarang.\n\n### Memilih Fitur\n\nUntuk memilih fitur peta, seperti jalan atau titik ketertarikan, klik\npada fitur di peta. Hal ini akan membuat fitur yang terpilih lebih cerah, membuka panel\nberisi perinciannya, dan menampilkan menu berisi hal-hal yang Anda dapat lakukan dengan fitur tersebut.\n\nUntuk memilih beberapa fitur, tahan tombol 'Shift'. Lalu klik pada\nfitur yang mau dipilih, atau geser pada peta untuk menggambar persegi panjang.\nIni akan menggambar sebuah kotak dan memilih semua titik di dalamnya.\n\n### Menyimpan Suntingan\n\nSaat Anda membuat perubahan seperti menyunting jalan, bangunan, dan tempat, perubahan ini\ndisimpan secara lokal sampai Anda menyimpan ke server. Jangan khawatir jika Anda\nmembuat kesalahan - Anda dapat membatalkan perubahan dengan menekan tombol undo, dan mengembalikan\nperubahan dengan menekan tombol redo.\n\nKlik 'Simpan' untuk menyelesaikan sekelompok perubahan - seperti, jika Anda telah melengkapi\nsebuah area di kota dan akan memulai di area baru lain. Anda memiliki kesempatan\nuntuk meninjau kembali apa yang telah dilakukan, dan penyunting akan memberikan saran berguna\ndan peringatan jika sesuatu terkesan janggal dengan perubahan tersebut.\n\nJika semua terlihat baik, Anda dapat memasukkan penjelasan pendek mengenai perubahan\nyang Anda buat, dan klik 'Simpan' lagi untuk mengirim perubahan\nke [MapHubs.org](http://www.maphubs.com/), yang akan terlihat\noleh seluruh pengguna dan tersedia bagi yang lain untuk dibangun dan diperbaiki.\n\nJika Anda tidak bisa menyelesaikan suntingan dalam sekali waktu, Anda dapat meninggalkan jendela penyunting\ndan kembali (pada peramban dan komputer yang sama), dan aplikasi penyunting akan menawarkan untuk mengembalikan kembali apa yang sudah dikerjakan.\n\n### Menggunakan penyunting\n\nDaftar shortcut untuk keyboard tersedia [here](http://wiki.maphubs.com/wiki/ID/Shortcuts).\n",
         "roads": "# Jalan\n\nAnda dapat membuat, memperbaiki, dan menghapus jalan dengan penyunting ini. Jalan ada banyak\njenis: jalan setapak, jalan raya, jalan sepeda, dan sebagainya - segmen yang sering dilalui\nseharusnya dapat dipetakan.\n\n### Memilih\n\nKlik pada jalan untuk memilihnya. Sebuah garis tepi akan terlihat, dengan\nmenu peralatan kecil pada peta dan sidebar berisi informasi lebih tentang jalan tersebut.\n\n### Mengubah\n\nSeringkali Anda akan melihat jalan-jalan yang tidak segaris dengan gambar di belakangnya\natau dengan trek GPS. Anda dapat mengatur jalan-jalan ini agar mereka berada\npada posisi yang tepat.\n\nPertama, klik pada jalan yang Anda ingin ubah. Ini akan menyorotinya dan menampilkan\ntitik kendali di sepanjang jalan yang dapat Anda geser ke letak yang lebih baik. Jika\nAnda ingin menambah titik kendali untuk memerincinya, klik dua kali bagian\ndari jalan tanpa titik, dan titik kendali akan ditambah.\n\nJika jalan itu terhubung dengan jalan lain, tetapi tidak terhubung dengan baik\npada peta, Anda bisa menggeser salah satu titik kendalinya ke jalan lain tersebut untuk\nmenghubungkannya. Memastikan jalan terhubung penting untuk peta dan sangat diperlukan untuk memberikan arah berkendara.\n\nAnda dapat klik alat 'Move' atau tekan tombol pintasan 'M' untuk memindahkan keseluruhan jalan sekaligus,\nlalu klik lagi untuk menyimpan pemindahan tersebut.\n\n### Menghapus\n\nJika sebuah jalan seluruhnya salah - Anda dapat melihat bahwa itu tidak ada pada citra satelit\ndan telah mengamatinya langsung bahwa itu memang tidak ada - Anda dapat menghapusnya,\nuntuk menghilangkannya dari peta. Berhati-hatilah saat menghapus fitur -\nseperti suntingan lain, hasilnya akan terlihat oleh semua orang dan citra satelit\nseringkali sudah usang, sehingga jalan mungkin baru dibangun.\n\nAnda dapat menghapus jalan dengan klik jalan tersebut untuk memilihnya,\nlalu klik ikon tong sampah atau menekan tombol 'Delete'.\n\n### Menciptakan\n\nMenemukan tempat yang seharusnya ada jalan tapi tidak ada? Pilih ikon 'Line'\npada kiri-atas penyunting atau tekan tombol pintasan '2' untuk mulai\nmenggambar garis.\n\nKlik pada bagian awal jalan untuk mulai menggambar. Jika jalan\nbercabang dari jalan yang sudah ada, mulai dengan klik pada tempat keduanya terhubung.\n\nLalu klik pada titik-titik sepanjang jalan sehingga sesuai alur,\nmenurut citra satelit atau GPS. Jika jalan yang Anda gambar menyeberangi jalan lain,\nhubungkan jalan itu dengan mengeklik pada titik persimpangan. Saat Anda selesai menggambar, klik dua kali\natau tekan 'Return' atau 'Enter' pada papan tik.\n",
         "imagery": "# Citra\n\nCitra foto udara merupakan sumber penting untuk pemetaan. Gabungan dari\npemotretan pesawat, pandangan satelit, dan sumber terhimpun lain tersedia\ndi penyunting pada menu 'Pengaturan Latar' di sebelah kanan.\n\nBiasanya lapisan satelit [Bing Maps](http://www.bing.com/maps/) ditampilkan\ndi penyunting ini, tetapi ketika Anda geser atau perbesar tampilan di suatu wilayah baru,\nsumber baru lain akan tersedia. Di beberapa negara, seperti Amerika Serikat,\nPerancis, dan Denmark memiliki citra berkualitas tinggi yang tersedia di beberapa area.\n\nCitra kadang melenceng dari data peta karena ada kesalahan pada\npenyedia data citra. Jika Anda melihat banyak jalan yang bergeser dari latarnya,\njangan serta-merta memindahkan semuanya untuk mencocokkan latar. Justru Anda bisa menyesuaikan\ncitranya agar pas dengan data yang ada dengan mengeklik 'Perbaiki perataan' pada\nbagian bawah Pengaturan Latar.\n",
-        "addresses": "# Alamat\n\nAlamat adalah informasi yang paling penting dalam suatu peta.\n\nMeski alamat sering ditampilkan sebagai bagian dari jalan, OpenStreetMap menampilkan alamat sebagai bagian dari bangunan dan tempat-tempat di pinggir jalan.\n\nAnda dapat menambahkan alamat ke tempat-tempat berbentuk garis bangunan atau titik. Data alamat yang tepercaya diperoleh dari survei lapangan atau pengetahuan sendiri - seperti fitur lainnya, Anda tidak diperbolehkan menyalin alamat dari sumber-sumber komersial seperti Google Maps.\n",
-        "buildings": "# Bangunan\n\nOpenStreetMap ialah database terbesar dunia untuk bangunan. Kamu dapat membuat\ndan memperbaiki database ini.\n\n## Memilih\n\nKamu dapat memilih sebuah bangunan dengan mengklik pada batasnya. Hal ini akan membedakan\nbangunannya dan membuka sebuah alat kecil menu dan di sisi samping menampilkan informasi lebih lanjut\ntentang bangunan tersebut.\n\n### Mengubah\n\nTerkadang bangunan tidak diletakan pada tempatnya atau memiliki tags yang salah.\n\nUntuk memindahkan seluruh bangunan, pilih, lalu klik alat 'Move'. Geser\ntetikus kamu untuk memindahkan bangunan, dan klik ketika sudah sesuai tempatnya.\n\nUntuk memperbaiki bentuk sebuah gedung, klik dan geser sebuah sudut yang membentuk\nbatasnya ke tempat yang sesuai.\n\n### Membuat\n\nSatu pertanyaan utama terkait menambahkan bangunan ke dalam suatu peta adalah\nOpenStreetMap mencatat gedung baik dalam bentuk luasan dan titik. \n"
+        "addresses": "# Alamat\n\nAlamat adalah informasi yang paling penting dalam suatu peta.\n\nMeski alamat sering ditampilkan sebagai bagian dari jalan, MapHubs menampilkan alamat sebagai bagian dari bangunan dan tempat-tempat di pinggir jalan.\n\nAnda dapat menambahkan alamat ke tempat-tempat berbentuk garis bangunan atau titik. Data alamat yang tepercaya diperoleh dari survei lapangan atau pengetahuan sendiri - seperti fitur lainnya, Anda tidak diperbolehkan menyalin alamat dari sumber-sumber komersial seperti Google Maps.\n",
+        "buildings": "# Bangunan\n\nMapHubs ialah database terbesar dunia untuk bangunan. Kamu dapat membuat\ndan memperbaiki database ini.\n\n## Memilih\n\nKamu dapat memilih sebuah bangunan dengan mengklik pada batasnya. Hal ini akan membedakan\nbangunannya dan membuka sebuah alat kecil menu dan di sisi samping menampilkan informasi lebih lanjut\ntentang bangunan tersebut.\n\n### Mengubah\n\nTerkadang bangunan tidak diletakan pada tempatnya atau memiliki tags yang salah.\n\nUntuk memindahkan seluruh bangunan, pilih, lalu klik alat 'Move'. Geser\ntetikus kamu untuk memindahkan bangunan, dan klik ketika sudah sesuai tempatnya.\n\nUntuk memperbaiki bentuk sebuah gedung, klik dan geser sebuah sudut yang membentuk\nbatasnya ke tempat yang sesuai.\n\n### Membuat\n\nSatu pertanyaan utama terkait menambahkan bangunan ke dalam suatu peta adalah\nMapHubs mencatat gedung baik dalam bentuk luasan dan titik. \n"
     },
     "intro": {
         "navigation": {
             "title": "Navigasi",
-            "drag": "Area peta utama menampilkan data OpenStreetMap pada bagian atas dari latar. Anda dapat bernavigasi dengan menggeser dan mengskrol, seperti peta web lainnya. **Geser petanya!**",
+            "drag": "Area peta utama menampilkan data MapHubs pada bagian atas dari latar. Anda dapat bernavigasi dengan menggeser dan mengskrol, seperti peta web lainnya. **Geser petanya!**",
             "select": "Fitur peta dapat diwakili dengan tiga cara: dengan titik, garis, atau area. Semua fitur dapat dipilih dengan mengklik mereka. **Klik sebuah titik untuk memilihnya.**"
         },
         "points": {

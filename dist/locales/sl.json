@@ -211,7 +211,7 @@
     },
     "zoom_in_edit": "Za urejanje približaj pogled",
     "logout": "odjava",
-    "loading_auth": "Povezovanje z OpenStreetMap...",
+    "loading_auth": "Povezovanje z MapHubs...",
     "status": {
         "error": "Ne morem se povezati na API.",
         "offline": "API je offline. Prosimo, poskusite urejati kasneje.",
@@ -220,8 +220,8 @@
     "commit": {
         "title": "Shrani spremembe",
         "description_placeholder": "Kratek opis vaših sprememb",
-        "upload_explanation": "Spremembe, ki ji boste naložili, bodo vidne na vseh zemljevidih, ki uporabljajo podatke OpenStreetMap.",
-        "upload_explanation_with_user": "Spremembe, ki jih boste naložili kot {user}, bodo vidne na vseh zemljevidih, ki uporabljajo podatke OpenStreetMap.",
+        "upload_explanation": "Spremembe, ki ji boste naložili, bodo vidne na vseh zemljevidih, ki uporabljajo podatke MapHubs.",
+        "upload_explanation_with_user": "Spremembe, ki jih boste naložili kot {user}, bodo vidne na vseh zemljevidih, ki uporabljajo podatke MapHubs.",
         "save": "Shrani",
         "cancel": "Prekliči",
         "warnings": "Opozorila",
@@ -245,7 +245,7 @@
         "no_documentation_combination": "Za to kombinacijo oznak ni na voljo dokumentacije",
         "no_documentation_key": "Za ta ključ ni na voljo dokumentacije",
         "show_more": "Pokaži več",
-        "view_on_osm": "Ogled na openstreetmap.org",
+        "view_on_osm": "Ogled na maphubs.com",
         "all_tags": "Vse oznake",
         "all_members": "Vsi člani",
         "all_relations": "Vse povezave",
@@ -253,7 +253,7 @@
         "role": "Vloga",
         "choose": "Izberite vrsto elementa",
         "results": "{n} zadetkov iskanja {search}",
-        "reference": "Ogled v OpenStreetMap Wiki-ju",
+        "reference": "Ogled v MapHubs Wiki-ju",
         "back_tooltip": "Spremeni element",
         "remove": "Odstrani",
         "search": "Išči",
@@ -287,14 +287,14 @@
     },
     "save": {
         "title": "Shrani",
-        "help": "Shrani spremembe na OpenStreetMap, s čimer bodo vidne tudi ostalim uporabnikom.",
+        "help": "Shrani spremembe na MapHubs, s čimer bodo vidne tudi ostalim uporabnikom.",
         "no_changes": "Ni sprememb za shranjevanje.",
-        "uploading": "Prenašanje sprememb v OpenStreetMap.",
+        "uploading": "Prenašanje sprememb v MapHubs.",
         "unsaved_changes": "Nekatere spremembe še niso bile shranjene."
     },
     "success": {
         "edited_osm": "OSM urejen!",
-        "just_edited": "Pravkar ste uredili OpenStreetMap zemljevid!",
+        "just_edited": "Pravkar ste uredili MapHubs zemljevid!",
         "view_on_osm": "Ogled na OSM",
         "facebook": "Deli na Facebook-u",
         "twitter": "Deli na Twitter-ju",
@@ -304,7 +304,7 @@
         "okay": "Potrdi"
     },
     "splash": {
-        "welcome": "Dobrodošli v iD, urejevalniku OpenStreetMap podatkov",
+        "welcome": "Dobrodošli v iD, urejevalniku MapHubs podatkov",
         "text": "iD je uporabniku prijazno, toda zmogljivo orodje za vnašanje na najboljši brezplačni svetovni zemljevid.  To je različica {version}. Več informacij je na voljo na {website}, sporočeni hrošči pa so na {github}.",
         "walkthrough": "Začnite z uvodnim sprehodom",
         "start": "Začnite urejati"
@@ -323,7 +323,7 @@
         "untagged_point": "Točka je brez oznak",
         "untagged_line": "Črta je brez oznak",
         "untagged_area": "Mnogokotnik je brez oznak",
-        "many_deletions": "Izbrisati želite {n} objektov. Ali ste prepričani, da to želite storiti? Objekte boste tako odstranili z zemljevida, ki ga lahko vidijo vsi na openstreetmap.org.",
+        "many_deletions": "Izbrisati želite {n} objektov. Ali ste prepričani, da to želite storiti? Objekte boste tako odstranili z zemljevida, ki ga lahko vidijo vsi na maphubs.com.",
         "tag_suggests_area": "Oznaka {tag} nakazuje, da bi črta morala opisovati območje, vendar črta ni sklenjena",
         "untagged_point_tooltip": "Izberite tip točkovnega objekta.",
         "untagged_line_tooltip": "Izberite tip črtnega objekta.",
@@ -345,14 +345,14 @@
         "title": "Pomoč",
         "roads": "# Ceste\n\nS tem urejevalnikom lahko ceste ustvarjate, popravljate in jih brišete. Ceste so lahko vseh\ntipov: poti, avtoceste, kolovozi, kolesarske steze idr. - vsak pogosto prečkan del ceste\n\nnaj bi bil kartiran.\n\n### Izbiranje\n\nZa izbiranje ceste kliknite nanjo. Pokazal se bo obris ceste, ob njem pa\nmajhen meni z orodji in stranski meni z več informacijami o tej cesti.\n\n### Spreminjanje\n\nPogosto boste opazili ceste, ki se ne prekrivajo s sliko v ozadju,\nali z GPS sledjo. Te ceste lahko prilagodite tako, da so na pravilnem\nmestu.\n\nNajprej klinite na cesto, ki jo želite spremeniti. Cesta bo postala poudarjena in vzdolž\nnje se bodo prikazala vozlišča, ki jih lahko premaknete na pravo mesto. Če želite\ndodati nova vozlišča za bolj podroben potek ceste, dvokliknite na del ceste, ki\nše nima vozlišča, in pojavilo se bo novo vozlišče.\nČe se cesta dotika druge ceste, toda na zemljevidu ni pravilno povezana, \nlahko enega od njenih vozlišč premaknete na drugo cesto in ju tako\npovežete. Pravilno povezane ceste so pomembne za zemljevid\nin nujne za samodejno iskanje pot med različnimi kraji.\nS klikom na 'Premakni' ali s pritiskom tipke 'M' na tipkovnici lahko aktivirate orodje\nza premik celotne ceste naenkrat; premik je končan ob naslednjem kliku.\n### Odstranjevanje\nČe je potek ceste v celoti napačen - npr. ko cesta na satelitskem posnetku sploh ne obstaja\noz. še bolje, ko imate informacijo o tem iz prve roke - jo lahko izbrišete ter jo tako\nodstranite z zemljevida. Pri brisanju objektov bodite pozorni - \nkot pri ostalih načinih urejanja bodo posledice vidne vsakomur. Včasih so satelitski posnetki\nzastareli in morda zato kakšne ceste na njih še ni.\nCesto izbrišete tako, da najprej kliknete nanjo, nato pa kliknete na ikono za smetnjak ali\npa pritisnete tipko 'Izbriši'.\n\n### Creating\n\nSte opazili, da na zemljevidu manjka kakšna cesta? Za začetek risanja kliknite ikono 'Črta' \nlevo zgoraj v urejevalniku ali pa pritisnite tipko '2'.\nKliknite na zemljevid na začetek nove ceste. Če se cesta odcepi z že obstoječe ceste,\nzačnite s klikom na mesto, kjer se ločita.\nNato klikajte na točke vzdolž ceste v pravi smeri (glede na satelitske posnetke ali GPS)\nČe cesta, ki jo rišete, prečka drugo cesto, ju povežite s klikom na njuno križišče.\nKo končate, dvokliknite z miško ali na tipkovnici pritisnite tipko 'Return' ali 'Enter'.\n",
         "imagery": "# Slikovni posnetki\n\nZračne/satelitske fotografije so pomemben vir za kartiranje. Kombinacija letalskih\nposnetkov, satelitski posnetki in brezplačni viri so dostopni v\nurejevalniku v meniju 'Nastavitve ozadja' na desni.\nZa prikaz so prednastavljen [Bing Maps](http://www.bing.com/maps/) satelitski posnetki,\na ob premikanju in povečevanju zemljevida se bodo prikazali tudi ostali razpoložljivi viri.\nV nekaterih državah, kot so ZDA, Francija ali Danska, so za posamezna območja na voljo tudi posnetki\nz zelo veliko prostorsko ločljivostjo.\nPosnetki so zaradi napak na strani ponudnika včasih zamaknjeni glede na zemljevid.\nČe vidite, da je več cest zamaknjenih glede na posnetek v ozadju,\ncest ne premikajte. Namesto tega lahko prilagodite posnetek tako, da se prekriva z\nobstoječimi podatki na zemljevidu; to storite s klikom na 'Popravi lego' na dnu\nuporabniškega vmesnika 'Nastavitve ozadja'.\n",
-        "addresses": "# Naslovi\n\nNaslovi so ena od najbolj uporabnih informacij za zemljevid.\n\nČeprav so naslovi pogosto predstavljeni kot deli ulic, so na OpenStreetMap\nzabeležni kot lastnost stavb in mest ob ulicah.\n\nNaslove lahko dodate točkovnim objektom in tudi obrisom stavb.\nNajboljši vir naslovov je lastna raziskava oz. zbiranje podatkov ali pa \nlastno znanje. Tako kot za ostale objekte tudi tu velja, da je kopiranje \nz ostalih tržnih virov, kot je Google Zemljevidi, strogo prepovedano.\n\n",
-        "buildings": "# Stavbe\n\nOpenStreetMap je največja svetovna zbirka stavb; lahko jo soustvarjate in izboljšujete.\n\n### Izbiranje\n\nStavbo lahko izberete s klikom na njen obris. Stavba se bo poudarila,\nprikazala pa se bosta majhen meni z orodji in stransko polje z več informacijami\no stavbi.\n\n### Spreminjanje\n\nVčasih so stavbe na napačnem mestu ali pa imajo vnešene napačne oznake.\n\nZa premik celotne stavbe jo najprej izberite, nato pa kliknite na orodje 'Move'. \nPremaknite miško za premik stavbe, s ponovnim klikom se premikanje konča.\n\nZa popravilo določenega dela stavbe kliknite in vlecite vozlišče, dokler\nne bo oblika pravilna.\n\n### Ustvarjanje\n\nEna od glavnih značilnosti dodajanja novih stavb na zemljevid je,  da\nOpenStreetMap beleži stavbe tako kot obliko kot tudi kot točko. Priporočamo, da\nse _stavbe predstavijo kot mnogokotniki, kadar je le to mogoče_, medtem ko se \npodjetja, domovi, ustanove in vse ostalo, kar se dogaja v stavbah, beleži kot točke,\nki jih umestimo znotraj mnogokotnika stavbe.\n\nZa začetek risanja stavbe na levo strani urejevalnika kliknite gumb 'Mnogokotnik',\nrisanje pa lahko končate s pritiskom tipke 'Return' ali pa s klikom na prvo vozlišče\nte stavbe.\n\n### Odstranjevanje\n\nČe je stavba prikazana popolnoma napačno - če se je npr. ni na satelitskem posnetku oz.\\imate informacije o tem iz prve roke - jo lahko odstranite z zemljevida.\nPri brisanju objektov bodite pozorni - \nkot pri ostalih načinih urejanja bodo posledice vidne vsakomur.\nVčasih so satelitski posnetki\nzastareli in morda zato kakšne stavbe na njih še ni.\n\nStavbo lahko odstanite tako, da jo s klikom izberete, nato pa kliknete\nikono smetnjak ali pritisnete tipko 'Delete'.\n",
-        "relations": "# Povezave\n\nPovezava je posebna vrsta objekta na OpenStreetMap, ki ostale objekte povezuje v skupine. \nNa primer: dva pogosta tipa povezav sta *cestne povezave*,\nki povezuje vse odseke cest, ki pripadajo določeni prometnici\n(npr. avtocesti, regionalni cesti), in *več mnogokotnikov*; ti v skupino povezujejo\nveč črt, ki definirajo kompleksno območje (npr. na več delov razkosano območje,\nobmočja z vrzelmi).\n\nSkupina objektov v povezavi so *člani* povezave. V stranski vrstici lahko vidite,\nčlan katerih povezav je vsak objekt, s klikom na povezavo pa jo izberete.\nKo je povezava izbrana, bodo v stranski vrstici prikazani vsi njeni člani,\nhkrati pa bodo tudi poudarjeni na zemljevidu.\n\nV večini primerov bo za vzdrževanje povezav samodejno poskrbel iD že med urejanjem.\nBodite pa pozorni predvsem med brisanjem delov cest, ki jih boste na novo narisali -\nte morate nato dodati v isto skupino, kot so bili pred brisanjem.\n\n## Urejanje povezav\n\nSpodaj so navedene osnove za urejanje povezav.\n\nZa dodajanje objekta v povezavo, izberite objekt in kliknite gumb \\+\\ v odseku \n\\All relations\\ stranske vrstice, nato pa izberite ali natipkajte ime povezave.\n\nZa ustvarjanje nove povezave najprej izberite objekt, ki bo njen član,\nnato klinite gumb \\+\\ v odseku \\All relations\\ nato pa izberite \new relation...\\.\n\nZa odstranitev objekta iz povezave najprej izberite objekt, nato pa kliknite na ikono\nsmetnjaka ob povezavi, iz katere želite objekt odstraniti.\n\nVeč mnogokotnikov z vrzelmi lahko ustvarite z orodjem \\Merge\\. Narišite dve območji (zunanjo\nin notranje), nato pa držite pritisnjeno tipko Shift in kliknite na obe območji, da ju izberete.\nNa koncu kliknite še gumb \\Merge\\ (+).\n\n"
+        "addresses": "# Naslovi\n\nNaslovi so ena od najbolj uporabnih informacij za zemljevid.\n\nČeprav so naslovi pogosto predstavljeni kot deli ulic, so na MapHubs\nzabeležni kot lastnost stavb in mest ob ulicah.\n\nNaslove lahko dodate točkovnim objektom in tudi obrisom stavb.\nNajboljši vir naslovov je lastna raziskava oz. zbiranje podatkov ali pa \nlastno znanje. Tako kot za ostale objekte tudi tu velja, da je kopiranje \nz ostalih tržnih virov, kot je Google Zemljevidi, strogo prepovedano.\n\n",
+        "buildings": "# Stavbe\n\nMapHubs je največja svetovna zbirka stavb; lahko jo soustvarjate in izboljšujete.\n\n### Izbiranje\n\nStavbo lahko izberete s klikom na njen obris. Stavba se bo poudarila,\nprikazala pa se bosta majhen meni z orodji in stransko polje z več informacijami\no stavbi.\n\n### Spreminjanje\n\nVčasih so stavbe na napačnem mestu ali pa imajo vnešene napačne oznake.\n\nZa premik celotne stavbe jo najprej izberite, nato pa kliknite na orodje 'Move'. \nPremaknite miško za premik stavbe, s ponovnim klikom se premikanje konča.\n\nZa popravilo določenega dela stavbe kliknite in vlecite vozlišče, dokler\nne bo oblika pravilna.\n\n### Ustvarjanje\n\nEna od glavnih značilnosti dodajanja novih stavb na zemljevid je,  da\nMapHubs beleži stavbe tako kot obliko kot tudi kot točko. Priporočamo, da\nse _stavbe predstavijo kot mnogokotniki, kadar je le to mogoče_, medtem ko se \npodjetja, domovi, ustanove in vse ostalo, kar se dogaja v stavbah, beleži kot točke,\nki jih umestimo znotraj mnogokotnika stavbe.\n\nZa začetek risanja stavbe na levo strani urejevalnika kliknite gumb 'Mnogokotnik',\nrisanje pa lahko končate s pritiskom tipke 'Return' ali pa s klikom na prvo vozlišče\nte stavbe.\n\n### Odstranjevanje\n\nČe je stavba prikazana popolnoma napačno - če se je npr. ni na satelitskem posnetku oz.\\imate informacije o tem iz prve roke - jo lahko odstranite z zemljevida.\nPri brisanju objektov bodite pozorni - \nkot pri ostalih načinih urejanja bodo posledice vidne vsakomur.\nVčasih so satelitski posnetki\nzastareli in morda zato kakšne stavbe na njih še ni.\n\nStavbo lahko odstanite tako, da jo s klikom izberete, nato pa kliknete\nikono smetnjak ali pritisnete tipko 'Delete'.\n",
+        "relations": "# Povezave\n\nPovezava je posebna vrsta objekta na MapHubs, ki ostale objekte povezuje v skupine. \nNa primer: dva pogosta tipa povezav sta *cestne povezave*,\nki povezuje vse odseke cest, ki pripadajo določeni prometnici\n(npr. avtocesti, regionalni cesti), in *več mnogokotnikov*; ti v skupino povezujejo\nveč črt, ki definirajo kompleksno območje (npr. na več delov razkosano območje,\nobmočja z vrzelmi).\n\nSkupina objektov v povezavi so *člani* povezave. V stranski vrstici lahko vidite,\nčlan katerih povezav je vsak objekt, s klikom na povezavo pa jo izberete.\nKo je povezava izbrana, bodo v stranski vrstici prikazani vsi njeni člani,\nhkrati pa bodo tudi poudarjeni na zemljevidu.\n\nV večini primerov bo za vzdrževanje povezav samodejno poskrbel iD že med urejanjem.\nBodite pa pozorni predvsem med brisanjem delov cest, ki jih boste na novo narisali -\nte morate nato dodati v isto skupino, kot so bili pred brisanjem.\n\n## Urejanje povezav\n\nSpodaj so navedene osnove za urejanje povezav.\n\nZa dodajanje objekta v povezavo, izberite objekt in kliknite gumb \\+\\ v odseku \n\\All relations\\ stranske vrstice, nato pa izberite ali natipkajte ime povezave.\n\nZa ustvarjanje nove povezave najprej izberite objekt, ki bo njen član,\nnato klinite gumb \\+\\ v odseku \\All relations\\ nato pa izberite \new relation...\\.\n\nZa odstranitev objekta iz povezave najprej izberite objekt, nato pa kliknite na ikono\nsmetnjaka ob povezavi, iz katere želite objekt odstraniti.\n\nVeč mnogokotnikov z vrzelmi lahko ustvarite z orodjem \\Merge\\. Narišite dve območji (zunanjo\nin notranje), nato pa držite pritisnjeno tipko Shift in kliknite na obe območji, da ju izberete.\nNa koncu kliknite še gumb \\Merge\\ (+).\n\n"
     },
     "intro": {
         "navigation": {
             "title": "Usmerjanje",
-            "drag": "Na glavnem zemljevidu so podatki OpenStreetMap prikazani na vrhu - nad ozadjem. Zemljevid lahko premikaš z vlečenjem ali pomikanjem - kot na ostalih spletnih zemljevidih. **Povleci zemljevid!**",
+            "drag": "Na glavnem zemljevidu so podatki MapHubs prikazani na vrhu - nad ozadjem. Zemljevid lahko premikaš z vlečenjem ali pomikanjem - kot na ostalih spletnih zemljevidih. **Povleci zemljevid!**",
             "select": "Topografski objekti so predstavljeni na tri načine: s točkami, s črtami ali z mnogokotniki. Vsak objekt je lahko izbran s klikom nanj. **Za izbiro točke kliknite nanjo.**"
         },
         "points": {

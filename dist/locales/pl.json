@@ -226,7 +226,7 @@
     },
     "zoom_in_edit": "Powiększ, aby edytować",
     "logout": "wyloguj",
-    "loading_auth": "Łączenie z OpenStreetMap...",
+    "loading_auth": "Łączenie z MapHubs...",
     "report_a_bug": "Zgłoś błąd",
     "help_translate": "Pomóż tłumaczyć",
     "feature_info": {
@@ -242,8 +242,8 @@
         "title": "Zapisz zmiany",
         "description_placeholder": "Zwięzły opis twoich zmian",
         "message_label": "Opis zmian",
-        "upload_explanation": "Zmiany, które wyślesz będą widoczne na wszystkich mapach używających danych OpenStreetMap.",
-        "upload_explanation_with_user": "Zmiany, które wyślesz jako {user} będą widoczne na wszystkich mapach używających danych OpenStreetMap.",
+        "upload_explanation": "Zmiany, które wyślesz będą widoczne na wszystkich mapach używających danych MapHubs.",
+        "upload_explanation_with_user": "Zmiany, które wyślesz jako {user} będą widoczne na wszystkich mapach używających danych MapHubs.",
         "save": "Zapisz",
         "cancel": "Anuluj",
         "changes": "{count} zmian",
@@ -252,7 +252,7 @@
         "deleted": "Usunięto",
         "created": "Utworzono",
         "about_changeset_comments": "Komentarze do zestawu zmian",
-        "about_changeset_comments_link": "http://wiki.openstreetmap.org/wiki/Pl:Good_changeset_comments"
+        "about_changeset_comments_link": "http://wiki.maphubs.com/wiki/Pl:Good_changeset_comments"
     },
     "contributors": {
         "list": "Edycje użytkowników {users}",
@@ -290,7 +290,7 @@
         "no_documentation_combination": "Nie ma dokumentacji dla tej kombinacji tagów",
         "no_documentation_key": "Nie ma dokumentacji dla tego klucza",
         "show_more": "Pokaż więcej",
-        "view_on_osm": "Zobacz na openstreetmap.org",
+        "view_on_osm": "Zobacz na maphubs.com",
         "all_fields": "Wszystkie pola",
         "all_tags": "Wszystkie tagi",
         "all_members": "Wszyscy członkowie",
@@ -299,7 +299,7 @@
         "role": "Rola",
         "choose": "Wybierz rodzaj obiektu",
         "results": "{n} wyników dla {search}",
-        "reference": "Zobacz na OpenStreetMap Wiki",
+        "reference": "Zobacz na MapHubs Wiki",
         "back_tooltip": "Zmień rodzaj obiektu",
         "remove": "Usuń",
         "search": "Szukaj",
@@ -416,12 +416,12 @@
     },
     "save": {
         "title": "Zapisz",
-        "help": "Zapisz zmiany na OpenStreetMap, aby były one widoczne dla innych.",
+        "help": "Zapisz zmiany na MapHubs, aby były one widoczne dla innych.",
         "no_changes": "Brak zmian do zapisania.",
         "error": "Wystąpiły błędy podczas próby zapisu. ",
         "status_code": "Serwer zwrócił kod {code}",
         "unknown_error_details": "Upewnij się że jesteś połączony z internetem.",
-        "uploading": "Wysyłanie zmian do OpenStreetMap.",
+        "uploading": "Wysyłanie zmian do MapHubs.",
         "unsaved_changes": "Masz niezapisane zmiany.",
         "conflict": {
             "header": "Napraw konflikt edycji",
@@ -448,20 +448,20 @@
     },
     "success": {
         "edited_osm": "Zmiany zostały wprowadzone do OSM!",
-        "just_edited": "Właśnie wprowadziłeś zmiany w OpenStreetMap!",
+        "just_edited": "Właśnie wprowadziłeś zmiany w MapHubs!",
         "view_on_osm": "Zobacz na OSM",
         "facebook": "Podziel się na Facebooku",
         "twitter": "Podziel się na Twitterze",
         "google": "Podziel się na Google+",
         "help_link_text": "Szczegóły",
-        "help_link_url": "http://wiki.openstreetmap.org/wiki/Pl:FAQ#Kiedy_wprowadzone_przeze_mnie_zmiany_poka.C5.BCa_si.C4.99_na_mapie.3F"
+        "help_link_url": "http://wiki.maphubs.com/wiki/Pl:FAQ#Kiedy_wprowadzone_przeze_mnie_zmiany_poka.C5.BCa_si.C4.99_na_mapie.3F"
     },
     "confirm": {
         "okay": "Okej",
         "cancel": "Anuluj"
     },
     "splash": {
-        "welcome": "Witaj w edytorze iD map OpenStreetMap",
+        "welcome": "Witaj w edytorze iD map MapHubs",
         "text": "iD jest przyjaznym, ale i jednocześnie potężnym narzędziem, dzięki któremu możesz przyczynić się do rozwoju najlepszej wolnej mapy świata. To jest wersja {version}. Więcej informacji znajdziesz na {website}, a błędy zgłosisz na {github}.",
         "walkthrough": "Rozpocznij samouczek",
         "start": "Edytuj teraz"
@@ -480,7 +480,7 @@
         "untagged_point": "Nieoznaczony punkt",
         "untagged_line": "Nieoznaczona linia",
         "untagged_area": "Nieoznaczony obszar",
-        "many_deletions": "Usuwasz {n} obiektów. Czy na pewno chcesz to zrobić? Ta operacja usunie je z mapy, którą widzą wszyscy na openstreetmap.org.",
+        "many_deletions": "Usuwasz {n} obiektów. Czy na pewno chcesz to zrobić? Ta operacja usunie je z mapy, którą widzą wszyscy na maphubs.com.",
         "tag_suggests_area": "Tag {tag} sugeruje, że linia powinna być obszarem, ale nim nie jest.",
         "untagged_point_tooltip": "Wybierz typ obiektu, który opisuje czym jest ten punkt.",
         "untagged_line_tooltip": "Wybierz typ obiektu, który opisuje czym jest ta linia.",
@@ -512,12 +512,12 @@
     },
     "help": {
         "title": "Pomoc",
-        "help": "# Pomoc\n\nTo jest edytor [OpenStreetMap](http://www.openstreetmap.org/),\nwolnej i edytowalnej mapy świata. Możesz go używać do dodawania i\naktualizacji danych w twoim rejonie, czyniąc otwartą mapę świata lepszą\ndla każdego.\n\nModyfikacje wprowadzone na tej mapie będą widoczne dla wszystkich\nużywających OpenStreetMap. Aby wprowadzić modyfikacje,\nmusisz się [zalogować](https://www.openstreetmap.org/login).\n\n[Edytor iD](http://ideditor.com/) jest projektem społecznościowym z\n[kodem dostępnym na GitHub](https://github.com/openstreetmap/iD).\n",
+        "help": "# Pomoc\n\nTo jest edytor [MapHubs](http://www.maphubs.com/),\nwolnej i edytowalnej mapy świata. Możesz go używać do dodawania i\naktualizacji danych w twoim rejonie, czyniąc otwartą mapę świata lepszą\ndla każdego.\n\nModyfikacje wprowadzone na tej mapie będą widoczne dla wszystkich\nużywających MapHubs. Aby wprowadzić modyfikacje,\nmusisz się [zalogować](https://www.maphubs.com/login).\n\n[Edytor iD](http://ideditor.com/) jest projektem społecznościowym z\n[kodem dostępnym na GitHub](https://github.com/openstreetmap/iD).\n",
         "roads": "# Drogi\n\nMożesz tworzyć, poprawiać i usuwać drogi używając tego edytora. Drogi mogą być wszelkiego rodzaju:\nścieżki, ulice, szlaki, ścieżki rowerowe i tak dalej - każdy często uczęszczany odcinek powinien dać się\nprzedstawić.\n\n### Zaznaczanie\n\nKliknij drogę, aby ją zaznaczyć. Obwiednia powinna stać się widoczna, wraz z małym menu\nnarzędziowym na mapie oraz panelem bocznym pokazującym więcej informacji na temat drogi.\n\n### Modyfikowanie\n\nCzęsto będziesz widział drogi, które nie są wyrównane ze zdjęciami satelitarnymi lub śladami GPS.\nMożesz dopasować te drogi tak, aby były we właściwym miejscu.\n\nNajpierw kliknij drogę, którą chcesz zmienić. Podświetli ją to oraz pokaże punkty kontrolne, które\nmożesz przesunąć w lepsze miejsce. Jeżeli chcesz dodać nowe punkty kontrolne, aby droga\nbyła bardziej szczegółowa, dwukrotnie kliknij część drogi bez punktu, a w tym miejscu nowy się\npojawi.\n\nJeżeli droga łączy się z inną drogą, ale nie jest prawidłowo połączona z nią na mapie, możesz\nprzeciągnąć jeden z puntów kontrolnych na drugą drogę w celu ich połączenia. Prawidłowe połączenia\ndróg są ważne dla mapy i kluczowe dla wyznaczania tras.\n\nMożesz też kliknąć narzędzie 'Przesuń' lub nacisnąć klawisz `M` aby przesunąć jednocześnie całą\ndrogę, a następnie kliknąć ponownie, aby zachować to przesunięcie.\n\n### Usuwanie\n\nGdy droga jest całkiem błędna - widzisz, że nie istnieje na zdjęciach satelitarnych (a najlepiej sam\nsprawdziłeś w terenie, że jej nie ma) - możesz usunąć ją. Uważaj, gdy usuwasz obiekty - wyniki usunięcia,\ntak jak każdej modyfikacji, są widoczne dla wszystkich, a zdjęcie satelitarne często nie są aktualne,\nwięc droga może być po prostu nowo wybudowana.\n\nMożesz usunąć drogę przez zaznaczenie jej, a następnie kliknięcie ikony kosza lub wciśnięcie\nklawisza 'Delete'.\n\n### Tworzenie\n\nGdzieś tam powinna być droga, ale jej nie ma? Kliknij przycisk 'Linia' w górnym lewym rogu edytora\nlub naciśnij klawisz '2' na klawiaturze, aby zacząć rysować linię.\n\nKliknij początek drogi na mapie, aby zacząć rysować. Jeżeli droga odchodzi od już istniejącej, zacznij\nprzez kliknięcie w miejscu, w którym się łączą.\n\nNastępnie klikaj na punktach wzdłuż drogi tak, aby biegła ona odpowiednio według zdjęć satelitarnych\nlub GPS. Jeżeli droga, którą rysujesz, krzyżuje się z inną, połącz je, klikając na punkcie przecięcia. Gdy\nskończysz rysować, dwukrotnie kliknij ostatni punkt lub naciśnij klawisz 'Enter' na klawiaturze.\n",
         "imagery": "# Zdjęcia\n\nZdjęcia lotnicze/satelitarne są ważnym zasobem w rysowaniu map. Kolekcja zdjęć lotniczych,\nsatelitarnych i innych wolnodostępnych źródeł jest dostępna w edytorze w menu 'Ustawienia tła' po\nprawej stronie.\n\nDomyślnie wyświetlana jest warstwa zdjęć satelitarnych z [Bing Maps](http://www.bing.com/maps/),\nale w miarę przybliżania i pojawiają się nowe źródła. Niektóre kraje, takie jak Stany Zjednoczone, Francja\nczy Dania mają w pewnych miejscach dostępne zdjęcia bardzo wysokiej jakości.\n\nZdjęcia są czasem przesunięte względem danych na mapie z powodu błędu dostawcy zdjęć. Jeżeli\nwidzisz dużo dróg przesuniętych względem tła, zastanów się, zanim je wszystkie wyrównasz względem\ntła. Zamiast tego możesz dostosować przesunięcie zdjęć tak, aby zgadzały się z istniejącymi danymi przez\nnaciśnięcie przycisku 'Wyrównaj podkład' na dole Ustawień tła.\n",
-        "addresses": "# Adresy\n\nAdresy są jedną z najbardziej użytecznych informacji na mapie.\n\nMimo że adresy są często reprezentowane jako części ulic, w OpenStreetMap są one\nzapisywane jako atrybuty budynków i miejsc wzdłuż ulicy.\n\nMożesz dodać nową informację adresową do miejsc narysowanych w postaci\nobwiedni budynków jak również do tych narysowanych w postaci pojedynczych punktów.\nNajlepszym źródłem danych adresowych jest jak zwykle zwiedzanie okolicy\nlub własna wiedza - tak jak z każdym innym obiektem, kopiowanie danych z komercyjnych\nźródeł takich jak Google Maps jest zabronione.\n",
-        "buildings": "# Budynki\n\nOpenStreetMap jest największą na świecie bazą budynków. Możesz\nprzyczynić się do rozwoju owej bazy.\n\n### Zaznaczanie\n\nMożesz zaznaczyć budynek przez kliknięcie jego obwodu. Podświetli\nto obiekt i otworzy małe menu narzędziowe oraz pasek boczny zawierający\ninformacje o budynku.\n\n### Modyfikowanie\n\nZdarza się, że budynki są umieszczone w nieprawidłowych miejscach\nlub mają nieodpowiednie tagi.\n\nAby przesunąć cały budynek, zaznacz go, a następnie wybierz narzędzie\nprzesuwania. Przesuń kursor myszy, aby zmienić pozycję obiektu, a następnie\nkliknij, gdy już będzie w odpowiednim miejscu.\n\nAby poprawić kształt budynku, kliknij i przeciągnij węzły, które tworzą obwód\nobiektu, w lepiej usytuowane miejsce.\n\n### Tworzenie\n\nJednym z głównych problemów podczas tworzenia budynków jest to,\nże OpenStreetMap przechowuje budynki zarówno w postaci punktów\njak i obszarów. Przyjęło się rysowanie budynków w postaci obszarów, a rysowanie\nfirm, domów czy innej infrastruktury w postaci punktów w obszarze budynku.\n\nZacznij rysować budynek w postaci obszaru przez kliknięcie przycisku 'Obszar'\nw górnym lewym rogu edytora i zakończ go przez naciśnięcie klawisza 'Enter'\nna klawiaturze lub przez kliknięcie na pierwszym rysowanym punkcie w celu\nzamknięcia obszaru.\n\n### Usuwanie\n\nJeżeli budynek jest całkiem błędny - widzisz, że nie ma go na zdjęciach satelitarnych,\na najlepiej sprawdziłeś w terenie, że nie istnieje - możesz go usunąć. Bądź ostrożny\nusuwając obiekty - tak jak po każdej innej modyfikacji, rezultaty są widoczne dla wszystkich,\na zdjęcia satelitarne często nie są aktualne, więc budynek może być po prostu nowo\nwybudowany.\n\nMożesz usunąć budynek przez kliknięcie na nim, a następnie na ikonie\nśmietnika lub wciśnięcie klawisza 'Delete'. \n",
-        "relations": "# Relacje\n\nRelacja to specjalny rodzaj obiektu w OpenStreetMap, który grupuje razem\ninne obiekty. Na przykład dwa powszechne rodzaje relacji to *relacje trasy*\nktóre grupują odcinki drogi należące do konkretnej autostrady lub drogi oraz\n*wielokąty* łączące razem kilka linii, które definiują bardziej złożony obszar\n(na przykład las z polaną w środku).\n\nKażdy element relacji nazywany jest *członkiem*. W pasku bocznym możesz\nzobaczyć do której relacji należy obiekt i kliknąć aby ją zaznaczyć. Gdy relacja\njest zaznaczona, ukaże nam się lista jej członków, które jednocześnie zostaną \npodświetlone na mapie.\n\nPrzeważnie edytor iD automatycznie sprawdza relacje podczas twoich edycji.\nTrzeba pamiętać o ważnej rzeczy, gdy kasujesz jakiś fragment linii (np. aby\ndokładniej go narysować), sprawdź wcześniej do jakich relacji należy oraz\njakie pełni w nich role aby uzupełnić te dane po wyrysowaniu linii.\n\n## Edycja relacji\n\nJeśli chcesz edytować relacje, oto podstawy wiedzy.\n\nAby dodać obiekt do relacji, zaznacz obiekt i wciśnij \"+\" w sekcji \"Wszystkie relacje\"\ni wybierz relację lub wpisz jej nazwę.\n\nAby utworzyć nową relację, zaznacz pierwszy obiekt, który ma być członkiem\nrelacji i wciśnij \"+\" w sekcji \"Wszystkie relacje\" i wybierz \"Nowa relacja...\"\n\nAby usunąć obiekt z relacji, zaznacz obiekt i kliknij ikonkę kosza obok\nrelacji, z której chcesz go usunąć.\n\nMożesz stworzyć wielokąt złożony z otworem używając narzędzia Scalanie.\nNarysuj dwa obszary, gdzie jeden znajduje się wewnątrz drugiego, zaznacz\noba przytrzymując klawisz Shift i kliknij przycisk \"Scal te linie\" (+).\n"
+        "addresses": "# Adresy\n\nAdresy są jedną z najbardziej użytecznych informacji na mapie.\n\nMimo że adresy są często reprezentowane jako części ulic, w MapHubs są one\nzapisywane jako atrybuty budynków i miejsc wzdłuż ulicy.\n\nMożesz dodać nową informację adresową do miejsc narysowanych w postaci\nobwiedni budynków jak również do tych narysowanych w postaci pojedynczych punktów.\nNajlepszym źródłem danych adresowych jest jak zwykle zwiedzanie okolicy\nlub własna wiedza - tak jak z każdym innym obiektem, kopiowanie danych z komercyjnych\nźródeł takich jak Google Maps jest zabronione.\n",
+        "buildings": "# Budynki\n\nMapHubs jest największą na świecie bazą budynków. Możesz\nprzyczynić się do rozwoju owej bazy.\n\n### Zaznaczanie\n\nMożesz zaznaczyć budynek przez kliknięcie jego obwodu. Podświetli\nto obiekt i otworzy małe menu narzędziowe oraz pasek boczny zawierający\ninformacje o budynku.\n\n### Modyfikowanie\n\nZdarza się, że budynki są umieszczone w nieprawidłowych miejscach\nlub mają nieodpowiednie tagi.\n\nAby przesunąć cały budynek, zaznacz go, a następnie wybierz narzędzie\nprzesuwania. Przesuń kursor myszy, aby zmienić pozycję obiektu, a następnie\nkliknij, gdy już będzie w odpowiednim miejscu.\n\nAby poprawić kształt budynku, kliknij i przeciągnij węzły, które tworzą obwód\nobiektu, w lepiej usytuowane miejsce.\n\n### Tworzenie\n\nJednym z głównych problemów podczas tworzenia budynków jest to,\nże MapHubs przechowuje budynki zarówno w postaci punktów\njak i obszarów. Przyjęło się rysowanie budynków w postaci obszarów, a rysowanie\nfirm, domów czy innej infrastruktury w postaci punktów w obszarze budynku.\n\nZacznij rysować budynek w postaci obszaru przez kliknięcie przycisku 'Obszar'\nw górnym lewym rogu edytora i zakończ go przez naciśnięcie klawisza 'Enter'\nna klawiaturze lub przez kliknięcie na pierwszym rysowanym punkcie w celu\nzamknięcia obszaru.\n\n### Usuwanie\n\nJeżeli budynek jest całkiem błędny - widzisz, że nie ma go na zdjęciach satelitarnych,\na najlepiej sprawdziłeś w terenie, że nie istnieje - możesz go usunąć. Bądź ostrożny\nusuwając obiekty - tak jak po każdej innej modyfikacji, rezultaty są widoczne dla wszystkich,\na zdjęcia satelitarne często nie są aktualne, więc budynek może być po prostu nowo\nwybudowany.\n\nMożesz usunąć budynek przez kliknięcie na nim, a następnie na ikonie\nśmietnika lub wciśnięcie klawisza 'Delete'. \n",
+        "relations": "# Relacje\n\nRelacja to specjalny rodzaj obiektu w MapHubs, który grupuje razem\ninne obiekty. Na przykład dwa powszechne rodzaje relacji to *relacje trasy*\nktóre grupują odcinki drogi należące do konkretnej autostrady lub drogi oraz\n*wielokąty* łączące razem kilka linii, które definiują bardziej złożony obszar\n(na przykład las z polaną w środku).\n\nKażdy element relacji nazywany jest *członkiem*. W pasku bocznym możesz\nzobaczyć do której relacji należy obiekt i kliknąć aby ją zaznaczyć. Gdy relacja\njest zaznaczona, ukaże nam się lista jej członków, które jednocześnie zostaną \npodświetlone na mapie.\n\nPrzeważnie edytor iD automatycznie sprawdza relacje podczas twoich edycji.\nTrzeba pamiętać o ważnej rzeczy, gdy kasujesz jakiś fragment linii (np. aby\ndokładniej go narysować), sprawdź wcześniej do jakich relacji należy oraz\njakie pełni w nich role aby uzupełnić te dane po wyrysowaniu linii.\n\n## Edycja relacji\n\nJeśli chcesz edytować relacje, oto podstawy wiedzy.\n\nAby dodać obiekt do relacji, zaznacz obiekt i wciśnij \"+\" w sekcji \"Wszystkie relacje\"\ni wybierz relację lub wpisz jej nazwę.\n\nAby utworzyć nową relację, zaznacz pierwszy obiekt, który ma być członkiem\nrelacji i wciśnij \"+\" w sekcji \"Wszystkie relacje\" i wybierz \"Nowa relacja...\"\n\nAby usunąć obiekt z relacji, zaznacz obiekt i kliknij ikonkę kosza obok\nrelacji, z której chcesz go usunąć.\n\nMożesz stworzyć wielokąt złożony z otworem używając narzędzia Scalanie.\nNarysuj dwa obszary, gdzie jeden znajduje się wewnątrz drugiego, zaznacz\noba przytrzymując klawisz Shift i kliknij przycisk \"Scal te linie\" (+).\n"
     },
     "intro": {
         "graph": {
@@ -552,7 +552,7 @@
         },
         "navigation": {
             "title": "Nawigacja",
-            "drag": "Główny obszar mapy pokazuje dane OpenStreetMap na tle podkładu. Możesz poruszać się po niej, przeciągając i przewijając tak jak po każdej mapie internetowej. **Przeciągnij mapę!**",
+            "drag": "Główny obszar mapy pokazuje dane MapHubs na tle podkładu. Możesz poruszać się po niej, przeciągając i przewijając tak jak po każdej mapie internetowej. **Przeciągnij mapę!**",
             "select": "Obiekty na mapie reprezentowane są przez punkty, linie i obszary. Wszystkie mogą zostać zaznaczone przez kliknięcie na nich. **Kliknij na punkcie, aby go zaznaczyć.**",
             "choose": "**Naciśnij {name} z listy by wybrać ten obiekt.",
             "chosen": "Wspaniale! {name} jest teraz zaznaczony. **Zamknij edytor obiektów przez naciśnięcie {button} przycisku."

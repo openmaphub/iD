@@ -145,7 +145,7 @@
         "nothing": "Niks om weer te doen nie."
     },
     "logout": "voetsek",
-    "loading_auth": "Maak kontak met OpenStreetMap...",
+    "loading_auth": "Maak kontak met MapHubs...",
     "status": {
         "error": "Kan nie aan die API koppel nie.",
         "offline": "Die API is aflyn, probeer asseblief later weer.",
@@ -168,10 +168,10 @@
         "no_documentation_combination": "Daar is geen dokumentasie beskikbaar vir hierdie kenmerk kombinasie nie",
         "no_documentation_key": "Daar is geen dokumentasie beskikbaar vir hierdie sleutel nie",
         "show_more": "Wys meer",
-        "view_on_osm": "Kyk daarna op openstreetmap.org",
+        "view_on_osm": "Kyk daarna op maphubs.com",
         "choose": "Kies funksie tipe",
         "results": "{n} resultate vir {search}",
-        "reference": "Kyk daarna op OpenStreetMap Wiki",
+        "reference": "Kyk daarna op MapHubs Wiki",
         "remove": "Verwyder"
     },
     "background": {
@@ -188,17 +188,17 @@
     },
     "save": {
         "title": "Stoor",
-        "help": "Stoor veranderinge na OpenStreetMap, en maak dit sigbaar vir ander gebruikers.",
+        "help": "Stoor veranderinge na MapHubs, en maak dit sigbaar vir ander gebruikers.",
         "no_changes": "Geen verandering om te stoor.",
-        "uploading": "Laai verandering op na OpenStreetMap.",
+        "uploading": "Laai verandering op na MapHubs.",
         "unsaved_changes": "Jy het ongestoorde veranderinge"
     },
     "success": {
-        "just_edited": "Jy het nou net 'n OpenStreetMapKaart bydra gemaak!",
+        "just_edited": "Jy het nou net 'n MapHubsKaart bydra gemaak!",
         "view_on_osm": "Besigtig op OSM"
     },
     "splash": {
-        "welcome": "Welkom by die iD OpenStreetMap program",
+        "welcome": "Welkom by die iD MapHubs program",
         "walkthrough": "Begin die Deurloop",
         "start": "Verander Nou"
     },
@@ -216,7 +216,7 @@
         "untagged_point": "Punt sonder eienskappe",
         "untagged_line": "Lyn het geen kenmerk",
         "untagged_area": "Area het geen kenmerk",
-        "many_deletions": "Jy verwyder items van die kaart. Dit affekteer die kaart wat almal sien op openstreetmap.org. Maak asseblief seker dit is wat jy wil doen.",
+        "many_deletions": "Jy verwyder items van die kaart. Dit affekteer die kaart wat almal sien op maphubs.com. Maak asseblief seker dit is wat jy wil doen.",
         "tag_suggests_area": "Die kenmerk {tag} is geoormerk vir 'n area nie vir 'n lyn nie.",
         "deprecated_tags": "Vervalde kenmerke: {tags}"
     },
@@ -233,7 +233,7 @@
     },
     "intro": {
         "navigation": {
-            "drag": "Die hoofkaartarea toon OpenStreetMap data aan op 'n agtergrond. Jy kan navigeer deur te trek en te sleep net soos met enige ander web gebaseerde kaart. **Probeer dit nou!**",
+            "drag": "Die hoofkaartarea toon MapHubs data aan op 'n agtergrond. Jy kan navigeer deur te trek en te sleep net soos met enige ander web gebaseerde kaart. **Probeer dit nou!**",
             "select": "Kaart eienskappe word verteenwoordig op drie maniere: punte, lyne en areas. All eienskappe kan uitgekies word deur daarop te klick. **Klick op 'n punt om dit uit te kies.**"
         },
         "points": {

@@ -199,7 +199,7 @@
     },
     "zoom_in_edit": "كبّر للتحرير",
     "logout": "تسجيل الخروج",
-    "loading_auth": "يتصل بـ OpenStreetMap ...",
+    "loading_auth": "يتصل بـ MapHubs ...",
     "report_a_bug": "إبلاغ عن خطأ أو مشكلة",
     "help_translate": "ساعد في الترجمة",
     "feature_info": {
@@ -214,8 +214,8 @@
         "title": "حفظ التغييرات",
         "description_placeholder": "وصف مختصر لمساهماتك",
         "message_label": "ملخص التغييرات التي قمت بها",
-        "upload_explanation": "التغييرات التي قمت برفعها سوف تظهر على كل الخرائط التي تستخدم بيانات OpenStreetMap.",
-        "upload_explanation_with_user": "التغييرات التي قمت برفعها كـ {user} سوف تظهر على كل الخرائط التي تستخدم بيانات OpenStreetMap.",
+        "upload_explanation": "التغييرات التي قمت برفعها سوف تظهر على كل الخرائط التي تستخدم بيانات MapHubs.",
+        "upload_explanation_with_user": "التغييرات التي قمت برفعها كـ {user} سوف تظهر على كل الخرائط التي تستخدم بيانات MapHubs.",
         "save": "حفظ",
         "cancel": "إلغاء",
         "changes": "{count} تغييرات",
@@ -258,7 +258,7 @@
         "no_documentation_combination": "لا يوجد توثيقا لهذا الجمع من الوسوم",
         "no_documentation_key": "لا يوجد توثيق لهذا المفتاح",
         "show_more": "شاهد المزيد",
-        "view_on_osm": "العرض على openstreetmap.org",
+        "view_on_osm": "العرض على maphubs.com",
         "all_fields": "كل الحقول",
         "all_tags": "كل الوسوم",
         "all_members": "كل اﻷعضاء",
@@ -267,7 +267,7 @@
         "role": "الدور",
         "choose": "اختر نوع الميزة",
         "results": "{n} نتيجة لـ {search}",
-        "reference": "العرض على ويكي openstreetmap.org",
+        "reference": "العرض على ويكي maphubs.com",
         "back_tooltip": "تغيير الميزة",
         "remove": "إزالة",
         "search": "بحث",
@@ -354,11 +354,11 @@
     },
     "save": {
         "title": "حفظ",
-        "help": "حفظ التغييرات على OpenStreetMap يجعلها ظاهرة للمستخدمين الآخرين.",
+        "help": "حفظ التغييرات على MapHubs يجعلها ظاهرة للمستخدمين الآخرين.",
         "no_changes": "لا يوجد تعديلات للحفظ.",
         "error": "حدث خطأ أثناء محاولة الحفظ",
         "unknown_error_details": "الرجاء التأكد من أنك متصل بالإنترنت.",
-        "uploading": "يرفع التغييرات إلى OpenStreetMap.",
+        "uploading": "يرفع التغييرات إلى MapHubs.",
         "unsaved_changes": "لديك تغييرات غير محفوظة",
         "conflict": {
             "header": "حل عمليات التحرير المتعارضة",
@@ -378,7 +378,7 @@
         }
     },
     "success": {
-        "just_edited": "لقد قمت بتحرير OpenStreetMap!",
+        "just_edited": "لقد قمت بتحرير MapHubs!",
         "view_on_osm": "عرض على OSM",
         "facebook": "شارك على فيس بوك",
         "twitter": "شارك على تويتر",
@@ -389,7 +389,7 @@
         "cancel": "إلغاء"
     },
     "splash": {
-        "welcome": "مرحبا بك محرر iD لخرائط OpenStreetMap.",
+        "welcome": "مرحبا بك محرر iD لخرائط MapHubs.",
         "walkthrough": "ابدأ بالتجول",
         "start": "التحرير الآن"
     },
@@ -407,7 +407,7 @@
         "untagged_point": "نقطة غير موسومة",
         "untagged_line": "خط غير موسوم",
         "untagged_area": "منطقة غير موسومة",
-        "many_deletions": "ستحذف {n} من العناصر. هل أنت متأكد من ذلك؟ ستحذف تلك البيانات من الخريطة التي يراها الآخرين على openstreetmap.org.",
+        "many_deletions": "ستحذف {n} من العناصر. هل أنت متأكد من ذلك؟ ستحذف تلك البيانات من الخريطة التي يراها الآخرين على maphubs.com.",
         "tag_suggests_area": "الوسم {tag} يقترح بأن الخط يجب أن يكون منطقة، ولكنها حاليا ليست منطقة",
         "untagged_point_tooltip": "اختر نوع الميزة التي تصف هذه النقطة.",
         "untagged_line_tooltip": "اختر نوع الميزة التي تصف هذا الخط.",
@@ -432,7 +432,7 @@
         },
         "navigation": {
             "title": "التجوال",
-            "drag": "منطقة الخريطة الرئيسية تظهر بيانات OpenStreetMap فوق الخريطة. يمكنك استكشافها عن طريق السحب و التمرير، كأي خريطة ويب. **اسحب الخريطة!**",
+            "drag": "منطقة الخريطة الرئيسية تظهر بيانات MapHubs فوق الخريطة. يمكنك استكشافها عن طريق السحب و التمرير، كأي خريطة ويب. **اسحب الخريطة!**",
             "select": "تتمثل ميزات الخريطة في ثلاثة أنواع: النقاط، والخطوط، والمساحات. يمكن اختيار الميزات عن طريق النقر عليهم. **انقر على النقطة لاختيارها.**"
         },
         "points": {
