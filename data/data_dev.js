@@ -7,12 +7,12 @@ iD.data = {
         iD.util.asyncMap([
             path + 'data/deprecated.json',
             path + 'data/discarded.json',
-            path + 'data/imagery.json',
+            path + 'data/imagery-maphubs.json',
             path + 'data/wikipedia.json',
-            path + 'data/presets/presets.json',
-            path + 'data/presets/defaults.json',
-            path + 'data/presets/categories.json',
-            path + 'data/presets/fields.json',
+            //path + 'data/presets/presets.json',
+            //path + 'data/presets/defaults.json',
+            //path + 'data/presets/categories.json',
+            //path + 'data/presets/fields.json',
             path + 'data/imperial.json',
             path + 'data/feature-icons.json',
             path + 'data/locales.json',
@@ -27,17 +27,17 @@ iD.data = {
                 imagery: data[2],
                 wikipedia: data[3],
                 presets: {
-                    presets: data[4],
-                    defaults: data[5],
-                    categories: data[6],
-                    fields: data[7]
+                    presets: [],
+                    defaults: [],
+                    categories: [],
+                    fields: []
                 },
-                imperial: data[8],
-                featureIcons: data[9],
-                locales: data[10],
-                en: data[11],
-                suggestions: data[12],
-                addressFormats: data[13]
+                imperial: data[4],
+                featureIcons: data[5],
+                locales: data[6],
+                en: data[7],
+                suggestions: data[8],
+                addressFormats: data[9]
             };
 
             callback();

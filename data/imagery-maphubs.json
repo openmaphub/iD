@@ -1,0 +1,57 @@
+[
+  {
+      "name": "Bing aerial imagery",
+      "type": "bing",
+      "description": "Satellite and aerial imagery.",
+      "template": "http://www.bing.com/maps/",
+      "scaleExtent": [
+          0,
+          22
+      ],
+      "id": "Bing",
+      "default": true
+  },
+  {
+      "name": "Mapbox Satellite",
+      "type": "tms",
+      "description": "Satellite and aerial imagery.",
+      "template": "http://{switch:a,b,c}.tiles.mapbox.com/v4/openstreetmap.map-inh7ifmo/{zoom}/{x}/{y}.png?access_token=pk.eyJ1IjoiY3Jvd2Rjb3ZlciIsImEiOiI3akYtNERRIn0.uwBAdtR6Zk60Bp3vTKj-kg",
+      "scaleExtent": [
+          0,
+          19
+      ],
+      "terms_url": "http://www.mapbox.com/about/maps/",
+      "terms_text": "Terms & Feedback",
+      "id": "Mapbox",
+      "default": true
+  },
+  {
+      "name": "OpenStreetMap (Standard)",
+      "type": "tms",
+      "description": "The default OpenStreetMap layer.",
+      "template": "http://{switch:a,b,c}.tile.maphubs.com/{zoom}/{x}/{y}.png",
+      "scaleExtent": [
+          0,
+          19
+      ],
+      "terms_url": "http://maphubs.com/",
+      "terms_text": "© OpenStreetMap contributors, CC-BY-SA",
+      "id": "MAPNIK",
+      "default": true
+  },
+  {
+      "name": "Mapbox Streets",
+      "type": "tms",
+      "description": "Satellite and aerial imagery.",
+      "template": "http://{switch:a,b,c}.tiles.mapbox.com/v4/mapbox.streets/{zoom}/{x}/{y}.png?access_token=pk.eyJ1IjoiY3Jvd2Rjb3ZlciIsImEiOiI3akYtNERRIn0.uwBAdtR6Zk60Bp3vTKj-kg",
+      "scaleExtent": [
+          0,
+          19
+      ],
+      "terms_url": "http://www.mapbox.com/about/maps/",
+      "terms_text": "Terms & Feedback",
+      "id": "Mapbox",
+      "default": true
+  }
+
+]
