@@ -8,9 +8,15 @@ iD.presets.Collection = function(collection) {
         collection: collection,
 
         item: function(id) {
-            return _.find(collection, function(d) {
+            var result = _.find(collection, function(d) {
                 return d.id === id;
             });
+            //if not found, just use the first preset
+            if(!result && collection.length > 0){
+              result = collection[0];
+            }
+
+            return result;
         },
 
         matchGeometry: function(geometry) {
