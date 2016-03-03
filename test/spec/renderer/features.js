@@ -542,24 +542,4 @@ describe('iD.Features', function() {
         });
     });
 
-    it('focussed feature filter if a focussed ID', function() {
-        context.focussedID('w16');
-
-        var keys = features.keys(),
-            hidden = features.hidden();
-
-        expect(keys).to.include('focussed');
-        expect(hidden).not.to.include('focussed');
-    });
-
-    it('focussed feature filter if a focussed ID', function() {
-        context.focussedID('w16');
-
-        var keys = features.keys(),
-            hidden = features.hidden();
-
-        expect(keys).to.include('focussed');
-        expect(hidden).not.to.include('focussed');
-    });
-
 });

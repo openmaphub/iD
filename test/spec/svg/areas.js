@@ -19,7 +19,7 @@ describe("iD.svg.Areas", function () {
                 iD.Way({id: 'w', tags: {building: 'yes'}, nodes: ['a', 'b', 'c', 'a']})
             ]);
 
-        surface.call(iD.svg.Areas(projection, context), graph, [graph.entity('w')], none);
+        surface.call(iD.svg.Areas(projection), graph, [graph.entity('w')], none);
 
         expect(surface.select('path.way')).to.be.classed('way');
         expect(surface.select('path.area')).to.be.classed('area');
