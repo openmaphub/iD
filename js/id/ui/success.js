@@ -32,18 +32,20 @@ iD.ui.Success = function(context) {
             .append('span')
             .text(t('success.help_link_text'));
 
-        var changesetURL = context.connection().changesetURL(changeset.id);
+        //var changesetURL = context.connection().changesetURL(changeset.id);
+        var layer_id = iD.util.stringQs(window.location.hash).layer_id;
+        var maphubsURL = OMH_CONFIG.AUTH_URL + '/lyr/' + layer_id;
 
         body.append('a')
             .attr('class', 'button col12 osm')
             .attr('target', '_blank')
-            .attr('href', changesetURL)
+            .attr('href', maphubsURL)
             .text(t('success.view_on_osm'));
 
         var sharing = {
-            facebook: 'https://facebook.com/sharer/sharer.php?u=' + encodeURIComponent(changesetURL),
+            facebook: 'https://facebook.com/sharer/sharer.php?u=' + encodeURIComponent(maphubsURL),
             twitter: 'https://twitter.com/intent/tweet?source=webclient&text=' + encodeURIComponent(message),
-            google: 'https://plus.google.com/share?url=' + encodeURIComponent(changesetURL)
+            google: 'https://plus.google.com/share?url=' + encodeURIComponent(maphubsURL)
         };
 
         body.selectAll('.button.social')
