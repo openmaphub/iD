@@ -209,9 +209,9 @@
         "unsaved_changes": "Jums ir nesaglabātas izmaiņas"
     },
     "success": {
-        "edited_osm": "Jūs izmainījāt OSM!",
+        "edited_osm": "Jūs izmainījāt MapHubs!",
         "just_edited": "Jūs nupat rediģējāt MapHubs",
-        "view_on_osm": "Apskatīt OSM",
+        "view_on_osm": "Apskatīt MapHubs",
         "facebook": "Dalīties Facebook",
         "twitter": "Dalīties uz Facebook",
         "google": "Dalīties uz Google+"

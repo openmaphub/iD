@@ -434,9 +434,9 @@
         }
     },
     "success": {
-        "edited_osm": "OSM tersunting!",
+        "edited_osm": "MapHubs tersunting!",
         "just_edited": "Anda baru saja menyunting MapHubs!",
-        "view_on_osm": "Lihat di OSM",
+        "view_on_osm": "Lihat di MapHubs",
         "facebook": "Bagikan di Facebook",
         "twitter": "Bagikan di Twitter",
         "google": "Bagikan di Google+"

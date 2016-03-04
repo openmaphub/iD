@@ -424,9 +424,9 @@
         }
     },
     "success": {
-        "edited_osm": "¡Editáu OSM!",
+        "edited_osm": "¡Editáu MapHubs!",
         "just_edited": "¡Acaba d'editar MapHubs!",
-        "view_on_osm": "Ver en OSM",
+        "view_on_osm": "Ver en MapHubs",
         "facebook": "Compartir en Facebook",
         "twitter": "Compartir en Twitter",
         "google": "Compartir en Google+"

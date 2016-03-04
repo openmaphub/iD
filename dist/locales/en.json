@@ -448,9 +448,9 @@
         }
     },
     "success": {
-        "edited_osm": "Edited OSM!",
+        "edited_osm": "Edited MapHubs!",
         "just_edited": "You just edited MapHubs!",
-        "view_on_osm": "View on OSM",
+        "view_on_osm": "View on MapHubs",
         "facebook": "Share on Facebook",
         "twitter": "Share on Twitter",
         "google": "Share on Google+",

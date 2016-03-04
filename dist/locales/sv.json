@@ -448,9 +448,9 @@
         }
     },
     "success": {
-        "edited_osm": "Redigerat OSM!",
+        "edited_osm": "Redigerat MapHubs!",
         "just_edited": "Du har nu redigerat MapHubs!",
-        "view_on_osm": "Visa på OSM",
+        "view_on_osm": "Visa på MapHubs",
         "facebook": "Dela på Facebook",
         "twitter": "Dela på Twitter",
         "google": "Dela på Google+",

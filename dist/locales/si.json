@@ -396,9 +396,9 @@
         }
     },
     "success": {
-        "edited_osm": "OSM සංස්කරණය කරන ලදී!",
+        "edited_osm": "MapHubs සංස්කරණය කරන ලදී!",
         "just_edited": "ඔබ මේ මොහොතේ MapHubs සංස්කරණය කරන ලදී",
-        "view_on_osm": "OSM මත දක්වන්න",
+        "view_on_osm": "MapHubs මත දක්වන්න",
         "facebook": "Facebook හි බෙදාහරින්න",
         "twitter": "Twitter හි බෙදා හරින්න",
         "google": "Google+ හි බෙදා හරින්න"

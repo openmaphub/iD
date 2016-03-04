@@ -320,9 +320,9 @@
         }
     },
     "success": {
-        "edited_osm": "Þú breyttir OSM!",
+        "edited_osm": "Þú breyttir MapHubs!",
         "just_edited": "Þú hefur breytt MapHubs!",
-        "view_on_osm": "Skoða á OSM",
+        "view_on_osm": "Skoða á MapHubs",
         "facebook": "Deila á Facebook",
         "twitter": "Deila á Twitter",
         "google": "Deila á Google+"

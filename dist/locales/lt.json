@@ -434,9 +434,9 @@
         }
     },
     "success": {
-        "edited_osm": "Pakeitėte OSM!",
+        "edited_osm": "Pakeitėte MapHubs!",
         "just_edited": "Jūs ką tik pakeitėte MapHubs!",
-        "view_on_osm": "Žiūrėti OSM žemėlapyje",
+        "view_on_osm": "Žiūrėti MapHubs žemėlapyje",
         "facebook": "Pasidalinti Facebook'e",
         "twitter": "Pasidalinti Twitter'yje",
         "google": "Pasidalinti Google+"

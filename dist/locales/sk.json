@@ -442,9 +442,9 @@
         }
     },
     "success": {
-        "edited_osm": "OSM bol upravený!",
+        "edited_osm": "MapHubs bol upravený!",
         "just_edited": "Práve ste upravili MapHubs!",
-        "view_on_osm": "Zobraz na OSM",
+        "view_on_osm": "Zobraz na MapHubs",
         "facebook": "Zdieľaj na Facebooku",
         "twitter": "Zdieľaj na Twitteri",
         "google": "Zdieľaj na Google+"

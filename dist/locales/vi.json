@@ -448,9 +448,9 @@
         }
     },
     "success": {
-        "edited_osm": "Bạn đã sửa đổi OSM!",
+        "edited_osm": "Bạn đã sửa đổi MapHubs!",
         "just_edited": "Bạn vừa sửa đổi MapHubs!",
-        "view_on_osm": "Xem tại OSM",
+        "view_on_osm": "Xem tại MapHubs",
         "facebook": "Chia sẻ trên Facebook",
         "twitter": "Chia sẻ trên Twitter",
         "google": "Chia sẻ trên Google+",

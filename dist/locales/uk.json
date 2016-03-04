@@ -448,9 +448,9 @@
         }
     },
     "success": {
-        "edited_osm": "OSM змінено!",
+        "edited_osm": "MapHubs змінено!",
         "just_edited": "Ви щойно внесли зміни на мапу MapHubs!",
-        "view_on_osm": "Подивитись в OSM",
+        "view_on_osm": "Подивитись в MapHubs",
         "facebook": "Поділитись у Facebook",
         "twitter": "Поділитись у Twitter",
         "google": "Поділитись у Google+",

@@ -448,9 +448,9 @@
         }
     },
     "success": {
-        "edited_osm": "OSM aangepast!",
+        "edited_osm": "MapHubs aangepast!",
         "just_edited": "Je hebt zojuist MapHubs aangepast!",
-        "view_on_osm": "Bekijk op OSM",
+        "view_on_osm": "Bekijk op MapHubs",
         "facebook": "Deel op Facebook",
         "twitter": "Deel op Twitter",
         "google": "Deel op Google+",

@@ -448,9 +448,9 @@
         }
     },
     "success": {
-        "edited_osm": "OSM szerkesztve!",
+        "edited_osm": "MapHubs szerkesztve!",
         "just_edited": "Szerkesztetted az MapHubset!",
-        "view_on_osm": "Megtekintés OSM-en",
+        "view_on_osm": "Megtekintés MapHubs-en",
         "facebook": "Megosztás Facebookon",
         "twitter": "Megosztás Twitteren",
         "google": "Megosztás Google+-on",

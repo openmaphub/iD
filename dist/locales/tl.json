@@ -300,9 +300,9 @@
         "unsaved_changes": "Mayroon kang hindi na-save ng mga pagbabago"
     },
     "success": {
-        "edited_osm": "Nag-edit sa OSM!",
+        "edited_osm": "Nag-edit sa MapHubs!",
         "just_edited": "Nag-edit ka sa MapHubs!",
-        "view_on_osm": "Tingnan sa OSM",
+        "view_on_osm": "Tingnan sa MapHubs",
         "facebook": "I-share sa Facebook",
         "twitter": "I-share sa Twitter",
         "google": "I-share sa Google+"

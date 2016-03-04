@@ -265,9 +265,9 @@
         "unsaved_changes": "Имате незаписани промени"
     },
     "success": {
-        "edited_osm": "Редактирахте OSM!",
+        "edited_osm": "Редактирахте MapHubs!",
         "just_edited": "Вие редактирахте MapHubs!",
-        "view_on_osm": "Вижте в OSM",
+        "view_on_osm": "Вижте в MapHubs",
         "facebook": "Споделете във Facebook",
         "twitter": "Сподели в Twitter",
         "google": "Сподели в Google+"

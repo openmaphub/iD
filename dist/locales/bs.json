@@ -269,9 +269,9 @@
         "unsaved_changes": "Imate promjene koje nisu spašene"
     },
     "success": {
-        "edited_osm": "OSM uređen!",
+        "edited_osm": "MapHubs uređen!",
         "just_edited": "Upravo ste uredili MapHubs kartu!",
-        "view_on_osm": "Pogledajte na OSM-u",
+        "view_on_osm": "Pogledajte na MapHubs-u",
         "facebook": "Podijeliti na Facebooku",
         "twitter": "Podijeliti na Twitteru",
         "google": "Podijeliti na Google+"

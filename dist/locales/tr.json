@@ -394,9 +394,9 @@
         }
     },
     "success": {
-        "edited_osm": "Düzenlenmiş OSM!",
+        "edited_osm": "Düzenlenmiş MapHubs!",
         "just_edited": "Şu an MapHubs'de bir değişiklik yaptınız!",
-        "view_on_osm": "OSM üzerinde gör",
+        "view_on_osm": "MapHubs üzerinde gör",
         "facebook": "Facebook'da Paylaş",
         "twitter": "Twitter'da Paylaş",
         "google": "Google+'da Paylaş"

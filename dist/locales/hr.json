@@ -448,9 +448,9 @@
         }
     },
     "success": {
-        "edited_osm": "Uređen OSM!",
+        "edited_osm": "Uređen MapHubs!",
         "just_edited": "Upravo si uredio/la MapHubs!",
-        "view_on_osm": "Pogledaj na OSM",
+        "view_on_osm": "Pogledaj na MapHubs",
         "facebook": "Podijeli na mreži Facebook",
         "twitter": "Podijeli na mreži Twitter",
         "google": "Podijeli na mreži Google+",

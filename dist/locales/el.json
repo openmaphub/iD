@@ -378,9 +378,9 @@
         }
     },
     "success": {
-        "edited_osm": "Επεξεργαστήκατε τον OSM",
+        "edited_osm": "Επεξεργαστήκατε τον MapHubs",
         "just_edited": "Μόλις επεξεργαστήκατε το MapHubs!",
-        "view_on_osm": "Εμφάνιση στο OSM",
+        "view_on_osm": "Εμφάνιση στο MapHubs",
         "facebook": "Διαμοιρασμός στο Facebook",
         "twitter": "Διαμοιρασμός στο Twitter",
         "google": "Διαμοιρασμός στο Google+"

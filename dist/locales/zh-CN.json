@@ -442,9 +442,9 @@
         }
     },
     "success": {
-        "edited_osm": "编辑了 OSM！",
+        "edited_osm": "编辑了 MapHubs！",
         "just_edited": "您刚刚编辑了 MapHubs！",
-        "view_on_osm": "在 OSM 上查看",
+        "view_on_osm": "在 MapHubs 上查看",
         "facebook": "分享到Facebook",
         "twitter": "分享到 Twitter",
         "google": "分享到 Google+"

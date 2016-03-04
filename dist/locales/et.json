@@ -405,9 +405,9 @@
         }
     },
     "success": {
-        "edited_osm": "Sa täiendasid OSM-i!",
+        "edited_osm": "Sa täiendasid MapHubs-i!",
         "just_edited": "Sa täiendasid just MapHubs-i!",
-        "view_on_osm": "Vaata OSM lehel",
+        "view_on_osm": "Vaata MapHubs lehel",
         "facebook": "Jaga Facebook-is",
         "twitter": "Jaga Twitteris",
         "google": "Jaga Google+-is"
@@ -454,7 +454,7 @@
     },
     "help": {
         "title": "Abi",
-        "imagery": "# Aerofoto\n\nAerofotod on kaardistamisel oluliseks algallikaks. Valik aerofotosid on kättesaadavad paremal asuva redaktori taustaseadete menüü kaudu, vaikimisi on taustaks [Bing Maps](http://www.bing.com/maps/) satelliitfoto.\n\nMaa-ameti aerofoto taustana kasutamiseks lisa kohandatud tausta valikusse aadress kujul http://kaart.maakaart.ee/orto/{z}/{x}/{y}.jpeg. Selleks, et avada OSM ID-redaktor vaikimisi Maa-ameti ortofoto taustaga, kasuta veebibrauseris aadressi http://www.maphubs.com/edit#background=custom:http://kaart.maakaart.ee/orto/{z}/{x}/{y}.jpeg&map=@zoom/@lon/@lat, milles @zoom/@lon/@lat asenda reaalsete väärtustega (näit. 15/59.3438/24.5892).\n\nMõnikord on aerofoto kaardiandmete suhtes nihkes. Kui märkad mitmeid taustaga nihkes olevaid teid, ära asu kohe nende asukohti muutma, vaid kohanda vastavalt aerofoto asendit taustaseadete menüü valiku 'Korrigeeri nihet' abil.\n"
+        "imagery": "# Aerofoto\n\nAerofotod on kaardistamisel oluliseks algallikaks. Valik aerofotosid on kättesaadavad paremal asuva redaktori taustaseadete menüü kaudu, vaikimisi on taustaks [Bing Maps](http://www.bing.com/maps/) satelliitfoto.\n\nMaa-ameti aerofoto taustana kasutamiseks lisa kohandatud tausta valikusse aadress kujul http://kaart.maakaart.ee/orto/{z}/{x}/{y}.jpeg. Selleks, et avada MapHubs ID-redaktor vaikimisi Maa-ameti ortofoto taustaga, kasuta veebibrauseris aadressi http://www.maphubs.com/edit#background=custom:http://kaart.maakaart.ee/orto/{z}/{x}/{y}.jpeg&map=@zoom/@lon/@lat, milles @zoom/@lon/@lat asenda reaalsete väärtustega (näit. 15/59.3438/24.5892).\n\nMõnikord on aerofoto kaardiandmete suhtes nihkes. Kui märkad mitmeid taustaga nihkes olevaid teid, ära asu kohe nende asukohti muutma, vaid kohanda vastavalt aerofoto asendit taustaseadete menüü valiku 'Korrigeeri nihet' abil.\n"
     },
     "intro": {
         "navigation": {

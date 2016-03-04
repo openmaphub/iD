@@ -293,9 +293,9 @@
         "unsaved_changes": "Nekatere spremembe še niso bile shranjene."
     },
     "success": {
-        "edited_osm": "OSM urejen!",
+        "edited_osm": "MapHubs urejen!",
         "just_edited": "Pravkar ste uredili MapHubs zemljevid!",
-        "view_on_osm": "Ogled na OSM",
+        "view_on_osm": "Ogled na MapHubs",
         "facebook": "Deli na Facebook-u",
         "twitter": "Deli na Twitter-ju",
         "google": "Deli na Google+"
@@ -943,7 +943,7 @@
                 "label": "Vrsta"
             },
             "sloped_curb": {
-                "label": "Klančina s pločnika (NA OSM NE OBSTAJA!)"
+                "label": "Klančina s pločnika (NA MapHubs NE OBSTAJA!)"
             },
             "smoking": {
                 "label": "Kajenje",
