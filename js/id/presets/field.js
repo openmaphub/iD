@@ -11,13 +11,19 @@ iD.presets.Field = function(id, field) {
         return t('presets.fields.' + id + '.' + scope, options);
     };
 
+    //disabling translation of field labels for now,
+    //otherwise this ignores the label from the field definition
+    var label = field.label;
     field.label = function() {
-        return field.t('label', {'default': id});
+        //return field.t('label', {'default': id});
+        return label;
     };
 
+      //disabling translation of placeholder labels for now,
     var placeholder = field.placeholder;
     field.placeholder = function() {
-        return field.t('placeholder', {'default': placeholder});
+        //return field.t('placeholder', {'default': placeholder});
+        return placeholder;
     };
 
     return field;
